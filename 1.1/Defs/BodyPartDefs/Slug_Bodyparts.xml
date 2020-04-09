@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<BodyPartDef>
+		<defName>SlugMantle</defName>
+		<label>mantle</label>
+		<hitPoints>40</hitPoints>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	<BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>SlugGroove</defName>
+		<label>mantle</label>
+		<hitPoints>30</hitPoints>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	<BodyPartDef>
+	
+	<BodyPartDef Name="OpticalTentacle" Abstract="True">
+		<defName>OpticalTentacle</defName>
+		<label>optical tentacle</label>
+		<hitPoints>10</hitPoints>
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<skinCovered>false</skinCovered>
+		<!-- <socketed>true</socketed> -->
+		<beautyRelated>true</beautyRelated>
+		
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		
+		<tags>
+			<li>SightSource</li>
+		</tags>
+		<hitChanceFactors>
+			<li>
+				<key>Blunt</key>
+				<value>0</value>
+			</li>
+		</hitChanceFactors>
+	</BodyPartDef>
+	
+	<BodyPartDef Parent="OpticalTentacle">
+		<defName>SlugLeftOpticalTentacle</defName>
+		<label>left optical tentacle</label>
+	</BodyPartDef>
+	<BodyPartDef Parent="OpticalTentacle">
+		<defName>SlugRightOpticalTentacle</defName>
+		<label>right optical tentacle</label>
+	</BodyPartDef>
+  
+	<BodyPartDef>
+		<defName>Ear</defName>
+		<label>ear</label>
+		<hitPoints>12</hitPoints>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<tags>
+			<li>HearingSource</li>
+		</tags>
+	</BodyPartDef>
+  
+</Defs>

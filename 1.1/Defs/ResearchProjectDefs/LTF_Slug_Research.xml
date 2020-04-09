@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Slug -->
+	<ResearchProjectDef>
+		<defName>LTF_Research_Slug</defName>
+		<label>Slug neophyte</label>
+		<description>Beerawecka recipe and silk made of dew.
+		
+[ButcherTable]
+[TailoringBench]</description>
+		<baseCost>700</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tab>LTF_Slug</tab>
+		<prerequisites>
+			<li>Devilstrand</li>
+			<li>Brewing</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+<!-- Slug	 -->
+	<ResearchProjectDef>
+		<defName>LTF_Research_SlugProducts</defName>
+		<label>Slug amateur</label>
+		<description>Torturing nature recipes.
+		
+- Egg + dew = more dew
+- Egg + krap chunk = more chunk
+- Fertilized egg + krap chunk = ???
+You can also throw these eggs for results.
+
+[ButcherTable]</description>
+		<baseCost>700</baseCost>
+		<techLevel>Industrial</techLevel>
+		<tab>LTF_Slug</tab>
+		<prerequisites>
+			<li>LTF_Research_Slug</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+	
+</Defs>
