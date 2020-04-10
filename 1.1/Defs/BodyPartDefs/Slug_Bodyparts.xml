@@ -10,8 +10,8 @@
 		<bleedRate>2</bleedRate>
 		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
 		<canSuggestAmputation>false</canSuggestAmputation>
-	<BodyPartDef>
-	
+	</BodyPartDef>
+
 	<BodyPartDef>
 		<defName>SlugGroove</defName>
 		<label>groove</label>
@@ -25,7 +25,7 @@
 			<li>EatingPathway</li>
 			<li>TalkingPathway</li>
 		</tags>
-	<BodyPartDef>
+	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>SlugNeck</defName>
@@ -39,7 +39,7 @@
 		</tags>
 		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
-	
+
 	<BodyPartDef>
 		<defName>SlugHead</defName>
 		<label>head</label>
@@ -48,7 +48,7 @@
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<bleedRate>2</bleedRate>
 	</BodyPartDef>
-	
+
 	<!-- <BodyPartDef Name="OpticalTentacle" Abstract="True"> -->
 	<BodyPartDef>
 		<defName>OpticalTentacle</defName>
@@ -60,7 +60,7 @@
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
-		
+
 		<tags>
 			<li>SightSource</li>
 		</tags>
@@ -85,46 +85,48 @@
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
-		
+
 		<tags>
 			<li>HearingSource</li>
 		</tags>
 	</BodyPartDef>
-	
+
 	<BodyPartDef>
 		<defName>SlugRaspingRadula</defName>
 		<label>rasping radula</label>
 		<hitPoints>5</hitPoints>
-		
+
 		<frostbiteVulnerability>0</frostbiteVulnerability>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
 		<solid>true</solid>
 		<beautyRelated>true</beautyRelated>
-		<bleedRate>1</bleedRate>
-		
+		<bleedRate>0</bleedRate>
+
 		<socketed>true</socketed>
 		<tags>
 			<li>TalkingSource</li>
 			<li>EatingSource</li>
 		</tags>
 	</BodyPartDef>
-	
+
 	<BodyPartDef>
-		<def>SlugPneumostone</def>
+		<defName>SlugPneumostone</defName>
 		<label>Pneumostone</label>
+		
 		<socketed>true</socketed>
 		<hitPoints>12</hitPoints>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
+		
 		<tags>
 			<li>BreathingPathway</li>
 		</tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<def>SalivaryGland</def>
+		<defName>SalivaryGland</defName>
 		<label>salivary gland</label>
 		<hitPoints>15</hitPoints>
 		<skinCovered>false</skinCovered>
@@ -134,10 +136,23 @@
 		</tags>
 	</BodyPartDef>
 
+	<BodyPartDef>
+		<defName>SlugVestigialShell</defName>
+		<label>remnant shell</label>
+		<hitPoints>15</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MetabolismSource</li>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+	
 
 	<BodyPartDef>
-		<def>SlugMantleSole</def>
-		<label>Mantle sole</label>
+		<defName>SlugGrooveSole</defName>
+		<label>Groove sole</label>
 		<hitPoints>35</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
@@ -149,8 +164,8 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<def>SlugMantleSoleSkirt</def>
-		<label>mantle sole skirt</label>
+		<defName>SlugGrooveSoleSkirt</defName>
+		<label>groove sole skirt</label>
 		<hitPoints>20</hitPoints>
 		<permanentInjuryChanceFactor>5</permanentInjuryChanceFactor>
 		<frostbiteVulnerability>2</frostbiteVulnerability>
@@ -160,10 +175,10 @@
 			<li>MovingLimbSegment</li>
 		</tags>
 	</BodyPartDef>
-	
+
 
 	<BodyPartDef>
-		<def>SlugUpperBody</def>
+		<defName>SlugUpperTrunk</defName>
 		<label>upper body</label>
 		<hitPoints>30</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
@@ -177,7 +192,7 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<def>SlugUpperBodySole</def>
+		<defName>SlugUpperTrunkSole</defName>
 		<label>upper body sole</label>
 		<hitPoints>25</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
@@ -188,9 +203,9 @@
 			<li>EatingPathway</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugUpperBodySoleSkirt</def>
+		<defName>SlugUpperTrunkSoleSkirt</defName>
 		<label>upper body sole skirt</label>
 		<hitPoints>15</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
@@ -200,36 +215,38 @@
 			<li>MovingLimbSegment</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugLowerBody</def>
+		<defName>SlugLowerTrunk</defName>
 		<label>lower body</label>
+		
 		<hitPoints>25</hitPoints>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
+
 		<destroyableByDamage>false</destroyableByDamage>
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<tags>
 			<li>Spine</li>
 		</tags>
-		
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<def>SlugLowerBodySole</def>
+		<defName>SlugLowerTrunkSole</defName>
 		<label>lower body sole</label>
 		<hitPoints>20</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
+		
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<tags>
 			<li>MovingLimbCore</li>
 			<li>EatingPathway</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugLowerBodySoleSkirt</def>
+		<defName>SlugLowerTrunkSoleSkirt</defName>
 		<label>lower body sole skirt</label>
 		<hitPoints>10</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
@@ -239,9 +256,9 @@
 			<li>MovingLimbSegment</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugTail</def>
+		<defName>SlugTail</defName>
 		<label>tail</label>
 		<hitPoints>20</hitPoints>
 		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
@@ -250,21 +267,22 @@
 			<li>Spine</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugKeel</def>
+		<defName>SlugKeel</defName>
 		<label>keel</label>
 		<hitPoints>10</hitPoints>
 		<skinCovered>true</skinCovered>
 		<bleedRate>2</bleedRate>
+		
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<tags>
 			<li>Spine</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugTailSole</def>
+		<defName>SlugTailSole</defName>
 		<label>tail sole</label>
 		<hitPoints>15</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
@@ -273,9 +291,9 @@
 			<li>MovingLimbCore</li>
 		</tags>
 	</BodyPartDef>  
-	
+
 	<BodyPartDef>
-		<def>SlugTailSoleSkirt</def>
+		<defName>SlugTailSoleSkirt</defName>
 		<label>tail sole skirt</label>
 		<hitPoints>10</hitPoints>
 		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
