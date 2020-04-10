@@ -321,32 +321,38 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
 					</li>
-				</bodyAddons>	
-				
+				</bodyAddons>
 				<alienskincolorgen Class="ColorGenerator_Options">
 					<options>
-						<!-- dark -->
-						<li><weight>20</weight><only>RGBA(0.9,0.9,0.9,1)</only></li>
-						<li><weight>15</weight><only>RGBA(0.8,0.8,0.8,1)</only></li>
-						<li><weight>10</weight><only>RGBA(0.7,0.7,0.7,1)</only></li>
-						<!-- blue -->
-						<li><weight>8</weight><only>RGBA(0.9,0.9,1,1)</only></li>
-						<li><weight>5</weight><only>RGBA(0.8,0.8,1,1)</only></li>
-						<li><weight>3</weight><only>RGBA(0.7,0.7,1,1)</only></li>
-						<li><weight>2</weight><only>RGBA(0.6,0.6,1,1)</only></li>
-						<li><weight>1</weight><only>RGBA(0.5,0.5,1,1)</only></li>
-						<!-- red -->
-						<li><weight>8</weight><only>RGBA(1,0.9,0.9,1)</only></li>
-						<li><weight>5</weight><only>RGBA(1,0.8,0.8,1)</only></li>
-						<li><weight>3</weight><only>RGBA(1,0.7,0.7,1)</only></li>
-						<li><weight>2</weight><only>RGBA(1,0.6,0.6,1)</only></li>
-						<li><weight>1</weight><only>RGBA(1,0.5,0.5,1)</only></li>
-						<!-- violet -->
-						<li><weight>8</weight><only>RGBA(1,0.9,1,1)</only></li>
-						<li><weight>5</weight><only>RGBA(1,0.8,1,1)</only></li>
-						<li><weight>3</weight><only>RGBA(1,0.7,1,1)</only></li>
+						<!-- https://www.schemecolor.com/cool-autumn-color-palette.php -->
+						<li><weight>10</weight><only>(117, 26, 51)</only></li>
+						<li><weight>10</weight><only>(179, 66, 51)</only></li>
+						<li><weight>10</weight><only>(210, 143, 51)</only></li>
+						<li><weight>10</weight><only>(212, 185, 94)</only></li>
+						<li><weight>10</weight><only>(78, 162, 162)</only></li>
+						<li><weight>10</weight><only>(26, 134, 147)</only></li>
 					</options>
 				</alienskincolorgen>
+				
+				<alienskinsecondcolorgen Class="ColorGenerator_Options">
+					<options>
+						<!-- https://www.color-hex.com/color-palette/20646 -->
+						<li><weight>10</weight><only>(78, 39, 24)</only></li>
+						<li><weight>10</weight><only>(141, 16, 40)</only></li>
+						<li><weight>10</weight><only>(196, 12, 35)</only></li>
+						<li><weight>10</weight><only>(217, 90, 25)</only></li>
+						<li><weight>10</weight><only>(236, 160, 19)</only></li>
+						<!-- https://www.schemecolor.com/fall-colors-palette.php -->
+						<li><weight>10</weight><only>(143, 187, 9)</only></li>
+						<li><weight>10</weight><only>(214, 231, 21)</only></li>
+						<li><weight>10</weight><only>(251, 246, 1)</only></li>
+						<li><weight>10</weight><only>(251, 205, 38)</only></li>
+						<li><weight>10</weight><only>(250, 143, 4)</only></li>
+						<li><weight>10</weight><only>(246, 77, 13)</only></li>
+					</options>
+				</alienskinsecondcolorgen>
+
+				
 			</alienPartGenerator>
 
 			<forcedRaceTraitEntries>
