@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<HairDef>
-		<defName>Antenna</defName>
-		<label>antenna</label>
+		<defName>Slug</defName>
+		<label>none</label>
 		<hairGender>Any</hairGender>
-		<texPath>Hair/Slug/Antenna</texPath>
+		<texPath>Hair/empty</texPath>
 		<hairTags>
 			<li>SlugHair</li>
 		</hairTags>
 	</HairDef> 
- 
+	
+	<HairDef>
+		<defName>EmptyHair</defName>
+		<label>empty</label>
+		<hairGender>Any</hairGender>
+		<texPath>Hair/empty</texPath>
+		<hairTags>
+			<li>EmptyHair</li>
+		</hairTags>
+	</HairDef>
 </Defs>

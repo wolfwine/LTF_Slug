@@ -40,6 +40,7 @@
 		<canSuggestAmputation>false</canSuggestAmputation>
 	</BodyPartDef>
 
+	<!--
 	<BodyPartDef>
 		<defName>SlugHead</defName>
 		<label>head</label>
@@ -48,9 +49,10 @@
 		<canSuggestAmputation>false</canSuggestAmputation>
 		<bleedRate>2</bleedRate>
 	</BodyPartDef>
+	-->
 
-	<!-- <BodyPartDef Name="OpticalTentacle" Abstract="True"> -->
-	<BodyPartDef>
+	<BodyPartDef Name="OpticalTentacle" Abstract="True">
+	<!-- <BodyPartDef> -->
 		<defName>OpticalTentacle</defName>
 		<label>optical tentacle</label>
 		<hitPoints>15</hitPoints>
@@ -65,7 +67,7 @@
 			<li>SightSource</li>
 		</tags>
 	</BodyPartDef>
-	<!--
+	
 	<BodyPartDef Parent="OpticalTentacle">
 		<defName>SlugLeftOpticalTentacle</defName>
 		<label>left optical tentacle</label>
@@ -74,8 +76,9 @@
 		<defName>SlugRightOpticalTentacle</defName>
 		<label>right optical tentacle</label>
 	</BodyPartDef>
-	-->
-	<BodyPartDef>
+	
+	<BodyPartDef Name="SensoryTentacle" Abstract="True">
+	<!-- <BodyPartDef> -->
 		<defName>SensoryTentacle</defName>
 		<label>sensory tentacle</label>
 		<hitPoints>12</hitPoints>
@@ -89,6 +92,15 @@
 		<tags>
 			<li>HearingSource</li>
 		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef Parent="SensoryTentacle">
+		<defName>SlugLeftSensoryTentacle</defName>
+		<label>left sensory tentacle</label>
+	</BodyPartDef>
+	<BodyPartDef Parent="SensoryTentacle">
+		<defName>SlugRightSensoryTentacle</defName>
+		<label>right sensory tentacle</label>
 	</BodyPartDef>
 
 	<BodyPartDef>

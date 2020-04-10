@@ -10,7 +10,7 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<!-- <groups><li>Torso</li></groups> -->
-			<!-- <groups><li>Groove</li></groups> -->
+			<groups><li>SlugGroove</li></groups>
 
 			<parts>
 
@@ -22,7 +22,8 @@
 					<groups><li>Neck</li></groups>
 					<parts>
 						<li>
-							<def>SlugHead</def>
+							<!-- <def>SlugHead</def> -->
+							<def>Head</def>
 							<coverage>0.08</coverage>
 							<height>Top</height>
 							<groups>
@@ -41,8 +42,8 @@
 									</groups>
 								</li>
 								<li>
-									<!-- <def>SlugLeftOpticalTentacle</def> -->
-									<def>OpticalTentacle</def>
+									<def>SlugLeftOpticalTentacle</def>
+									<!-- <def>OpticalTentacle</def> -->
 									<customLabel>left optical tentacle</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
@@ -62,8 +63,8 @@
 									</parts>
 								</li>
 								<li>
-									<!-- <def>SlugRightOpticalTentacle</def> -->
-									<def>OpticalTentacle</def>
+									<def>SlugRightOpticalTentacle</def>
+									<!-- <def>OpticalTentacle</def> -->
 									<customLabel>right optical tentacle</customLabel>
 									<coverage>0.07</coverage>
 									<groups>
@@ -83,8 +84,8 @@
 									</parts>
 								</li>
 								<li>
-									<!-- <def>SlugLeftSensoryTentacle</def> -->
-									<def>SensoryTentacle</def>
+									<def>SlugLeftSensoryTentacle</def>
+									<!-- <def>SensoryTentacle</def> -->
 									<customLabel>left sensory tentacle</customLabel>
 									<coverage>0.03</coverage>
 									<groups>
@@ -93,8 +94,8 @@
 									</groups>
 								</li>
 								<li>
-									<!-- <def>SlugRightSensoryTentacle</def> -->
-									<def>SensoryTentacle</def>
+									<def>SlugRightSensoryTentacle</def>
+									<!-- <def>SensoryTentacle</def> -->
 									<customLabel>right sensory tentacle</customLabel>
 									<coverage>0.03</coverage>
 									<groups>
@@ -111,9 +112,15 @@
 									</groups>
 									<parts>
 										<li>
+											<!-- <def>teeth</def> -->
 											<def>SlugRaspingRadula</def>
+											<customLabel>rasping radula</customLabel>
 											<coverage>0.05</coverage>
 											<depth>Inside</depth>
+											<groups>
+												<li>Teeth</li>
+												<li>FullHead</li>
+											</groups>
 										</li>
 									</parts>
 								</li>
@@ -342,12 +349,19 @@
 
 					<coverage>0.18</coverage>
 					<height>Top</height>
-
+					<groups>
+						<li>SlugGroove</li>
+						<li>SlugMantle</li>
+					</groups>
 					<parts>
 						<li>
 							<def>SlugPneumostone</def>
 							<coverage>0.05</coverage>
 							<depth>Outside</depth>
+							<groups>
+								<li>SlugGroove</li>
+								<li>SlugMantle</li>
+							</groups>
 						</li>
 					</parts>
 				</li>
@@ -356,78 +370,79 @@
 					<def>Heart</def>
 					<coverage>0.015</coverage>
 					<depth>Inside</depth>
-					
+					<groups><li>SlugGroove</li></groups>
 				</li>
 
 				<li>
 					<def>SalivaryGland</def>
-					<coverage>0.02</coverage>
 					<customLabel>left salivary gland</customLabel>
+					<coverage>0.02</coverage>
 					<depth>Inside</depth>
+					<groups><li>SlugGroove</li></groups>
 				</li>
 
 				<li>
 					<def>SalivaryGland</def>
-					<coverage>0.02</coverage>
 					<customLabel>right salivary gland</customLabel>
+					<coverage>0.02</coverage>
 					<depth>Inside</depth>
+					<groups><li>SlugGroove</li></groups>
 				</li>
 						
 				<li>
 					<def>SlugGrooveSole</def>
 					<coverage>0.07</coverage>
 					<height>Bottom</height>
-					<!-- <groups><li>Groove</li></groups> -->
+					<groups><li>SlugGroove</li></groups>
 					<parts>
 						<li>
 							<def>SlugGrooveSoleSkirt</def>
 							<coverage>0.05</coverage>
 							<height>Bottom</height>
-							<!-- <groups><li>Groove</li></groups> -->
+							<groups><li>SlugGroove</li></groups>
 						</li>
 					</parts>
 				</li>
 						
 				<li>
 					<def>SlugUpperTrunk</def>
-					<!-- <coverage>0.22</coverage> -->
 					<coverage>0.16</coverage>
 					<height>Middle</height>
-					<!-- <groups><li>Groove</li></groups> -->
+					<groups><li>SlugUpperTrunk</li></groups>
 					<parts>
 						<li>
 							<def>Lung</def>
 							<customLabel>left lung</customLabel>
 							<coverage>0.025</coverage>
 							<depth>Inside</depth>
-							<!-- <groups><li>UpperTrunkOrgans</li></groups> -->
+							<groups><li>SlugUpperTrunk</li></groups>
 						</li>
 						<li>
 							<def>Lung</def>
 							<customLabel>right lung</customLabel>
 							<coverage>0.025</coverage>
 							<depth>Inside</depth>
-							<!-- <groups><li>UpperTrunkOrgans</li></groups> -->
+							<groups><li>SlugUpperTrunk</li></groups>
 						</li>
 						<li>
 							<def>SlugVestigialShell</def>
 							<customLabel>right lung</customLabel>
 							<coverage>0.01</coverage>
 							<depth>Inside</depth>
-							<!-- <groups><li>UpperTrunkOrgans</li></groups> -->
+							<groups><li>SlugUpperTrunk</li></groups>
 						</li>
 						
 						<li>
 							<def>SlugUpperTrunkSole</def>
 							<coverage>0.07</coverage>
 							<height>Bottom</height>
-							<!-- <groups><li>UpperTrunk</li></groups> -->
+							<groups><li>SlugUpperTrunk</li></groups>
 							<parts>
 								<li>
 									<def>SlugUpperTrunkSoleSkirt</def>
 									<coverage>0.045</coverage>
 									<height>Bottom</height>
-									<!-- <groups><li>UpperTrunk</li></groups> -->
+									<groups><li>SlugUpperTrunk</li></groups>
 								</li>
 							</parts>
 						</li>
@@ -435,43 +450,42 @@
 						
 						<li>
 							<def>SlugLowerTrunk</def>
-							<!-- <coverage>0.12</coverage> -->
 							<coverage>0.14</coverage>
 							<height>Middle</height>
-							<!-- <groups><li>UpperTrunk</li></groups> -->
+							<groups><li>SlugLowerTrunk</li></groups>
 							<parts>
 								<li>
 									<def>Kidney</def>
 									<customLabel>left kidney</customLabel>
 									<coverage>0.017</coverage>
 									<depth>Inside</depth>
-									<!-- <groups><li>LowerTrunkOrgans</li></groups> -->
+									<groups><li>SlugLowerTrunk</li></groups>
 								</li>
 								<li>
 									<def>Kidney</def>
 									<customLabel>right kidney</customLabel>
 									<coverage>0.017</coverage>
 									<depth>Inside</depth>
-									<!-- <groups><li>LowerTrunkOrgans</li></groups> -->
+									<groups><li>SlugLowerTrunk</li></groups>
 								</li>
 								<li>
 									<def>Stomach</def>
 									<coverage>0.025</coverage>
 									<depth>Inside</depth>
-									<!-- <groups><li>LowerTrunkOrgans</li></groups> -->
+									<groups><li>SlugLowerTrunk</li></groups>
 								</li>
 
 								<li>
 									<def>SlugLowerTrunkSole</def>
 									<coverage>0.06</coverage>
 									<height>Bottom</height>
-									<!-- <groups><li>LowerTrunk</li></groups> -->
+									<groups><li>SlugLowerTrunk</li></groups>
 									<parts>
 										<li>
 											<def>SlugLowerTrunkSoleSkirt</def>
 											<coverage>0.035</coverage>
 											<height>Bottom</height>
-											<!-- <groups><li>LowerTrunk</li></groups> -->
+											<groups><li>SlugLowerTrunk</li></groups>
 										</li>
 									</parts>
 								</li>
@@ -482,26 +496,26 @@
 									<!-- <coverage>0.08</coverage> -->
 									<coverage>0.1</coverage>
 									<height>Middle</height>
-									<!-- <groups><li>LowerTrunk</li></groups> -->
+									<groups><li>SlugTail</li></groups>
 									<parts>
 										<li>
 											<def>SlugKeel</def>
 											<coverage>0.3</coverage>
 											<height>Middle</height>
-											<!-- <groups><li>Tail</li></groups> -->
+											<groups><li>SlugTail</li></groups>
 										</li>
 
 										<li>
 											<def>SlugTailSole</def>
 											<coverage>0.2</coverage>
 											<height>Bottom</height>
-											<!-- <groups><li>Tail</li></groups> -->
+											<groups><li>SlugTail</li></groups>
 											<parts>
 												<li>
 													<def>SlugTailSoleSkirt</def>
 													<coverage>0.025</coverage>
 													<height>Bottom</height>
-													<!-- <groups><li>Tail</li></groups> -->
+													<groups><li>SlugTail</li></groups>
 												</li>
 											</parts>
 										</li>
