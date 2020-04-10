@@ -7,40 +7,65 @@
 		<label>mantle</label>
 		<hitPoints>40</hitPoints>
 		<skinCovered>true</skinCovered>
+		<bleedRate>2</bleedRate>
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
 		<canSuggestAmputation>false</canSuggestAmputation>
 	<BodyPartDef>
 	
 	<BodyPartDef>
 		<defName>SlugGroove</defName>
-		<label>mantle</label>
+		<label>groove</label>
 		<hitPoints>30</hitPoints>
 		<skinCovered>true</skinCovered>
 		<canSuggestAmputation>false</canSuggestAmputation>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<destroyableByDamage>false</destroyableByDamage>
+		<tags>
+			<li>BreathingPathway</li>
+			<li>EatingPathway</li>
+			<li>TalkingPathway</li>
+		</tags>
 	<BodyPartDef>
+
+	<BodyPartDef>
+		<defName>SlugNeck</defName>
+		<label>neck</label>
+		<hitPoints>25</hitPoints>
+		<bleedRate>4</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>EatingPathway</li>
+			<li>TalkingPathway</li>
+		</tags>
+		<canSuggestAmputation>false</canSuggestAmputation>
+	</BodyPartDef>
 	
-	<BodyPartDef Name="OpticalTentacle" Abstract="True">
+	<BodyPartDef>
+		<defName>SlugHead</defName>
+		<label>head</label>
+		<hitPoints>25</hitPoints>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<bleedRate>2</bleedRate>
+	</BodyPartDef>
+	
+	<!-- <BodyPartDef Name="OpticalTentacle" Abstract="True"> -->
+	<BodyPartDef>
 		<defName>OpticalTentacle</defName>
 		<label>optical tentacle</label>
-		<hitPoints>10</hitPoints>
+		<hitPoints>15</hitPoints>
+
 		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
 		<delicate>true</delicate>
-		<skinCovered>false</skinCovered>
-		<!-- <socketed>true</socketed> -->
+		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
-		
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 		
 		<tags>
 			<li>SightSource</li>
 		</tags>
-		<hitChanceFactors>
-			<li>
-				<key>Blunt</key>
-				<value>0</value>
-			</li>
-		</hitChanceFactors>
 	</BodyPartDef>
-	
+	<!--
 	<BodyPartDef Parent="OpticalTentacle">
 		<defName>SlugLeftOpticalTentacle</defName>
 		<label>left optical tentacle</label>
@@ -49,17 +74,215 @@
 		<defName>SlugRightOpticalTentacle</defName>
 		<label>right optical tentacle</label>
 	</BodyPartDef>
-  
+	-->
 	<BodyPartDef>
-		<defName>Ear</defName>
-		<label>ear</label>
+		<defName>SensoryTentacle</defName>
+		<label>sensory tentacle</label>
+		<hitPoints>12</hitPoints>
+
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		
+		<tags>
+			<li>HearingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>SlugRaspingRadula</defName>
+		<label>rasping radula</label>
+		<hitPoints>5</hitPoints>
+		
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<beautyRelated>true</beautyRelated>
+		<bleedRate>1</bleedRate>
+		
+		<socketed>true</socketed>
+		<tags>
+			<li>TalkingSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<def>SlugPneumostone</def>
+		<label>Pneumostone</label>
+		<socketed>true</socketed>
 		<hitPoints>12</hitPoints>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<tags>
-			<li>HearingSource</li>
+			<li>BreathingPathway</li>
 		</tags>
 	</BodyPartDef>
-  
+
+	<BodyPartDef>
+		<def>SalivaryGland</def>
+		<label>salivary gland</label>
+		<hitPoints>15</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>BloodFiltrationLiver</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+
+	<BodyPartDef>
+		<def>SlugMantleSole</def>
+		<label>Mantle sole</label>
+		<hitPoints>35</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>EatingPathway</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<def>SlugMantleSoleSkirt</def>
+		<label>mantle sole skirt</label>
+		<hitPoints>20</hitPoints>
+		<permanentInjuryChanceFactor>5</permanentInjuryChanceFactor>
+		<frostbiteVulnerability>2</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>
+	
+
+	<BodyPartDef>
+		<def>SlugUpperBody</def>
+		<label>upper body</label>
+		<hitPoints>30</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<destroyableByDamage>false</destroyableByDamage>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>BreathingSourceCage</li>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<def>SlugUpperBodySole</def>
+		<label>upper body sole</label>
+		<hitPoints>25</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>EatingPathway</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugUpperBodySoleSkirt</def>
+		<label>upper body sole skirt</label>
+		<hitPoints>15</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugLowerBody</def>
+		<label>lower body</label>
+		<hitPoints>25</hitPoints>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<destroyableByDamage>false</destroyableByDamage>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>Spine</li>
+		</tags>
+		
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<def>SlugLowerBodySole</def>
+		<label>lower body sole</label>
+		<hitPoints>20</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>EatingPathway</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugLowerBodySoleSkirt</def>
+		<label>lower body sole skirt</label>
+		<hitPoints>10</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugTail</def>
+		<label>tail</label>
+		<hitPoints>20</hitPoints>
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugKeel</def>
+		<label>keel</label>
+		<hitPoints>10</hitPoints>
+		<skinCovered>true</skinCovered>
+		<bleedRate>2</bleedRate>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<tags>
+			<li>Spine</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugTailSole</def>
+		<label>tail sole</label>
+		<hitPoints>15</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>  
+	
+	<BodyPartDef>
+		<def>SlugTailSoleSkirt</def>
+		<label>tail sole skirt</label>
+		<hitPoints>10</hitPoints>
+		<permanentInjuryChanceFactor>10</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<tags>
+			<li>MovingLimbSegment</li>
+		</tags>
+	</BodyPartDef>  
 </Defs>
