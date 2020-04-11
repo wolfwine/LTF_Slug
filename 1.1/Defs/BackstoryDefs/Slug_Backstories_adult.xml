@@ -129,7 +129,7 @@ A - "na"
 		<title>Slug enhancer</title>
 		<titleShort>enhancer</titleShort>
 		<baseDescription>Seeing how backwards Slug Home Nebula was, [PAWN_nameDef] decided to tour Zoltan's homeworlds in order to find ways to modernize his country.
-[PAWN_nameDef] took the guise of an average merchant to avoid being discovered and came back to Slugland with many ways to improve the empire. He set up new schools, created the mighty port of St. Astrodroolport, and ordered all slug men to collect their morning dews or pay a tax.
+[PAWN_nameDef] took the guise of an average merchant to avoid being discovered and came back to Slugland with many ways to improve the empire. [PAWN_pronoun] set up new schools, created the mighty port of St. Astrodroolport, and ordered all slug men to collect their morning dews or pay a tax.
 		</baseDescription>
 		<slot>Adulthood</slot>
 		
@@ -167,8 +167,8 @@ A - "na"
 		</spawnCategories>
 		
 		<skillGains>
-			<li><defName>Artistic</defName><amount>2</amount></li>
-			<li><defName>Intellectual</defName><amount>1</amount></li>
+			<li><defName>Artistic</defName><amount>3</amount></li>
+			<li><defName>Intellectual</defName><amount>2</amount></li>
 			<li><defName>Crafting</defName><amount>2</amount></li>
 			<li><defName>Plants</defName><amount>2</amount></li>
 			<li><defName>Medicine</defName><amount>3</amount></li>
@@ -263,12 +263,13 @@ A - "na"
 		<defName>SlugBSQuote09</defName>
 		<title>Drool sculptor</title>
 		<titleShort>sculptor</titleShort>
-		<baseDescription>[PAWN_nameDef] has always felt his excretions were great. Due to this, [PAWN_nameDef] begun to capture figures and craft opulent wares. Because even with his abundant morning dews, he was not able to gather enough drool to build his dream statues, [PAWN_nameDef] became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has always felt his excretions were great. Due to this, [PAWN_nameDef] begun to capture figures and craft opulent wares. Because even with his abundant morning dews, [PAWN_pronoun] was not able to gather enough drool to build his dream statues, [PAWN_nameDef] became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
 
 	<slot>Adulthood</slot>
 	
-	<bodyTypeMale>Male</bodyTypeMale>
-	<bodyTypeFemale>Female</bodyTypeFemale>
+	<bodyTypeGlobal>Fat</bodyTypeGlobal>
+	<!-- <bodyTypeMale>Male</bodyTypeMale> -->
+	<!-- <bodyTypeFemale>Female</bodyTypeFemale> -->
 	
 	<spawnCategories>
 		  <li>SlugBackstory</li>
@@ -287,7 +288,7 @@ A - "na"
 		<defName>SlugBSQuote10</defName>
 		<title>Gofast veteran</title>
 		<titleShort>Ex gofast</titleShort>
-		<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adaptes, overcomes.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adapts, overcomes.</baseDescription>
 
 	<slot>Adulthood</slot>
 	
@@ -315,15 +316,16 @@ A - "na"
 </AlienRace.BackstoryDef>
 <!---->
 <AlienRace.BackstoryDef>
-		<defName>SlugBSQuote11</defName>
-		<title>Mantispulated</title>
-		<titleShort>Nerd</titleShort>
-		<baseDescription>[PAWN_nameDef] pretends he was forced to harvest an engie by a mantis tryharder. The guy needed a screen to VR because he a had a raid with its clan on the ansible. What the fudge dude!:kappa: [PAWN_nameDef] managed to escape thanks to his strafing and bunny hops skills. Btw do you even rocket jump bro ?</baseDescription>
+	<defName>SlugBSQuote11</defName>
+	<title>Mantispulated</title>
+	<titleShort>Nerd</titleShort>
+	<baseDescription>[PAWN_nameDef] pretends [PAWN_pronoun] was forced to harvest an engi by a mantis tryharder. The guy needed a VR device because he had a raid with its clan on the ansible. What the fudge dude!:kappa: [PAWN_nameDef] managed to escape thanks to his strafing and bunny hops skills.</baseDescription>
 
 	<slot>Adulthood</slot>
 	
-	<bodyTypeMale>Male</bodyTypeMale>
-		<bodyTypeFemale>Female</bodyTypeFemale>
+	<bodyTypeGlobal>Fat</bodyTypeGlobal>
+	<!-- <bodyTypeMale>Male</bodyTypeMale> -->
+	<!-- <bodyTypeFemale>Female</bodyTypeFemale> -->
 	
 	<spawnCategories>
 		  <li>SlugBackstory</li>

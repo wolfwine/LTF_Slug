@@ -172,6 +172,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.42,	.5)</Female>
 									<Thin>(-.42,	.5)</Thin>
 									<Hulk>(-.42,	.5)</Hulk>
+									<Fat>(-.42,	.5)</Fat>
 								</bodyTypes>
 							</south>
 							<!-- side -->
@@ -181,6 +182,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.475,	.545)</Female>
 									<Thin>(-.465,	.53)</Thin>
 									<Hulk>(-.47,	.54)</Hulk>
+									<Fat>(-.47,	.54)</Fat>
 								</bodyTypes>
 							</east>
 							<!-- back -->
@@ -190,6 +192,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(0, .87)</Female>
 									<Thin>(0,	.85)</Thin>
 									<Hulk>(0,	.85)</Hulk>
+									<Fat>(0,	.85)</Fat>
 								</bodyTypes>
 							</north>
 						</offsets>
@@ -213,6 +216,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.42,	.5)</Female>
 									<Thin>(-.42,	.5)</Thin>
 									<Hulk>(-.42,	.5)</Hulk>
+									<Fat>(-.42,	.5)</Fat>
 								</bodyTypes>
 							</south>
 							<!-- side -->
@@ -222,6 +226,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.475,	.545)</Female>
 									<Thin>(-.465,	.53)</Thin>
 									<Hulk>(-.47,	.54)</Hulk>
+									<Fat>(-.47,	.54)</Fat>
 								</bodyTypes>
 							</east>
 							<!-- back -->
@@ -231,6 +236,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(0, .87)</Female>
 									<Thin>(0,	.85)</Thin>
 									<Hulk>(0,	.85)</Hulk>
+									<Fat>(0,	.85)</Fat>
 								</bodyTypes>
 							</north>
 						</offsets>
@@ -254,6 +260,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.42,	.5)</Female>
 									<Thin>(-.42,	.5)</Thin>
 									<Hulk>(-.42,	.5)</Hulk>
+									<Fat>(-.42,	.5)</Fat>
 								</bodyTypes>
 							</south>
 							<!-- side -->
@@ -263,6 +270,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.475,	.545)</Female>
 									<Thin>(-.465,	.53)</Thin>
 									<Hulk>(-.47,	.54)</Hulk>
+									<Fat>(-.47,	.54)</Fat>
 								</bodyTypes>
 							</east>
 							<!-- back -->
@@ -272,6 +280,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(0, .87)</Female>
 									<Thin>(0,	.85)</Thin>
 									<Hulk>(0,	.85)</Hulk>
+									<Fat>(0,	.85)</Fat>
 								</bodyTypes>
 							</north>
 						</offsets>
@@ -295,6 +304,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.42,	.5)</Female>
 									<Thin>(-.42,	.5)</Thin>
 									<Hulk>(-.42,	.5)</Hulk>
+									<Fat>(-.42,	.5)</Fat>
 								</bodyTypes>
 							</south>
 							<!-- side -->
@@ -304,6 +314,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(-.475,	.545)</Female>
 									<Thin>(-.465,	.53)</Thin>
 									<Hulk>(-.47,	.54)</Hulk>
+									<Fat>(-.47,	.54)</Fat>
 								</bodyTypes>
 							</east>
 							<!-- back -->
@@ -313,6 +324,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 									<Female>(0, .87)</Female>
 									<Thin>(0,	.85)</Thin>
 									<Hulk>(0,	.85)</Hulk>
+									<Fat>(0,	.85)</Fat>
 								</bodyTypes>
 							</north>
 						</offsets>

@@ -14,11 +14,17 @@
 		<defName>Slug</defName>
 		<label>colonist</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
-		<backstoryCategories>
-			<li>SlugBackstory</li>
-		</backstoryCategories>
-		<!-- B19 <backstoryCategory>SlugBackstory</backstoryCategory> -->
-		<!-- <apparelAllowHeadwearChance>0</apparelAllowHeadwearChance> -->
+		
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>SlugBackstory</li>
+					<li>Outlander</li>
+					<li>Outsider</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+
 		<apparelTags>
 			<li>Neolithic</li>
 		</apparelTags>

@@ -6,9 +6,17 @@
 <PawnKindDef Name="SlugBase" Abstract="True">
     <defaultFactionType>SlugFaction</defaultFactionType>
     <race>Alien_Slug</race>
-	<backstoryCategories>
-		<li>SlugBackstory</li>
-	</backstoryCategories>
+
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>SlugBackstory</li>
+				<li>Outlander</li>
+				<li>Outsider</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+
 	<!-- B19 <backstoryCategory>SlugBackstory</backstoryCategory> -->
 	<chemicalAddictionChance>0.15</chemicalAddictionChance>
     <baseRecruitDifficulty>.95</baseRecruitDifficulty>
@@ -446,6 +454,15 @@
     <label>Hist Guardian</label>
     <combatPower>135</combatPower>
     <minGenerationAge>20</minGenerationAge>
+	
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>Offworld</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+	
     <gearHealthRange>
       <min>0.5</min>
       <max>2.3</max>
@@ -500,6 +517,15 @@
     <label>Shadowscale</label>
     <combatPower>220</combatPower>
     <minGenerationAge>26</minGenerationAge>
+	
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>Offworld</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+	
     <gearHealthRange>
       <min>0.8</min>
       <max>3.5</max>
