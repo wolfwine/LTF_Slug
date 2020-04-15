@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- optical tentacle -->
+	<ThingDef ParentName="BodyPartNaturalBase">
+		<defName>OpticalTentacle</defName>
+		<label>optical tentacle</label>
+		<description>A biological slug optical tentable. Retractable, light-sensitive optical tentacles independently to gaze at their surroundings. The optical tentacles are also used for smell.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallLeftOpticalTentacle</RecipeDef>
+			<RecipeDef>InstallRightOpticalTentacle</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+  
+	<RecipeDef Name="InstallOpticalTentacle" ParentName="SurgeryInstallBodyPartNaturalBase" Abstract="True">
+		<defName>InstallOpticalTentacle</defName>
+		<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>OpticalTentacle</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>OpticalTentacle</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="InstallOpticalTentacle">
+		<defName>InstallLeftOpticalTentacle</defName>
+		<label>install left optical tentacle</label>
+		<description>Install a left biological optical tentacle.</description>
+		<descriptionHyperlinks><ThingDef>OpticalTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing left optical tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugLeftOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="InstallOpticalTentacle">
+		<defName>InstallRightOpticalTentacle</defName>
+		<label>install right optical tentacle</label>
+		<description>Install a right biological optical tentacle.</description>
+		<descriptionHyperlinks><ThingDef>OpticalTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing right optical tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugRightOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+<!--
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallOpticalTentacle</defName>
+    <label>install optical tentacle</label>
+    <description>Install a biological optical tentacle.</description>
+    <descriptionHyperlinks><ThingDef>OpticalTentacle</ThingDef></descriptionHyperlinks>
+    <jobString>Installing optical tentacle.</jobString>
+    <deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OpticalTentacle</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OpticalTentacle</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>OpticalTentacle</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+-->
+  <!-- sensory tentacle -->
+	<ThingDef ParentName="BodyPartNaturalBase">
+		<defName>SensoryTentacle</defName>
+		<label>sensory tentacle</label>
+		<description>A biological slug sensory tentacle. Lower sensory tentacles serve for feeling and tasting.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallLeftSensoryTentacle</RecipeDef>
+			<RecipeDef>InstallRightSensoryTentacle</RecipeDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<Mass>1</Mass>
+		</statBases>
+	</ThingDef>
+  
+	<RecipeDef Name="InstallSensoryTentacle" ParentName="SurgeryInstallBodyPartNaturalBase" Abstract="True">
+		<defName>InstallSensoryTentacle</defName>
+
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SensoryTentacle</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SensoryTentacle</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="InstallSensoryTentacle">
+		<defName>InstallLeftSensoryTentacle</defName>
+		<label>install left sensory tentacle</label>
+		<description>Install a left sensory tentacle.</description>
+		<descriptionHyperlinks><ThingDef>SensoryTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing left sensory tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugLeftSensoryTentacle</li>
+		</appliedOnFixedBodyParts> 
+	</RecipeDef>
+	
+	<RecipeDef ParentName="InstallSensoryTentacle">
+		<defName>InstallRightSensoryTentacle</defName>
+		<label>install right sensory tentacle</label>
+		<description>Install a right sensory tentacle.</description>
+		<descriptionHyperlinks><ThingDef>SensoryTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing right sensory tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugRightSensoryTentacle</li>
+		</appliedOnFixedBodyParts> 
+	</RecipeDef>
+	
+	<!--
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallSensoryTentacle</defName>
+    <label>install sensory tentacle</label>
+    <description>Install a sensory tentacle.</description>
+    <descriptionHyperlinks><ThingDef>SensoryTentacle</ThingDef></descriptionHyperlinks>
+    <jobString>Installing sensory tentacle.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SensoryTentacle</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SensoryTentacle</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SensoryTentacle</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  -->
+
+  <!-- Kidney -->
+  <ThingDef ParentName="BodyPartNaturalBase">
+    <defName>SalivaryGland</defName>
+    <label>salivary gland</label>
+    <description>A biological slug salivary gland. Controls the secretion of saliva and its transport to the buccal mass.</description>
+    <descriptionHyperlinks><RecipeDef>InstallNaturalSalivaryGland</RecipeDef></descriptionHyperlinks>
+    <statBases>
+      <MarketValue>250</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
+    <defName>InstallNaturalSalivaryGland</defName>
+    <label>install salivary gland</label>
+    <description>Install a biological salivary gland.</description>
+    <descriptionHyperlinks><ThingDef>SalivaryGland</ThingDef></descriptionHyperlinks>
+    <jobString>Installing salivary gland.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SalivaryGland</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SalivaryGland</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>SalivaryGland</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+
+</Defs>

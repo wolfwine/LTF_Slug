@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<BodyPartDef Name="OpticalTentacle" Abstract="True">
+	<!-- <BodyPartDef> -->
+		<defName>OpticalTentacle</defName>
+		<label>optical tentacle</label>
+		<hitPoints>15</hitPoints>
+
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+
+		<spawnThingOnRemoved>SensoryTentacle</spawnThingOnRemoved>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef Parent="OpticalTentacle">
+		<defName>SlugLeftOpticalTentacle</defName>
+		<label>left optical tentacle</label>
+	</BodyPartDef>
+	<BodyPartDef Parent="OpticalTentacle">
+		<defName>SlugRightOpticalTentacle</defName>
+		<label>right optical tentacle</label>
+	</BodyPartDef>
+	
+	<BodyPartDef Name="SensoryTentacle" Abstract="True">
+	<!-- <BodyPartDef> -->
+		<defName>SensoryTentacle</defName>
+		<label>sensory tentacle</label>
+		<hitPoints>12</hitPoints>
+
+		<permanentInjuryChanceFactor>15</permanentInjuryChanceFactor>
+		<delicate>true</delicate>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<spawnThingOnRemoved>SensoryTentacle</spawnThingOnRemoved>
+		
+		<tags>
+			<li>HearingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef Parent="SensoryTentacle">
+		<defName>SlugLeftSensoryTentacle</defName>
+		<label>left sensory tentacle</label>
+	</BodyPartDef>
+	<BodyPartDef Parent="SensoryTentacle">
+		<defName>SlugRightSensoryTentacle</defName>
+		<label>right sensory tentacle</label>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>SlugRaspingRadula</defName>
+		<label>rasping radula</label>
+		<hitPoints>5</hitPoints>
+
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<beautyRelated>true</beautyRelated>
+		<bleedRate>0</bleedRate>
+
+		<socketed>true</socketed>
+		<tags>
+			<li>TalkingSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>SlugPneumostone</defName>
+		<label>Pneumostone</label>
+		
+		<socketed>true</socketed>
+		<hitPoints>12</hitPoints>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<beautyRelated>true</beautyRelated>
+		
+		<tags>
+			<li>BreathingPathway</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>SalivaryGland</defName>
+		<label>salivary gland</label>
+		<hitPoints>15</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>BloodFiltrationLiver</li>
+			<li>MetabolismSource</li>
+		</tags>
+		<spawnThingOnRemoved>SalivaryGland</spawnThingOnRemoved>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>SlugVestigialShell</defName>
+		<label>remnant shell</label>
+		<hitPoints>15</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>MetabolismSource</li>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+</Defs>

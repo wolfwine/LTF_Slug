@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Tribe -->
+
+  <RulePackDef>
+    <defName>NamerFactionSlugVillage</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->The [negative] [terrainfeature] [SlugNames]</li>
+        <li>name->[color] [badAdj] [SlugNames2] </li>
+        <li>name->[negative] [badAdj] [terrainfeature]</li>
+        <li>name->The [slugAdj] [SlugNames] [SlugNames2]</li>
+        <li>name->[negative] [color] [SlugNames2] [terrainfeature]</li>
+		<li>name->[slugAdj] [negative] [politicalunion]</li>
+		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames] [politicalunion]</li>
+		
+		<li>name->[slugAdj] [lightVessel] [type] [vesselRelated]</li>
+		<li>name->[SlugNames2] [mediumVessel] [vesselRelated]</li>
+		<li>name->[SlugNames2] [vesselRelated] [politicalunion]</li>
+		<li>name->[slugAdj] [vesselRelated] [politicalunion]</li>
+		<li>name->[slugAdj] [mediumVessel] [type] [vesselRelated]</li>
+      </rulesStrings>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
+		<!-- adj -->
+        <li Class="Rule_File">
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>badAdj</keyword>
+          <path>SlugNames/BadAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>slugAdj</keyword>
+          <path>SlugNames/SlugAdj</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>SlugNames</keyword>
+          <path>SlugNames/SlugNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>SlugNames2</keyword>
+          <path>SlugNames/SlugNames2</path>
+        </li>
+
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerBaseSlugVillage</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->The [negative] [terrainfeature] [SlugNames]</li>
+        <li>name->[color] [badAdj] [SlugNames2] </li>
+        <li>name->[negative] [badAdj] [terrainfeature]</li>
+        <li>name->The [slugAdj] [SlugNames] [SlugNames2]</li>
+        <li>name->[negative] [color] [SlugNames2] [terrainfeature]</li>
+		<li>name->[slugAdj] [negative] [politicalunion]</li>
+		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->[slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames] [politicalunion]</li>
+		
+		<li>name->[slugAdj] [lightVessel] [type] [vesselRelated]</li>
+		<li>name->[SlugNames2] [mediumVessel] [vesselRelated]</li>
+		<li>name->[SlugNames2] [vesselRelated] [politicalunion]</li>
+		<li>name->[slugAdj] [mediumVessel] [vesselRelated] [politicalunion]</li>
+      </rulesStrings>
+	  
+	  <rulesRaw>
+		 <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>terrainfeature</keyword>
+          <path>Words/Nouns/TerrainFeatures</path>
+        </li>
+		<!-- adj -->
+        <li Class="Rule_File">
+          <keyword>negative</keyword>
+          <path>Words/Nouns/Concepts_Badass</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>badAdj</keyword>
+          <path>SlugNames/BadAdj</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>slugAdj</keyword>
+          <path>SlugNames/SlugAdj</path>
+        </li>
+		<!-- noun -->
+		<li Class="Rule_File">
+          <keyword>SlugNames</keyword>
+          <path>SlugNames/SlugNames</path>
+        </li>
+		<li Class="Rule_File">
+          <keyword>SlugNames2</keyword>
+          <path>SlugNames/SlugNames2</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
