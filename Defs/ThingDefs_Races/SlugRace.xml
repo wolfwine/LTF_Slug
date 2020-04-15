@@ -24,7 +24,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		
 		<Mass>70</Mass>
 		<MeatAmount>80</MeatAmount>
-		<LeatherAmount>20</LeatherAmount>	
+		<LeatherAmount>0</LeatherAmount>	
 		<Flammability>1</Flammability>
 		
 		<MarketValue>1800</MarketValue>
@@ -542,8 +542,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 	</alienRace>
     
 	<race>
-		<thinkTreeMain>Humanlike</thinkTreeMain>
 		<nameGenerator>NamerPersonSlug</nameGenerator>
+		
+		<thinkTreeMain>Humanlike</thinkTreeMain>
 		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 		<intelligence>Humanlike</intelligence>
 		
@@ -629,6 +630,8 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		
 		<hediffGiverSets>
 			<li>OrganicStandard</li>
+			<li>Human</li>
+			<li>SlugHediffGiverSet</li>
 		</hediffGiverSets>
 	</race>
     <recipes>
@@ -639,10 +642,10 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<li>InstallBionicEye</li>
 		<li>InstallBionicArm</li>
 		<!-- <li>InstallBionicLeg</li> -->
-		<li>InstallBionicSpine</li>
+		<!-- <li>InstallBionicSpine</li> -->
 		<li>InstallBionicHeart</li>
 		<li>InstallBionicStomach</li>
-		<li>InstallBionicEar</li>
+		<!-- <li>InstallBionicEar</li> -->
 		<li>InstallSimpleProstheticArm</li>
 		<!-- <li>InstallSimpleProstheticLeg</li> -->
 		<li>InstallSimpleProstheticHeart</li>

@@ -3,7 +3,7 @@
 		<defName>SlugChildBS01</defName>
 		<title>Exugation overload</title>
 		<titleShort>exugator</titleShort>
-		<baseDescription>[PAWN_nameDef] exugates a lot.</baseDescription>
+		<baseDescription>[PAWN_nameDef] exudes a lot.</baseDescription>
 
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -16,7 +16,7 @@
 		<li><defName>Construction</defName><amount>-1</amount></li>
 		</skillGains>
 		
-		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 		<!---->
 	
@@ -37,7 +37,7 @@
 			<li><defName>Animals</defName><amount>1</amount></li>
 		</skillGains>
 
-		<forcedHediffs><li>Hediff_LTF_SlugInsectExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugInsectExugation</li></forcedHediffs> -->
 	</AlienRace.BackstoryDef>
 	
  		<!---->
@@ -57,7 +57,7 @@
 			<li><defName>Social</defName><amount>-2</amount></li>
 		</skillGains>
 		<workDisables><li>Mining</li></workDisables>
-		<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 		<!---->
 	<AlienRace.BackstoryDef>
@@ -77,12 +77,8 @@
 			<li><defName>Construction</defName><amount>-3</amount></li>
 			<li><defName>Crafting</defName><amount>-3</amount></li>
 		</skillGains>
-		<!--
-		<forcedTraits>
-			<li><defName>GreenThumb</defName></li>
-		</forcedTraits>
-		-->
-		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs> -->
 		<workDisables><li>Mining</li></workDisables>
     </AlienRace.BackstoryDef>
 		<!---->
@@ -105,7 +101,7 @@
 		</forcedTraits>
 		
 		<workDisables><li>Animals</li></workDisables>
-		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 	<!---->
 	<AlienRace.BackstoryDef>
@@ -136,7 +132,7 @@
 		
 		<workDisables>
 		</workDisables>
-		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 	<!---->
 	
@@ -165,7 +161,7 @@
 			<li>Caring</li>
 			<li>Social</li>
 		</workDisables>
-		<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 	<!---->
 	<AlienRace.BackstoryDef>
@@ -190,7 +186,7 @@
 		
 		<workDisables>
 		</workDisables>
-		<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 		<!---->
 	<AlienRace.BackstoryDef>
@@ -212,7 +208,7 @@
 		
 		<workDisables><li>Animals</li></workDisables>
 				
-		<forcedHediffs><li>Hediff_LTF_SlugRottingExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugRottingExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 		<!---->
 	<AlienRace.BackstoryDef>
@@ -235,6 +231,6 @@
 			<li><defName>Social</defName><amount>-3</amount></li>
 		</skillGains>
 		
-		<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
+		<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
     </AlienRace.BackstoryDef>
 </Defs>

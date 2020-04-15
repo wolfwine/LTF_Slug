@@ -24,7 +24,7 @@
         <li><defName>Jealous</defName></li>
     </forcedTraits>
 	
-	<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
 	
 </AlienRace.BackstoryDef>
 
@@ -53,8 +53,7 @@
 		<li><defName>Brawler</defName></li>
     </forcedTraits>
 
-	<forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs>
-	
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
@@ -82,7 +81,7 @@
     </forcedTraits>
 	
     <workDisables><li>PlantWork</li></workDisables>
-	<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
@@ -110,7 +109,7 @@
     </forcedTraits>
 	
     <workDisables><li>Violent</li></workDisables>
-	<forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs>
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
@@ -138,7 +137,7 @@
     </forcedTraits>
 	
     <workDisables><li>Animals</li></workDisables>
-	<forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs>
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 </Defs>

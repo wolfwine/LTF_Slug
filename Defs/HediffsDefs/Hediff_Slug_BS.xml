@@ -1,173 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- slug natural exudation -->
 	<HediffDef>
-		<defName>Hediff_LTF_SlugLowExugation</defName>
+		<defName>Hediff_MaterialProduction_SlugDew_Natural</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate slug dew liquids now and then</description>
-		<label>Dew sceptical</label>
+		
+		<description>A very common condition for slugs. It forces them to exudate slug dew liquids now and then.
+The older slugs are, the fewer and less often they will exsudate.</description>
+		<label>natural slug exsudation</label>
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>LTF_SlugDew</thingToSpawn>
-			<spawnCount>1</spawnCount>
+					   <!-- MoharHediffs.HediffCompProperties_Spawner -->
+			<li Class="MoharHediffs.HediffCompProperties_Spawner">
+				<thingToSpawn>LTF_SlugDew</thingToSpawn>
+				
+				<spawnCount>75</spawnCount>
 
-			<minDaysB4Next>.4</minDaysB4Next>
-			<maxDaysB4Next>.5</maxDaysB4Next>
+				<minDaysB4Next>.5</minDaysB4Next>
+				<maxDaysB4Next>.8</maxDaysB4Next>
 
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
+				<graceDays>.3</graceDays>
+				<randomGrace>.5</randomGrace>
+				
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>false</spawnForbidden>
 
-			<spawnVerb>exugation</spawnVerb>
+				<hungerRelative>true</hungerRelative>
+				
+				<ageWeightedPeriod>true</ageWeightedPeriod>
+				<olderSmallerPeriod>false</olderSmallerPeriod>
 
-			<hungerRelative>true</hungerRelative>
-			<mandatoryGrace>true</mandatoryGrace>
-			<graceDays>.3</graceDays>
+				<ageWeightedQuantity>true</ageWeightedQuantity>
+				<olderBiggerQuantity>false</olderBiggerQuantity>
+				<exponentialQuantity>true</exponentialQuantity>
+				<!-- must be lower than 20; default = 15; dll limited -->
+				<exponentialRatioLimit>15</exponentialRatioLimit>
 
-			<tickerLimit>.3</tickerLimit>
-		</li>
+				<!-- <debug>true</debug> -->
+
+				<spawnVerb>exsudation</spawnVerb>			
+			</li>
 		</comps>
 	</HediffDef>
-<!---->	
-	<HediffDef>
-		<defName>Hediff_LTF_SlugMedExugation</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate slug dew liquids on a regular basis</description>
-		<label>Dew volonteer</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
-		
-		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>LTF_SlugDew</thingToSpawn>
-			<spawnCount>3</spawnCount>
 
-			<minDaysB4Next>.4</minDaysB4Next>
-			<maxDaysB4Next>.6</maxDaysB4Next>
-			
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>exugation</spawnVerb>
-			
-			<hungerRelative>true</hungerRelative>
-			<randomGrace>true</randomGrace>
-			<graceDays>.3</graceDays>
-			
-			<tickerLimit>.5</tickerLimit>
-		</li>
-		</comps>
-	</HediffDef>
-<!---->
-	<HediffDef>
-		<defName>Hediff_LTF_SlugHighExugation</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate slug dew liquids more than you wish</description>
-		<label>Dewkward</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
-		
-		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>LTF_SlugDew</thingToSpawn>
-			<spawnCount>7</spawnCount>
-			<minDaysB4Next>.6</minDaysB4Next>
-			<maxDaysB4Next>.8</maxDaysB4Next>
-			<!--<spawnIntervalRange>
-				<min>12000</min>
-				<max>18000</max>
-			</spawnIntervalRange>-->
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>exugation</spawnVerb>
-			
-			<hungerRelative>true</hungerRelative>
-			
-			<tickerLimit>.65</tickerLimit>
-		</li>
-		</comps>
-	</HediffDef>
-<!---->	
-	<HediffDef>
-		<defName>Hediff_LTF_SlugInsectExugation</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate some insects</description>
-		<label>Hive</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
-		
-		<comps>
-
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<animalThing>true</animalThing>
-			<!--<thingToSpawn>insect</thingToSpawn>-->
-			<animalName>Megascarab</animalName>
-			<spawnCount>1</spawnCount>
-			<minDaysB4Next>.5</minDaysB4Next>
-			<maxDaysB4Next>.7</maxDaysB4Next>
-
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>moult</spawnVerb>
-			
-			<hungerRelative>true</hungerRelative>
-			<healthRelative>true</healthRelative>
-			<randomGrace>true</randomGrace>
-			
-			<tickerLimit>1.5</tickerLimit>
-		</li>
-		</comps>
-	</HediffDef>
-<!---->	
-	<HediffDef>
-		<defName>Hediff_LTF_SlugRottingExugation</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate insect meat</description>
-		<label>Rotting flesh</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
-		
-		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>Meat_Megaspider</thingToSpawn>
-			<spawnCount>5</spawnCount>
-			<minDaysB4Next>1.5</minDaysB4Next>
-			<maxDaysB4Next>2</maxDaysB4Next>
-
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>moult</spawnVerb>
-			
-			<hungerRelative>true</hungerRelative>
-			<healthRelative>true</healthRelative>
-			<randomGrace>true</randomGrace>
-			
-			<tickerLimit>2.3</tickerLimit>
-		</li>
-		</comps>
-	</HediffDef>
-<!---->	
-	<HediffDef>
-		<defName>Hediff_LTF_SlugYayo</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<description>A rare condition that forces the pawn to exudate drugs</description>
-		<label>Yayo factory</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
-		
-		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
-			<thingToSpawn>Yayo</thingToSpawn>
-			<spawnCount>2</spawnCount>
-
-			<minDaysB4Next>2</minDaysB4Next>
-			<maxDaysB4Next>5</maxDaysB4Next>
-			
-			<spawnMaxAdjacent>40</spawnMaxAdjacent>
-			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>synthetization</spawnVerb>
-			
-			<mandatoryGrace>true</mandatoryGrace>
-			<graceDays>2</graceDays>
-			<hungerRelative>true</hungerRelative>
-			<healthRelative>true</healthRelative>
-			
-			<tickerLimit>3.5</tickerLimit>
-		</li>
-		</comps>
-	</HediffDef>
 </Defs>

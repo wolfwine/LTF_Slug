@@ -14,9 +14,10 @@
 		<beautyRelated>true</beautyRelated>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 
-		<spawnThingOnRemoved>SensoryTentacle</spawnThingOnRemoved>
+		<spawnThingOnRemoved>OpticalTentacle</spawnThingOnRemoved>
 		<tags>
 			<li>SightSource</li>
+			<li>HearingSource</li>
 		</tags>
 	</BodyPartDef>
 	
@@ -57,8 +58,8 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>SlugRaspingRadula</defName>
-		<label>rasping radula</label>
+		<defName>RadulaBP</defName>
+		<label>radula</label>
 		<hitPoints>5</hitPoints>
 
 		<frostbiteVulnerability>0</frostbiteVulnerability>
@@ -70,14 +71,14 @@
 
 		<socketed>true</socketed>
 		<tags>
-			<li>TalkingSource</li>
+			<!-- <li>TalkingSource</li> -->
 			<li>EatingSource</li>
 		</tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>SlugPneumostone</defName>
-		<label>Pneumostone</label>
+		<defName>PneumostomeBP</defName>
+		<label>Pneumostome</label>
 		
 		<socketed>true</socketed>
 		<hitPoints>12</hitPoints>
@@ -86,12 +87,13 @@
 		<beautyRelated>true</beautyRelated>
 		
 		<tags>
+			<li>TalkingSource</li>
 			<li>BreathingPathway</li>
 		</tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>SalivaryGland</defName>
+		<defName>SalivaryGlandBP</defName>
 		<label>salivary gland</label>
 		<hitPoints>15</hitPoints>
 		<skinCovered>false</skinCovered>
@@ -103,8 +105,8 @@
 	</BodyPartDef>
 
 	<BodyPartDef>
-		<defName>SlugVestigialShell</defName>
-		<label>remnant shell</label>
+		<defName>VestigialShellBP</defName>
+		<label>vestigial shell</label>
 		<hitPoints>15</hitPoints>
 		<skinCovered>false</skinCovered>
 		<solid>true</solid>

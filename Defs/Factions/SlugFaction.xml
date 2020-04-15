@@ -58,15 +58,12 @@
 			<li>Base_Neolithic_Standard</li>
 		</baseTraderKinds>
 		
+		<!-- https://www.color-hex.com/color-palette/90169 -->
 		<colorSpectrum>
-		<!--
-			<li>(153, 153, 255)</li>
-			<li>(255, 153, 102)</li>
-			-->
-
-			<li>(150, 0, 255)</li>
-			<li>(220, 200, 250)</li>
-			<li>(220, 120, 250)</li>
+			<li>(255,155,231)</li>
+			<!-- <li>(205,131,210)</li> -->
+			<li>(255,147,100)</li>
+			<li>(255,110,110)</li>
 		</colorSpectrum>
 
 		<mustStartOneEnemy>false</mustStartOneEnemy>

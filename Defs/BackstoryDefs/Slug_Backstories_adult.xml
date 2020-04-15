@@ -285,10 +285,11 @@ A - "na"
 </AlienRace.BackstoryDef>
 <!---->
 <AlienRace.BackstoryDef>
-		<defName>SlugBSQuote10</defName>
-		<title>Gofast veteran</title>
-		<titleShort>Ex gofast</titleShort>
-		<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adapts, overcomes.</baseDescription>
+
+	<defName>SlugBSQuote10</defName>
+	<title>Gofast veteran</title>
+	<titleShort>Ex gofast</titleShort>
+	<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adapts, overcomes.</baseDescription>
 
 	<slot>Adulthood</slot>
 	
@@ -312,7 +313,7 @@ A - "na"
 		<li><defName>Masochist</defName><chance>50</chance></li>
 	</forcedTraits>
 	
-	<forcedHediffs><li>Hediff_LTF_SlugYayo</li></forcedHediffs>
+	<!-- <forcedHediffs><li>Hediff_LTF_SlugYayo</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 <!---->
 <AlienRace.BackstoryDef>

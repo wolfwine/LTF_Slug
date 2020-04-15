@@ -2,11 +2,13 @@
 <Defs>
 	<FactionDef Abstract="True" Name="SlugFactionBase">
 		<factionIconPath>World/WorldObjects/Defaultbase</factionIconPath>
-		<!-- rose -->
+		<!-- https://www.color-hex.com/color-palette/90530 -->
 		<colorSpectrum>
-			<li>(150, 0, 255)</li>
-			<li>(220, 200, 250)</li>
-			<li>(220, 120, 250)</li>
+			<li>(237,227,150)</li>
+			<!-- <li>(236,197,135)</li> -->
+			<li>(241,170,127)</li>
+			<!-- <li>(242,148,156)</li> -->
+			<li>(231,132,193)</li>
 		</colorSpectrum>
 	</FactionDef>
 

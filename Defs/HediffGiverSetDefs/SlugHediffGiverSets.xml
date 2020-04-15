@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffGiverSetDef>
+		<defName>SlugHediffGiverSet</defName>
+		
+		<hediffGivers>
+			<li Class="LTF_Slug.HediffGiver_NaturalSlugDewExudator">
+				<hediff>Hediff_MaterialProduction_SlugDew_Natural</hediff>
+				
+				<partsToAffect>
+					<li>Stomach</li>
+				</partsToAffect>
+
+				<letterLabel>[PAWN_nameDef]'s natural exsudation</letterLabel>
+				<letter>[PAWN_nameDef]'s stomach makes [PAWN_objective] produce</letter>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+</Defs>

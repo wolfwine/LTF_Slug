@@ -24,7 +24,8 @@
 						<li>
 							<!-- <def>SlugHead</def> -->
 							<def>Head</def>
-							<coverage>0.08</coverage>
+							<!-- <coverage>0.08</coverage> -->
+							<coverage>0.6</coverage>
 							<height>Top</height>
 							<groups>
 								<li>UpperHead</li>
@@ -113,8 +114,8 @@
 									<parts>
 										<li>
 											<!-- <def>teeth</def> -->
-											<def>SlugRaspingRadula</def>
-											<customLabel>rasping radula</customLabel>
+											<def>RadulaBP</def>
+											<!-- <customLabel>rasping radula</customLabel> -->
 											<coverage>0.05</coverage>
 											<depth>Inside</depth>
 											<groups>
@@ -124,6 +125,7 @@
 										</li>
 									</parts>
 								</li>
+								
 							</parts>
 						</li>
 					</parts>
@@ -355,7 +357,7 @@
 					</groups>
 					<parts>
 						<li>
-							<def>SlugPneumostone</def>
+							<def>PneumostomeBP</def>
 							<coverage>0.05</coverage>
 							<depth>Outside</depth>
 							<groups>
@@ -367,14 +369,15 @@
 				</li>
 				<!-- <groups><li>GrooveOrgans</li></groups> -->
 				<li>
-					<def>Heart</def>
-					<coverage>0.015</coverage>
+					<def>Lung</def>
+					<customLabel>unique lung</customLabel>
+					<coverage>0.025</coverage>
 					<depth>Inside</depth>
 					<groups><li>SlugGroove</li></groups>
 				</li>
 
 				<li>
-					<def>SalivaryGland</def>
+					<def>SalivaryGlandBP</def>
 					<customLabel>left salivary gland</customLabel>
 					<coverage>0.02</coverage>
 					<depth>Inside</depth>
@@ -382,7 +385,7 @@
 				</li>
 
 				<li>
-					<def>SalivaryGland</def>
+					<def>SalivaryGlandBP</def>
 					<customLabel>right salivary gland</customLabel>
 					<coverage>0.02</coverage>
 					<depth>Inside</depth>
@@ -410,23 +413,16 @@
 					<height>Middle</height>
 					<groups><li>SlugUpperTrunk</li></groups>
 					<parts>
+
+						<!-- <li> -->
+							<!-- <def>Lung</def> -->
+							<!-- <customLabel>right lung</customLabel> -->
+							<!-- <coverage>0.025</coverage> -->
+							<!-- <depth>Inside</depth> -->
+							<!-- <groups><li>SlugUpperTrunk</li></groups> -->
+						<!-- </li> -->
 						<li>
-							<def>Lung</def>
-							<customLabel>left lung</customLabel>
-							<coverage>0.025</coverage>
-							<depth>Inside</depth>
-							<groups><li>SlugUpperTrunk</li></groups>
-						</li>
-						<li>
-							<def>Lung</def>
-							<customLabel>right lung</customLabel>
-							<coverage>0.025</coverage>
-							<depth>Inside</depth>
-							<groups><li>SlugUpperTrunk</li></groups>
-						</li>
-						<li>
-							<def>SlugVestigialShell</def>
-							<customLabel>right lung</customLabel>
+							<def>VestigialShellBP</def>
 							<coverage>0.01</coverage>
 							<depth>Inside</depth>
 							<groups><li>SlugUpperTrunk</li></groups>
@@ -454,6 +450,13 @@
 							<height>Middle</height>
 							<groups><li>SlugLowerTrunk</li></groups>
 							<parts>
+								<li>
+									<def>Heart</def>
+									<coverage>0.015</coverage>
+									<depth>Inside</depth>
+									<groups><li>SlugLowerTrunk</li></groups>
+								</li>
+							
 								<li>
 									<def>Kidney</def>
 									<customLabel>left kidney</customLabel>

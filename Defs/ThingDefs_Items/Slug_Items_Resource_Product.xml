@@ -85,6 +85,7 @@
 	<tickerType>Rare</tickerType>
 
 	<comps>
+		<!--
 		<li Class="LTF_Slug.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>7</spawnCount>
@@ -96,6 +97,7 @@
 			<spawnForbidden>false</spawnForbidden>
 			<spawnVerb>liquefaction</spawnVerb>
 		</li>
+		-->
 
 		<li Class="CompProperties_Lifespan">
 			<lifespanTicks>10000</lifespanTicks>
@@ -199,12 +201,11 @@
 		<Nutrition>0.1</Nutrition>
     </statBases>
 	
-	<!-- B19 <ingestible><nutrition>0.1</nutrition></ingestible> -->
-	
 	<fillPercent>0.1</fillPercent>
 	<tickerType>Rare</tickerType>
 
 	<comps>
+		<!--
 		<li Class="LTF_Slug.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
@@ -216,6 +217,7 @@
 			<spawnForbidden>false</spawnForbidden>
 			<spawnVerb>corrosion</spawnVerb>
 		</li>
+		-->
 	
 		<li Class="CompProperties_Lifespan">
 			<lifespanTicks>24000</lifespanTicks>
@@ -280,7 +282,6 @@
 		<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
 		<graphicClass>Graphic_StackCount</graphicClass>
 		<drawSize>1.5</drawSize>
-		<!-- <color>(138,43,226)</color> -->
 		<color>(109,31,47)</color>
 	</graphicData>
 
@@ -294,11 +295,12 @@
 		<DeteriorationRate>4</DeteriorationRate>
 		<Nutrition>0.3</Nutrition>
     </statBases>
-	<!-- B19 <ingestible><nutrition>0.3</nutrition></ingestible> -->
+
 	
 	<fillPercent>0.1</fillPercent>
 	<tickerType>Rare</tickerType>
 	
+	<!--
     <comps>
 		<li Class="LTF_Slug.CompProperties_LTF_Steamer"/>
 		
@@ -315,13 +317,8 @@
 			<spawnForbidden>false</spawnForbidden>
 			<spawnVerb>liquefaction</spawnVerb>
 		</li>
-		<!--
-		<li Class="CompProperties_Lifespan">
-			<lifespanTicks>15000</lifespanTicks>
-		</li>
-		-->
-		<!-- <li Class="CompProperties_Breakdownable"/> -->
     </comps>
+	-->
 	
 	<thingCategories>
 		<li>AnimalProductRaw</li>

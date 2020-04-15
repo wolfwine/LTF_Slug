@@ -158,14 +158,8 @@
 			<chanceToStartFire>.2</chanceToStartFire>
 		</li>
    
-		<!--<li Class="CompProperties_EggLayer">
-			<eggUnfertilizedDef>LTF_DewEgg</eggUnfertilizedDef>
-			<eggFertilizedDef>LTF_KrapkenEgg</eggFertilizedDef>
-			<eggFertilizationCountMax>1</eggFertilizationCountMax>
-			<eggLayIntervalDays>1</eggLayIntervalDays>
-			<eggProgressUnfertilizedMax>0.1</eggProgressUnfertilizedMax>
-			<eggCountRange>1</eggCountRange>
-		</li>-->
+
+		<!--
 		<li Class="LTF_Slug.CompProperties_LTF_Spawner">
 			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
@@ -177,11 +171,7 @@
 			<spawnForbidden>false</spawnForbidden>
 			<spawnVerb>desintegration</spawnVerb>
 		</li>
-<!--
-		<li Class="CompProperties_Lifespan">
-			<lifespanTicks>10000</lifespanTicks>
-		</li>
-	-->	
+		-->
     
     </comps>
 	

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<!-- -->
 	<HediffDef>
 		<defName>Hediff_LTF_SlugLowExugation</defName>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -8,7 +7,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>1</spawnCount>
 
@@ -37,7 +36,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>3</spawnCount>
 
@@ -65,7 +64,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>7</spawnCount>
 			<minDaysB4Next>.6</minDaysB4Next>
@@ -94,7 +93,7 @@
 		
 		<comps>
 
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<animalThing>true</animalThing>
 			<!--<thingToSpawn>insect</thingToSpawn>-->
 			<animalName>Megascarab</animalName>
@@ -123,7 +122,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<thingToSpawn>Meat_Megaspider</thingToSpawn>
 			<spawnCount>5</spawnCount>
 			<minDaysB4Next>1.5</minDaysB4Next>
@@ -150,7 +149,7 @@
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
-		<li Class="LTF_Slug.HediffCompProperties_LTF_Spawner">
+		<li Class="MoarHediffs.HediffCompProperties_Spawner">
 			<thingToSpawn>Yayo</thingToSpawn>
 			<spawnCount>2</spawnCount>
 
@@ -170,4 +169,3 @@
 		</li>
 		</comps>
 	</HediffDef>
-</Defs>
