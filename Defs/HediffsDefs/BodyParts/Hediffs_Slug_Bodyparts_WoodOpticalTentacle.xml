@@ -15,7 +15,7 @@
 	
 		<addedPartProps>
 			<solid>true</solid>
-			<partEfficiency>.3</partEfficiency>
+			<partEfficiency>.6</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
 	</HediffDef>
@@ -27,11 +27,13 @@
 		<label>wooden optical tentacle</label>
 		<labelNoun>a wooden optical tentacle</labelNoun>
 		<description>An installed wooden optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks>
+		<!-- <descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks> -->
+		<descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
 
-		<spawnThingOnRemoved>LTF_WoodOpticalTentacle</spawnThingOnRemoved>
+		<!-- <spawnThingOnRemoved>LTF_WoodOpticalTentacle</spawnThingOnRemoved> -->
+		<spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
 	</HediffDef>
-	
+	<!--
 	<ThingDef ParentName="BodyPartBionicBase">
 		<defName>LTF_WoodOpticalTentacle</defName>
 		<label>wooden optical tentacle</label>
@@ -49,15 +51,16 @@
 			<Mass>2</Mass>
 		</statBases>
 	</ThingDef>
-	
-	<RecipeDef Name="LTF_InstallWoodOpticalTentacle" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+	-->
+	<RecipeDef Name="LTF_InstallWoodOpticalTentacle" ParentName="SurgeryInstallWoodenPartBase" Abstract="true">
 		<defName>LTF_InstallWoodOpticalTentacle</defName>
 		
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>LTF_WoodOpticalTentacle</li>
+						<!-- <li>LTF_WoodOpticalTentacle</li> -->
+						<li>WoodLog</li>
 					</thingDefs>
 				</filter>
 				<count>1</count>
@@ -66,7 +69,8 @@
 		
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>LTF_WoodOpticalTentacle</li>
+				<!-- <li>LTF_WoodOpticalTentacle</li> -->
+				<li>WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 	
@@ -78,7 +82,8 @@
 		
 		<label>install left wooden optical tentacle</label>
 		<description>Install a left wooden optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks>
+		<!-- <descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks> -->
+		<descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
 		<jobString>Installing left wooden optical tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>
@@ -91,7 +96,8 @@
 		
 		<label>install right wooden optical tentacle</label>
 		<description>Install a right wooden optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks>
+		<!-- <descriptionHyperlinks><ThingDef>LTF_WoodOpticalTentacle</ThingDef></descriptionHyperlinks> -->
+		<descriptionHyperlinks><ThingDef>WoodLog</ThingDef></descriptionHyperlinks>
 		<jobString>Installing right wooden optical tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>
