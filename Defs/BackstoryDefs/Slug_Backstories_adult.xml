@@ -4,7 +4,7 @@
 		<defName>SlugBSQuote01</defName>
 		<title>Stamp inc ceo</title>
 		<titleShort>StampLicker</titleShort>
-		<baseDescription>[PAWN_nameDef] was spotted by stampInc and ended up as a CEO there</baseDescription>
+		<baseDescription>[PAWN_nameDef] was spotted by stampInc and ended up as a CEO there.</baseDescription>
 		<slot>Adulthood</slot>
 		
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -34,7 +34,7 @@
 		<defName>SlugBSQuote02</defName>
 		<title>Boat licker</title>
 		<titleShort>Boat</titleShort>
-		<baseDescription>[PAWN_nameDef] bought a boat but didnt like it. [PAWN_nameDef]D liked the customers though and somehow managed to create a boat club. [PAWN_nameDef] built a distribution network, made connections, a lot of money, having moved upwards of a million dollars worth of product over the fiscal year. </baseDescription>
+		<baseDescription>[PAWN_nameDef] bought a boat but did not like it. In the process, [PAWN_nameDef] realized [PAWN_pronoun] liked people who owned a boat though. Their minds and vanity were easy to manipulate. [PAWN_pronoun] somehow managed to create a boat club. [PAWN_pronoun] made connections, built a distribution network and earned a lot of money. [PAWN_pronoun] accumulated a million worth of sellings over the fiscal year.</baseDescription>
 		<slot>Adulthood</slot>
 		
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -44,7 +44,7 @@
 		  <li>SlugBackstory</li>
 		</spawnCategories>
 		<skillGains>
-			<li><defName>Social</defName><amount>2</amount></li>
+			<li><defName>Social</defName><amount>3</amount></li>
 			<li><defName>Crafting</defName><amount>2</amount></li>
 			<li><defName>Medicine</defName><amount>2</amount></li>
 			<li><defName>Cooking</defName><amount>2</amount></li>
@@ -59,13 +59,20 @@
 			<li>ManualDumb</li>
 			<li>Intellectual</li>
 		</workDisables>
+		<!-- mind ability -->
+		
+		<forcedItems>
+			<Silver>50~80</Silver>
+			<SmokeleafLeaves>5~12</SmokeleafLeaves>
+			<PsychoidLeaves>5~12</PsychoidLeaves>
+		</forcedItems>
     </AlienRace.BackstoryDef>
 <!---->
 	<AlienRace.BackstoryDef>
 		<defName>SlugBSQuote03</defName>
 		<title>Big fish bait</title>
 		<titleShort>Bait</titleShort>
-		<baseDescription>Some interplanetarian NGO had organ traffic presumptions. [PAWN_nameDef] infiltrated the holographic production as a comedian. She almost got slaughtered in the process but managed to prove the big fish guilt by gathering overwhelming evidence.</baseDescription>
+		<baseDescription>Some interplanetarian NGO had organ traffic presumptions. [PAWN_nameDef] infiltrated the holographic production as a comedian. [PAWN_pronoun] almost got slaughtered in the process but managed to prove the big fish guilt by gathering overwhelming evidence.</baseDescription>
 		<slot>Adulthood</slot>
 		
 		<bodyTypeMale>Male</bodyTypeMale>
@@ -74,13 +81,11 @@
 		<spawnCategories>
 		  <li>SlugBackstory</li>
 		</spawnCategories>
-		<maleCommonality>0</maleCommonality>
-		<femaleCommonality>100</femaleCommonality>
 		
 		<skillGains>
 			<li><defName>Melee</defName><amount>2</amount></li>
 			<li><defName>Shooting</defName><amount>1</amount></li>
-			<li><defName>Social</defName><amount>5</amount></li>
+			<li><defName>Social</defName><amount>3</amount></li>
 		</skillGains>
 		
 		<forcedTraits>
@@ -98,7 +103,7 @@
 		<titleShort>hippie</titleShort>
 		<baseDescription>A - "That person over there is a tree lover."
 B - "wha."
-A - "She tied her self to the tree, yo!"
+A - "[PAWN_pronoun] tied [PAWN_objective]self to the tree, yo!"
 B - "you joken me"
 A - "na"
 [PAWN_nameDef] - "you got a problem ?" </baseDescription>
@@ -107,21 +112,14 @@ A - "na"
 		<bodyTypeMale>Male</bodyTypeMale>
 		<bodyTypeFemale>Female</bodyTypeFemale>
 		
-		<maleCommonality>0</maleCommonality>
-		<femaleCommonality>100</femaleCommonality>
 		<spawnCategories>
 		  <li>SlugBackstory</li>
 		</spawnCategories>
 		
 		<skillGains>
-			<li><defName>Plants</defName><amount>3</amount></li>
+			<li><defName>Plants</defName><amount>4</amount></li>
 			<li><defName>Social</defName><amount>-2</amount></li>
 		</skillGains>
-		<!--
-		<forcedTraits>
-			<li><defName>GreenThumb</defName></li>
-		</forcedTraits>
-		-->
 </AlienRace.BackstoryDef>
 <!---->	
 <AlienRace.BackstoryDef>
@@ -154,7 +152,7 @@ A - "na"
 		<defName>SlugBSQuote06</defName>
 		<title>Slave one day</title>
 		<titleShort>slave</titleShort>
-		<baseDescription>[PAWN_nameDef] is a polymath: poet, musician, singer, cosmetologist, fashion designer, strategist, astronomer, botanist and former slave. Most people have never heard of [PAWN_nameDef], yet at least one of his innovations remain to this day: he introduced the idea of meals on a regular basis in the slug society. Since Slugs used to carry their nutrients on their mucous membrane all day long, it slightly improved the Slug Home Nebula hygiene.
+		<baseDescription>[PAWN_nameDef] is a polymath: poet, musician, singer, cosmetologist, fashion designer, strategist, astronomer, botanist and former slave. Most people have never heard of [PAWN_nameDef], yet at least one of his innovations remain to this day: [PAWN_pronoun] introduced the idea of meals on a regular basis in the slug society. Since Slugs used to carry their nutrients on their mucous membrane all day long, it slightly improved the Slug Home Nebula hygiene.
 		</baseDescription>
 
 		<slot>Adulthood</slot>
@@ -258,38 +256,14 @@ A - "na"
 			<li>Intellectual</li>
 		</workDisables>
 </AlienRace.BackstoryDef>
-<!---->
-<AlienRace.BackstoryDef>
-		<defName>SlugBSQuote09</defName>
-		<title>Drool sculptor</title>
-		<titleShort>sculptor</titleShort>
-		<baseDescription>[PAWN_nameDef] has always felt his excretions were great. Due to this, [PAWN_nameDef] begun to capture figures and craft opulent wares. Because even with his abundant morning dews, [PAWN_pronoun] was not able to gather enough drool to build his dream statues, [PAWN_nameDef] became something of a recluse and a drool thief. His behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot. Also art exportation is legal while slug dew, which can help crafting drugs, is not.</baseDescription>
 
-	<slot>Adulthood</slot>
-	
-	<bodyTypeGlobal>Fat</bodyTypeGlobal>
-	<!-- <bodyTypeMale>Male</bodyTypeMale> -->
-	<!-- <bodyTypeFemale>Female</bodyTypeFemale> -->
-	
-	<spawnCategories>
-		  <li>SlugBackstory</li>
-	</spawnCategories>
-		
-	<skillGains>
-		<li><defName>Artistic</defName><amount>6</amount></li>
-		<li><defName>Crafting</defName><amount>2</amount></li>
-    </skillGains>
-	<workDisables>
-		<li>Social</li>
-	</workDisables>	
-</AlienRace.BackstoryDef>
 <!---->
 <AlienRace.BackstoryDef>
 
-	<defName>SlugBSQuote10</defName>
+	<defName>SlugBSQuote09</defName>
 	<title>Gofast veteran</title>
 	<titleShort>Ex gofast</titleShort>
-	<baseDescription>[PAWN_nameDef] has been using its body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adapts, overcomes.</baseDescription>
+	<baseDescription>[PAWN_nameDef] has been using [PAWN_possessive] body in unconventionnal ways. Nature has its own way and the body has its reasons. It improvises, adapts, overcomes.</baseDescription>
 
 	<slot>Adulthood</slot>
 	
@@ -304,7 +278,7 @@ A - "na"
 		<li><defName>Social</defName><amount>-1</amount></li>
 		
 		<li><defName>Crafting</defName><amount>2</amount></li>
-		<li><defName>Medicine</defName><amount>1</amount></li>
+		<li><defName>Medicine</defName><amount>3</amount></li>
     </skillGains>
 
 	<forcedTraits>
@@ -313,11 +287,11 @@ A - "na"
 		<li><defName>Masochist</defName><chance>50</chance></li>
 	</forcedTraits>
 	
-	<!-- <forcedHediffs><li>Hediff_LTF_SlugYayo</li></forcedHediffs> -->
+	<forcedHediffs><li>Hediff_Wrapper_Yayo_BS</li></forcedHediffs>
 </AlienRace.BackstoryDef>
 <!---->
 <AlienRace.BackstoryDef>
-	<defName>SlugBSQuote11</defName>
+	<defName>SlugBSQuote10</defName>
 	<title>Mantispulated</title>
 	<titleShort>Nerd</titleShort>
 	<baseDescription>[PAWN_nameDef] pretends [PAWN_pronoun] was forced to harvest an engi by a mantis tryharder. The guy needed a VR device because he had a raid with its clan on the ansible. What the fudge dude!:kappa: [PAWN_nameDef] managed to escape thanks to his strafing and bunny hops skills.</baseDescription>

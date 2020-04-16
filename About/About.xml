@@ -31,21 +31,24 @@ As a result, Slug ships aren't built with sensors; the psychic powers of the cre
 	
 While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and deceitful. They prey upon ships that wander into their home systems, often leading them into traps, as well as resort to piracy in other systems.
 	
-- 10% psychic sensivity / 110% toxic sensivity
-- 90% Social
-- Drools : colonists will generate some slug dew ressource from time to time.
-- Xenophobic trait : social debuff with non slug beings
-	
+ - 50% psychic sensivity / 110% toxic sensivity
+ - 90% Social
+ - Drools : colonists will generate some slug dew ressource from time to time.
+ - Xenophobic trait : social debuff with non slug beings
+
+Backstories:
+ - 31
+
 Dependencies:
-	- Humanoid Alien Races 2.0
+ - Humanoid Alien Races 2.0
 
 Discussion thread:
-	- https://ludeon.com/forums/index.php?topic=37908.0
+ - https://ludeon.com/forums/index.php?topic=37908.0
 
 More Faster Than Light in RimWorld:
-	- Beam me up Scotty(Teleporter)
-	- Clone Bay
-	- Crystal
-	- Lanius
+ - Beam me up Scotty(Teleporter)
+ - Clone Bay
+ - Crystal
+ - Lanius
 </description>
 </ModMetaData>

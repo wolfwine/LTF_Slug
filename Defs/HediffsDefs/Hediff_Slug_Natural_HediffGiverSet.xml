@@ -2,11 +2,12 @@
 <Defs>
 	<!-- slug natural exudation -->
 	<HediffDef>
-		<defName>Hediff_MaterialProduction_SlugDew_Natural</defName>
+		<defName>SlugHediff_StomachExsudation_SlugDew_Natural</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A very common condition for slugs. It forces them to exudate slug dew liquids now and then.
-The older slugs are, the fewer and less often they will exsudate.</description>
+		
+The older slugs are, the fewer quantities and less frequently they will exsudate.</description>
 		<label>natural slug exsudation</label>
 		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
@@ -34,10 +35,7 @@ The older slugs are, the fewer and less often they will exsudate.</description>
 				<ageWeightedQuantity>true</ageWeightedQuantity>
 				<olderBiggerQuantity>false</olderBiggerQuantity>
 				<exponentialQuantity>true</exponentialQuantity>
-				<!-- must be lower than 20; default = 15; dll limited -->
 				<exponentialRatioLimit>15</exponentialRatioLimit>
-
-				<!-- <debug>true</debug> -->
 
 				<spawnVerb>exsudation</spawnVerb>			
 			</li>

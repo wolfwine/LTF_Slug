@@ -4,7 +4,7 @@
     <defName>SlugAdultClodfish01</defName>
     <title>Puppet master</title>
     <titleShort>Puppeteer</titleShort>
-    <baseDescription>In [PAWN_pronoun] first transit to another planet [PAWN_nameDef] was captured and enslaved by a crime gang. Using [PAWN_pronoun] psychic abilities [PAWN_nameDef] was not only able to get out of enslavement but even join the crime gang. In a month [PAWN_pronoun] was a vital part of the gang, finding where prey was hiding, finding moles and inspiring men but that wasn’t good enough for [PAWN_objective]. In a year [PAWN_pronoun] orchestrated a coup and took over the gang and all without ever picking up a gun. </baseDescription> 
+    <baseDescription>In [PAWN_possessive] first transit to another planet, [PAWN_nameDef] was captured and enslaved by a crime gang. Using [PAWN_possessive] psychic abilities, [PAWN_nameDef] was not only able to get out of enslavement but even join the crime gang. In a month [PAWN_pronoun] was a vital part of the gang, finding where prey was hiding, finding moles and inspiring men but that wasn’t good enough for [PAWN_objective]. In a year [PAWN_pronoun] orchestrated a coup and took over the gang and all without ever picking up a gun.</baseDescription> 
 
     <slot>Adulthood</slot>
 
@@ -15,17 +15,17 @@
         <li>SlugBackstory</li>
     </spawnCategories>
     <skillGains>
-        <li><defName>Shooting</defName><amount>-3</amount></li>
+        <li><defName>Shooting</defName><amount>-2</amount></li>
 		<li><defName>Intellectual</defName><amount>2</amount></li>
-		<li><defName>Social</defName><amount>2</amount></li>
+		<li><defName>Social</defName><amount>3</amount></li>
     </skillGains>
 
     <forcedTraits>
         <li><defName>Jealous</defName></li>
     </forcedTraits>
 	
-	<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
-	
+	<!-- Mind ability -->
+	<!-- <forcedHediffs><li>Hediff_MaterialProduction_Low_SlugDew_BS_Wrapper</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
@@ -43,9 +43,10 @@
     <spawnCategories>
         <li>SlugBackstory</li>
     </spawnCategories>
+
     <skillGains>
-        <li><defName>Shooting</defName><amount>-3</amount></li>
-		<li><defName>Melee</defName><amount>3</amount></li>
+        <li><defName>Shooting</defName><amount>-2</amount></li>
+		<li><defName>Melee</defName><amount>4</amount></li>
     </skillGains>
 
     <forcedTraits>
@@ -53,14 +54,13 @@
 		<li><defName>Brawler</defName></li>
     </forcedTraits>
 
-	<!-- <forcedHediffs><li>Hediff_LTF_SlugLowExugation</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
     <defName>SlugAdultClodfish03</defName>
     <title>Engi helper</title>
     <titleShort>Helper</titleShort>
-    <baseDescription>Taking apart machines and putting them back together can be a real pain in the neck, more so if the machine only has a loose screw. That's why [PAWN_nameDef] put [PAWN_possessive] telekinetic mind powers to use starting a business in an engi mechanical centre. [PAWN_nameDef] felt needed and valuable fixing tiny little issues in a blink of an eye for [PAWN_possessive] engi friends, especially when they gave [PAWN_objective] the nickname TimeSaver [PAWN_nameDef].</baseDescription> 
+    <baseDescription>Taking apart machines and putting them back together can be a real pain in the neck, more so if the machine only has a loose screw. That's why [PAWN_nameDef] put [PAWN_possessive] telekinetic predispositions to use, starting a business in an engi mechanical centre. [PAWN_nameDef] felt needed and valuable fixing tiny little issues in a blink of an eye for [PAWN_possessive] engi friends, especially when they gave [PAWN_objective] the nickname TimeSaver [PAWN_nameDef].</baseDescription> 
 
     <slot>Adulthood</slot>
 
@@ -81,7 +81,9 @@
     </forcedTraits>
 	
     <workDisables><li>PlantWork</li></workDisables>
-	<!-- <forcedHediffs><li>Hediff_LTF_SlugMedExugation</li></forcedHediffs> -->
+	
+	<!-- telekinetic ability -->
+	<!-- <forcedHediffs><li>Hediff_MaterialProduction_Low_SlugDew_BS_Wrapper</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 <AlienRace.BackstoryDef>
@@ -116,7 +118,7 @@
     <defName>SlugAdultClodfish05</defName>
     <title>Circus performer</title>
     <titleShort>performer</titleShort>
-    <baseDescription>[PAWN_nameDef] ship crashed landed onto a primitive world where [PAWN_pronoun] was taken in by a travelling circus. Suddenly the star performer in a freak show [PAWN_nameDef] didn’t really know what to make of [PAWN_possessive] life. However, feeling the happiness that emanate from the crowd was like a drug to [PAWN_nameDef], and [PAWN_pronoun] soon became addicted. So despite the terrible food, hygiene and disease [PAWN_nameDef] didn’t think it was all that bad. Apart from the wild animal performances though, those scared [PAWN_objective].</baseDescription> 
+    <baseDescription>[PAWN_nameDef] ship crashed landed onto a primitive world where [PAWN_pronoun] was taken in by a travelling circus. Suddenly the star performer in a freak show, [PAWN_nameDef] didn’t really know what to make of [PAWN_possessive] life. However, feeling the happiness that emanates from the crowd was like a drug to [PAWN_nameDef], and [PAWN_pronoun] soon became addicted. So despite the terrible food, hygiene and disease [PAWN_nameDef] didn’t think it was all that bad. Apart from the wild animal performances though, those scared [PAWN_objective].</baseDescription> 
 
     <slot>Adulthood</slot>
 
@@ -137,7 +139,7 @@
     </forcedTraits>
 	
     <workDisables><li>Animals</li></workDisables>
-	<!-- <forcedHediffs><li>Hediff_LTF_SlugHighExugation</li></forcedHediffs> -->
+	<!-- <forcedHediffs><li>Hediff_MaterialProduction_High_SlugDew_BS</li></forcedHediffs> -->
 </AlienRace.BackstoryDef>
 
 </Defs>

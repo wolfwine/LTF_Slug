@@ -6,7 +6,7 @@
 		
 		<hediffGivers>
 			<li Class="LTF_Slug.HediffGiver_NaturalSlugDewExudator">
-				<hediff>Hediff_MaterialProduction_SlugDew_Natural</hediff>
+				<hediff>SlugHediff_StomachExsudation_SlugDew_Natural</hediff>
 				
 				<partsToAffect>
 					<li>Stomach</li>

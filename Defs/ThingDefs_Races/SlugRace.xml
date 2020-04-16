@@ -10,22 +10,24 @@ As a result, Slug ships aren't built with sensors; the psychic powers of the cre
 	
 While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and deceitful. They prey upon ships that wander into their home systems, often leading them into traps, as well as resort to piracy in other systems.
 	
-- Psychic resistant : 20% psychic sensivity
+- Psychic resistant : 50% psychic sensivity
 - Toxic resistant : 90% toxic sensivity
-- Socially awkward : 85% Social, 90% Negotiation
+- Socially awkward : 90% Social, 90% Negotiation
 - Droolers : they will generate slug dew from time to time.
 - Xenophobic trait : bad social relations with non slug beings</description>
         
     <statBases>
-		<PsychicSensitivity>0.2</PsychicSensitivity>
+		<PsychicSensitivity>0.5</PsychicSensitivity>
 		<ToxicSensitivity>.9</ToxicSensitivity>
 		<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 		<ComfyTemperatureMax>32</ComfyTemperatureMax>
 		
 		<Mass>70</Mass>
 		<MeatAmount>80</MeatAmount>
-		<LeatherAmount>0</LeatherAmount>	
-		<Flammability>1</Flammability>
+		<!-- Leather does not carry psychic sensitivity -->
+		<LeatherAmount>0</LeatherAmount>
+		
+		<Flammability>.7</Flammability>
 		
 		<MarketValue>1800</MarketValue>
 		<MoveSpeed>4.61</MoveSpeed>
@@ -34,7 +36,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<!-- <MentalBreakThreshold>0.01</MentalBreakThreshold> -->
 		<!-- <ResearchSpeed>1.0</ResearchSpeed> -->
 		<!-- <MiningSpeed>1.0</MiningSpeed> -->
-		<SocialImpact>.85</SocialImpact>
+		<SocialImpact>.9</SocialImpact>
 		<NegotiationAbility>.9</NegotiationAbility>
 		
 		<!-- <ArmorRating_Blunt>0.1</ArmorRating_Blunt> -->
@@ -512,7 +514,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 
 			<forcedRaceTraitEntries>
 				<li><defName>Xenophobia</defName><degree>1</degree><chance>80</chance></li>
-				<li><defName>Bisexual</defName><chance>100</chance></li>
+				<li><defName>Bisexual</defName><chance>60</chance></li>
 			</forcedRaceTraitEntries>
 		</generalSettings>    
 
@@ -560,12 +562,12 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		<!-- <bloodDef>Filth_BloodInsect</bloodDef> -->
 		<bloodDef>Filth_SlugDew</bloodDef>
 		
-		<useMeatFrom>Human</useMeatFrom>
+		<!-- <useMeatFrom>Human</useMeatFrom> -->
+		<useMeatFrom>Megaspider</useMeatFrom>
 
 		<nameCategory>HumanStandard</nameCategory>
 
 		<body>SlugBodyDef</body>
-		<!-- <body>Slug</body> -->
 
 		<baseBodySize>1.0</baseBodySize>
 		<baseHealthScale>1.0</baseHealthScale>
