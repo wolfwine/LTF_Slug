@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Steel -->
+	<HediffDef Name="Hediff_Wood_SensoryTentacle" ParentName="AddedBodyPartBase" Abstract="true">
+		<!--
+		<stages>
+			<li>
+				<statOffsets>
+					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
+					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		-->
+	
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>.3</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+	
+	<!-- Hediff_Wood_SensoryTentacle_Regular -->
+	<HediffDef ParentName="Hediff_Wood_SensoryTentacle">
+		<defName>Hediff_Wood_SensoryTentacle_Regular</defName>
+
+		<label>wooden sensory tentacle</label>
+		<labelNoun>a wooden sensory tentacle</labelNoun>
+		<description>An installed wooden sensory tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_WoodSensoryTentacle</ThingDef></descriptionHyperlinks>
+
+		<spawnThingOnRemoved>LTF_WoodSensoryTentacle</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>LTF_WoodSensoryTentacle</defName>
+		<label>wooden sensory tentacle</label>
+		<description>An mediocre sensory tentacle.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_InstallLeftWoodSensoryTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightWoodSensoryTentacle</RecipeDef>
+		</descriptionHyperlinks>
+		
+		<costList>
+			<WoodLog>2</WoodLog>
+		</costList>
+		
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+	
+	<RecipeDef Name="LTF_InstallWoodSensoryTentacle" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+		<defName>LTF_InstallWoodSensoryTentacle</defName>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>LTF_WoodSensoryTentacle</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>LTF_WoodSensoryTentacle</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	
+		<addsHediff>Hediff_Wood_SensoryTentacle_Regular</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallWoodSensoryTentacle">
+		<defName>LTF_InstallLeftWoodSensoryTentacle</defName>
+		
+		<label>install left wooden sensory tentacle</label>
+		<description>Install a left wooden sensory tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_WoodSensoryTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing left wooden sensory tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugLeftOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallWoodSensoryTentacle">
+		<defName>LTF_InstallRightWoodSensoryTentacle</defName>
+		
+		<label>install right wooden sensory tentacle</label>
+		<description>Install a right wooden sensory tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_WoodSensoryTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing right wooden sensory tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugRightOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+</Defs>

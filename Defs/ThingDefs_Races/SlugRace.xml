@@ -203,6 +203,10 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 								</bodyTypes>
 							</north>
 						</offsets>
+						
+						<hediffGraphics>
+							<Hediff_Bionic_OpticalTentacle_Regular>Slug/BionicOpticalTentacle/LeftBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle_Regular>
+						</hediffGraphics>
 					</li>
 				   <!-- Right Optical tentacle-->
 					<li>
@@ -248,7 +252,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 							</north>
 						</offsets>
 						
-
+						<hediffGraphics>
+							<Hediff_Bionic_OpticalTentacle_Regular>Slug/BionicOpticalTentacle/RightBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle_Regular>
+						</hediffGraphics>
 					</li>
 					<!-- Left Sensory tentacle-->
 					<li>
@@ -637,6 +643,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		</hediffGiverSets>
 	</race>
     <recipes>
+		<li>LTF_InstallLeftBionicOpticalTentacle</li>
+		<li>LTF_InstallRightBionicOpticalTentacle</li>
+	
 		<li>InstallArchotechEye</li>
 		<li>InstallArchotechArm</li>
 		<li>InstallArchotechLeg</li>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Steel -->
+	<HediffDef Name="Hediff_Bionic_OpticalTentacle" ParentName="AddedBodyPartBase" Abstract="true">
+		<!--
+		<stages>
+			<li>
+				<statOffsets>
+					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
+					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		-->
+	
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+	
+	<!-- Hediff_Bionic_OpticalTentacle_Regular -->
+	<HediffDef ParentName="Hediff_Bionic_OpticalTentacle">
+		<defName>Hediff_Bionic_OpticalTentacle_Regular</defName>
+
+		<label>bionic optical tentacle</label>
+		<labelNoun>a bionic optical tentacle</labelNoun>
+		<description>An installed bionic optical tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_BionicOpticalTentacle</ThingDef></descriptionHyperlinks>
+
+		<spawnThingOnRemoved>LTF_BionicOpticalTentacle</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>LTF_BionicOpticalTentacle</defName>
+		<label>bionic optical tentacle</label>
+		<description>An advanced optical tentacle. A lattice-dust healing system allows it to recover from damage. It is better than a biological optical tentacle in almost every way.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_InstallLeftBionicOpticalTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightBionicOpticalTentacle</RecipeDef>
+		</descriptionHyperlinks>
+		
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+		
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+	
+	<RecipeDef Name="LTF_InstallBionicOpticalTentacle" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+		<defName>LTF_InstallBionicOpticalTentacle</defName>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>LTF_BionicOpticalTentacle</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>LTF_BionicOpticalTentacle</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	
+		<addsHediff>Hediff_Bionic_OpticalTentacle_Regular</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallBionicOpticalTentacle">
+		<defName>LTF_InstallLeftBionicOpticalTentacle</defName>
+		
+		<label>install left bionic optical tentacle</label>
+		<description>Install a left bionic optical tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_BionicOpticalTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing left bionic optical tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugLeftOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallBionicOpticalTentacle">
+		<defName>LTF_InstallRightBionicOpticalTentacle</defName>
+		
+		<label>install right bionic optical tentacle</label>
+		<description>Install a right bionic optical tentacle.</description>
+		<descriptionHyperlinks><ThingDef>LTF_BionicOpticalTentacle</ThingDef></descriptionHyperlinks>
+		<jobString>Installing right bionic optical tentacle.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugRightOpticalTentacle</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+</Defs>

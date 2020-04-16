@@ -3,7 +3,6 @@
 <Defs>
 
 	<BodyPartDef Name="OpticalTentacle" Abstract="True">
-	<!-- <BodyPartDef> -->
 		<defName>OpticalTentacle</defName>
 		<label>optical tentacle</label>
 		<hitPoints>15</hitPoints>
@@ -30,8 +29,20 @@
 		<label>right optical tentacle</label>
 	</BodyPartDef>
 	
+	<BodyPartDef>
+		<defName>OpticalTentacleBase</defName>
+		<hitPoints>5</hitPoints>
+
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<skinCovered>true</skinCovered>
+		<solid>true</solid>
+		<beautyRelated>false</beautyRelated>
+		<bleedRate>0</bleedRate>
+		<socketed>true</socketed>
+	</BodyPartDef>
+	
 	<BodyPartDef Name="SensoryTentacle" Abstract="True">
-	<!-- <BodyPartDef> -->
 		<defName>SensoryTentacle</defName>
 		<label>sensory tentacle</label>
 		<hitPoints>12</hitPoints>

@@ -43,44 +43,61 @@
 									</groups>
 								</li>
 								<li>
-									<def>SlugLeftOpticalTentacle</def>
-									<!-- <def>OpticalTentacle</def> -->
-									<customLabel>left optical tentacle</customLabel>
-									<coverage>0.07</coverage>
-									<groups>
-										<li>FullHead</li>
-										<li>Eyes</li>
-									</groups>
+									<def>OpticalTentacleBase</def>
+									<customLabel>left optical tentacle base</customLabel>
+									<coverage>0.01</coverage>
+									
 									<parts>
 										<li>
-											<def>Eye</def>
-											<customLabel>left eye</customLabel>
-											<coverage>0.1</coverage>
+											<def>SlugLeftOpticalTentacle</def>
+											<!-- <def>OpticalTentacle</def> -->
+											<customLabel>left optical tentacle</customLabel>
+											<coverage>0.07</coverage>
 											<groups>
 												<li>FullHead</li>
 												<li>Eyes</li>
 											</groups>
+											<parts>
+												<li>
+													<def>Eye</def>
+													<customLabel>left eye</customLabel>
+													<coverage>0.1</coverage>
+													<groups>
+														<li>FullHead</li>
+														<li>Eyes</li>
+													</groups>
+												</li>
+											</parts>
 										</li>
 									</parts>
+									
 								</li>
 								<li>
-									<def>SlugRightOpticalTentacle</def>
-									<!-- <def>OpticalTentacle</def> -->
-									<customLabel>right optical tentacle</customLabel>
-									<coverage>0.07</coverage>
-									<groups>
-										<li>FullHead</li>
-										<li>Eyes</li>
-									</groups>
+									<def>OpticalTentacleBase</def>
+									<customLabel>right optical tentacle base</customLabel>
+									<coverage>0.01</coverage>
+									
 									<parts>
 										<li>
-											<def>Eye</def>
-											<customLabel>right eye</customLabel>
-											<coverage>0.1</coverage>
+											<def>SlugRightOpticalTentacle</def>
+											<!-- <def>OpticalTentacle</def> -->
+											<customLabel>right optical tentacle</customLabel>
+											<coverage>0.07</coverage>
 											<groups>
 												<li>FullHead</li>
 												<li>Eyes</li>
 											</groups>
+											<parts>
+												<li>
+													<def>Eye</def>
+													<customLabel>right eye</customLabel>
+													<coverage>0.1</coverage>
+													<groups>
+														<li>FullHead</li>
+														<li>Eyes</li>
+													</groups>
+												</li>
+											</parts>
 										</li>
 									</parts>
 								</li>
