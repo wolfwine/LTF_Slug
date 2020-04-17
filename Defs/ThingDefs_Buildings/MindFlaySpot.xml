@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+  <ThingDef ParentName="BuildingBase">
+    <defName>LTF_MindFlaySpot</defName>
+    <label>Mind flay spot</label>
+    <description>Slug Mind flay ability fruit</description>
+	
+    <thingClass>Building</thingClass>
+	
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+	<hasInteractionCell>false</hasInteractionCell>
+	
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>false</useHitPoints>
+	<drawDamagedOverlay>false</drawDamagedOverlay>
+	<size>(1,1)</size>
+
+    <rotatable>false</rotatable>
+    <holdsRoof>false</holdsRoof>
+    <mineable>false</mineable>	
+	<randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+	
+    <graphicData>
+		<texPath>Things/AbilityBuilding/MindFlaySpot</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1,1)</drawSize>
+    </graphicData>
+	
+    <blockLight>false</blockLight>
+	<blockWind>false</blockWind>
+	
+    <coversFloor>true</coversFloor>
+    <neverMultiSelect>false</neverMultiSelect>
+	
+
+	
+    <tickerType>Rare</tickerType>
+	
+    <statBases>
+		<MaxHitPoints>200</MaxHitPoints>
+		<WorkToBuild>3000</WorkToBuild>
+    </statBases>
+	
+    <comps>
+		<li>
+			<compClass>CompColorable</compClass>
+		</li>
+		
+		<li Class="CompProperties_Glower">
+			<glowRadius>2</glowRadius>
+			<glowColor>(113,141,117,0)</glowColor>
+		</li>
+		<li Class="CompProperties_Lifespan">
+			<lifespanTicks>2000</lifespanTicks>
+			<!-- about 8 sec 460 tk= 8 * 60 / boring-->
+		</li>
+		<!--
+		<li Class="LTF_Crystal_Lockdowner.CompProperties_MakeIceOverlay">
+			<maxTicks>500</maxTicks>
+		</li>
+		-->
+    </comps>
+	
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+	
+    <building>
+		<expandHomeArea>false</expandHomeArea>
+		<repairable>false</repairable>
+		<isInert>true</isInert>
+		<ai_chillDestination>false</ai_chillDestination>
+		<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+    </building>
+	
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	
+	<filthLeaving>Filth_SlugDew</filthLeaving>
+	<!-- csharp overriden -->
+	<colorGenerator Class="ColorGenerator_Options">
+		<options>
+			<!-- pink -->
+			<li><weight>3</weight><only>RGBA(.8,.75,	1,	.6)</only></li>
+			<li><weight>2</weight><only>RGBA(1,	.8, 1,	.6)</only></li>
+			<li><weight>1</weight><only>RGBA(1,	.9, 1,	.6)</only></li>
+		</options>
+    </colorGenerator>
+
+	
+	</ThingDef>
+
+
+
+</Defs>
