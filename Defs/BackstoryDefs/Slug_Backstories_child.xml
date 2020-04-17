@@ -76,8 +76,8 @@
 		</spawnCategories>
 
 		<skillGains>
-			<li><defName>Plants</defName><amount>3</amount></li>
-			<li><defName>Animals</defName><amount>2</amount></li>
+			<li><defName>Plants</defName><amount>2</amount></li>
+			<li><defName>Animals</defName><amount>3</amount></li>
 			<li><defName>Construction</defName><amount>-1</amount></li>
 			<li><defName>Crafting</defName><amount>-1</amount></li>
 		</skillGains>
@@ -149,15 +149,14 @@
 			<li><defName>Animals</defName><amount>2</amount></li>
 			<li><defName>Artistic</defName><amount>2</amount></li>
 			<li><defName>Intellectual</defName><amount>2</amount></li>
-			<li><defName>Shooting</defName><amount>1</amount></li>
 		</skillGains>
+		
 		<forcedTraits>
 			<li><defName>DislikesMen</defName></li>
 		</forcedTraits>
 		
 		<workDisables>
 			<li>Caring</li>
-			<li>Social</li>
 		</workDisables>
     </AlienRace.BackstoryDef>
 	<!---->
@@ -165,7 +164,7 @@
 		<defName>SlugChildBS08</defName>
 		<title>Socially awkward</title>
 		<titleShort>awkward</titleShort>
-		<baseDescription>[PAWN_nameDef] has always felt awkward concerning [PAWN_pronoun] morning dews. [PAWN_nameDef] cant bear being sighted when it happens and feels very vulnerable. That's why [PAWN_nameDef] chose to live as a night hermit.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has always felt awkward concerning [PAWN_possessive] morning dews. [PAWN_nameDef] cant bear being sighted when it happens and feels very vulnerable. That's why [PAWN_nameDef] chose to live as a night hermit.</baseDescription>
 
 		<slot>Childhood</slot>
 
@@ -192,7 +191,7 @@
 		<defName>SlugChildBS09</defName>
 		<title>Rotting outside</title>
 		<titleShort>Rotting</titleShort>
-		<baseDescription>[PAWN_nameDef] has never exsudated like others. Others say [PAWN_nameDef] smells weird, but hey that's what moult is for.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has a 'cherry on the cake' condition. Others say [PAWN_nameDef] smells weird, but hey, that's what moult is for.</baseDescription>
 
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -201,8 +200,9 @@
 		
 		<skillGains>
 			<li><defName>Medicine</defName><amount>2</amount></li>
+			<li><defName>Cooking</defName><amount>1</amount></li>
 			<li><defName>Crafting</defName><amount>-2</amount></li>
-			<li><defName>Social</defName><amount>-2</amount></li>
+			<li><defName>Social</defName><amount>-1</amount></li>
 		</skillGains>
 		
 		<workDisables><li>Animals</li></workDisables>
@@ -214,7 +214,7 @@
 		<defName>SlugChildBS10</defName>
 		<title>Spacepirate fanboy</title>
 		<titleShort>fanboy</titleShort>
-		<baseDescription>[PAWN_nameDef] has always dreamt to be a space pirate like Cobra, Harlock or Black Raven. [PAWN_nameDef] chose to let aside its race predispositions aside to live the dream, one day.</baseDescription>
+		<baseDescription>[PAWN_nameDef] has always dreamt to be a space pirate like Cobra, Harlock or Black Raven. [PAWN_nameDef] chose to let aside its race predispositions to live the dream, one day.</baseDescription>
 
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -223,7 +223,7 @@
 		
 		<skillGains>
 			<li><defName>Construction</defName><amount>2</amount></li>
-			<li><defName>Social</defName><amount>3</amount></li>
+			<li><defName>Social</defName><amount>1</amount></li>
 			<li><defName>Crafting</defName><amount>2</amount></li>
 			<li><defName>Shooting</defName><amount>1</amount></li>
 			
@@ -240,7 +240,7 @@
 		<defName>SlugChildBS11</defName>
 		<title>Drool sculptor</title>
 		<titleShort>sculptor</titleShort>
-		<baseDescription>[PAWN_nameDef] has always felt [PAWN_possessive] excretions were great. Due to this, [PAWN_nameDef] begun to capture figures and craft opulent wares.
+		<baseDescription>[PAWN_nameDef] has always felt [PAWN_possessive] excretions were great. Due to this, [PAWN_nameDef] began to mold them and to capture figures and craft opulent wares.
 		
 Because even with [PAWN_possessive] abundant morning dews, [PAWN_pronoun] was not able to gather enough drool to build [PAWN_possessive] dream statues, [PAWN_nameDef] became something of a recluse and a drool thief. [PAWN_possessive] behavior is only tolerated by the rest of the slugs because some fetish creeps will pay fortunes for thrumbo shaped slug snot.</baseDescription>
 

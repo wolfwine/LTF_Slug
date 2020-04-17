@@ -4,53 +4,67 @@
   <RulePackDef>
     <defName>NamerPersonSlug</defName>
     <rulePack>
+
 		<rulesStrings>
-        <li>name->[negative] '[slugAdj]' [SlugNames2]</li>
-        <li>name->[SlugNames] [animal]</li>
-        <li>name->[slugAdj] '[negative]' [SlugNames2]</li>
-        <li>name->[negative] '[SlugNames]' [animal]</li>
-        <li>name->[animal] '[negative]' [SlugNames]</li>
-        <li>name->[color] '[slugAdj]' [SlugNames2]</li>
+			<li>name->[FirstName] '[slugAdj]' [SlugName]</li>
+			<li>name->[FirstName] '[badAdj]' [SlugName]</li>
+			<li>name->[FirstName] '[negative]' [SlugName]</li>
+			<li>name->[FirstName] '[SlugName2]' [SlugName]</li>
+			<li>name->[FirstName] '[badass]' [SlugName]</li>
+			<li>name->[FirstName] '[SlugName]' [roman]</li>
+	
+			<li>name->[color] '[SlugName2]' [SlugName]</li>
+
+			<li>name->[negative] '[slugAdj]' [SlugName]</li>
+			<li>name->[slugAdj] '[negative]' [SlugName]</li>
+			
+			<li>name->[FirstName] [SlugName]</li>
 		</rulesStrings>
 	  
-	<rulesRaw>
-		<li Class="Rule_File">
-          <keyword>SlugNames</keyword>
-          <path>SlugNames/SlugNames</path>
-        </li>
-		<li Class="Rule_File">
-          <keyword>SlugNames2</keyword>
-          <path>SlugNames/SlugNames2</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>animal</keyword>
-          <path>Words/Nouns/Animals</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>badass</keyword>
-          <path>Words/Nouns/People_Badass</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>games</keyword>
-          <path>Words/Nouns/Games</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>negative</keyword>
-          <path>Words/Nouns/Concepts_Badass</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>roman</keyword>
-          <path>Words/Misc/Numbers_SmallRoman</path>
-        </li>
-        <li Class="Rule_File">
-          <keyword>color</keyword>
-          <path>Words/Nouns/Colors</path>
-        </li>
-		<li Class="Rule_File">
-          <keyword>slugAdj</keyword>
-          <path>SlugNames/SlugAdj</path>
-        </li>
-	</rulesRaw>
+		<rulesRaw>
+			<li Class="Rule_File">
+				<keyword>badAdj</keyword>
+				<path>SlugNames/BadAdj</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>slugAdj</keyword>
+			  <path>SlugNames/SlugAdj</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>SlugName</keyword>
+			  <path>SlugNames/SlugNames</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>SlugNames</keyword>
+			  <path>SlugNames/SlugNames2</path>
+			</li>
+			
+			<li Class="Rule_File">
+			  <keyword>FirstName</keyword>
+			  <path>Common/UnisexFirstNames</path>
+			</li>
+
+			<li Class="Rule_File">
+			  <keyword>animal</keyword>
+			  <path>Words/Nouns/Animals</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>badass</keyword>
+			  <path>Words/Nouns/People_Badass</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>negative</keyword>
+			  <path>Words/Nouns/Concepts_Badass</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>roman</keyword>
+			  <path>Words/Misc/Numbers_SmallRoman</path>
+			</li>
+			<li Class="Rule_File">
+			  <keyword>color</keyword>
+			  <path>Words/Nouns/Colors</path>
+			</li>
+		</rulesRaw>
 	  
     </rulePack>
   </RulePackDef>

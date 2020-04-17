@@ -6,21 +6,23 @@
     <defName>NamerFactionSlugVillage</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->The [negative] [terrainfeature] [SlugNames]</li>
-        <li>name->[color] [badAdj] [SlugNames2] </li>
-        <li>name->[negative] [badAdj] [terrainfeature]</li>
-        <li>name->The [slugAdj] [SlugNames] [SlugNames2]</li>
-        <li>name->[negative] [color] [SlugNames2] [terrainfeature]</li>
+        <li>name->[color] [badAdj] [SlugNames2]</li>
+		<li>name->The [slugAdj] and [badAdj] [SlugNames2]</li>
+		
+        <li>name->[badAdj] [negative] [terrainfeature]</li>
+		<li>name->The [SlugNames2] of the [color] [terrainfeature]</li>
+		<li>name->The [badAdj] [SlugNames2] [terrainfeature]</li>
+		
 		<li>name->[slugAdj] [negative] [politicalunion]</li>
 		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
-		<li>name->[slugAdj] [SlugNames2] [politicalunion]</li>
-		<li>name->[badAdj] [SlugNames] [politicalunion]</li>
-		
-		<li>name->[slugAdj] [lightVessel] [type] [vesselRelated]</li>
-		<li>name->[SlugNames2] [mediumVessel] [vesselRelated]</li>
-		<li>name->[SlugNames2] [vesselRelated] [politicalunion]</li>
+		<li>name->The [slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames2] [politicalunion]</li>
+
+		<li>name->[color] [vesselRelated] [politicalunion]</li>
 		<li>name->[slugAdj] [vesselRelated] [politicalunion]</li>
-		<li>name->[slugAdj] [mediumVessel] [type] [vesselRelated]</li>
+		
+		<li>name->[SlugNames2] [mediumVessel] [vesselRelated]</li>
+		<li>name->[slugAdj] [mediumVessel][type] [vesselRelated]</li>
       </rulesStrings>
 	  
 	  <rulesRaw>
@@ -44,6 +46,7 @@
           <keyword>vesselRelated</keyword>
           <path>Vessels/vesselRelated</path>
         </li>
+		
 		<li Class="Rule_File">
           <keyword>politicalunion</keyword>
           <path>Words/Nouns/PoliticalUnions_Outlander</path>
@@ -52,6 +55,7 @@
           <keyword>terrainfeature</keyword>
           <path>Words/Nouns/TerrainFeatures</path>
         </li>
+		
 		<!-- adj -->
         <li Class="Rule_File">
           <keyword>negative</keyword>
