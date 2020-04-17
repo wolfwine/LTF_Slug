@@ -20,9 +20,9 @@
 		</addedPartProps>
 	</HediffDef>
 	
-	<!-- Hediff_Wood_OpticalTentacle_Regular -->
+	<!-- Hediff_Wood_OpticalTentacle -->
 	<HediffDef ParentName="Hediff_Wood_OpticalTentacle">
-		<defName>Hediff_Wood_OpticalTentacle_Regular</defName>
+		<defName>Hediff_Wood_OpticalTentacle</defName>
 
 		<label>wooden optical tentacle</label>
 		<labelNoun>a wooden optical tentacle</labelNoun>
@@ -74,7 +74,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	
-		<addsHediff>Hediff_Wood_OpticalTentacle_Regular</addsHediff>
+		<addsHediff>Hediff_Wood_OpticalTentacle</addsHediff>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="LTF_InstallWoodOpticalTentacle">

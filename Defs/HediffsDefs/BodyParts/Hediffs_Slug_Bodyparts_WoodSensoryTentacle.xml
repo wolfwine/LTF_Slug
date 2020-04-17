@@ -20,9 +20,9 @@
 		</addedPartProps>
 	</HediffDef>
 	
-	<!-- Hediff_Wood_SensoryTentacle_Regular -->
+	<!-- Hediff_Wood_SensoryTentacle -->
 	<HediffDef ParentName="Hediff_Wood_SensoryTentacle">
-		<defName>Hediff_Wood_SensoryTentacle_Regular</defName>
+		<defName>Hediff_Wood_SensoryTentacle</defName>
 
 		<label>wooden sensory tentacle</label>
 		<labelNoun>a wooden sensory tentacle</labelNoun>
@@ -79,7 +79,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	
-		<addsHediff>Hediff_Wood_SensoryTentacle_Regular</addsHediff>
+		<addsHediff>Hediff_Wood_SensoryTentacle</addsHediff>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="LTF_InstallWoodSensoryTentacle">

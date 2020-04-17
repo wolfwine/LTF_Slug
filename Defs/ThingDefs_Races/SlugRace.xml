@@ -164,12 +164,14 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						<path>Slug/Tentacle/LeftOpticalTentacle</path>
 						<bodyPart>SlugLeftOpticalTentacle</bodyPart>
 						<useSkinColor>true</useSkinColor>
+						
+						<!-- <layerInvert>true</layerInvert> -->
+						<inFrontOfBody>true</inFrontOfBody>
+						
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
 						<drawnInBed>false</drawnInBed>
-
-						<inFrontOfBody>true</inFrontOfBody>
 						
 						<offsets>
 							<!-- front -->
@@ -205,8 +207,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						</offsets>
 						
 						<hediffGraphics>
-							<Hediff_Bionic_OpticalTentacle_Regular>Slug/BionicOpticalTentacle/LeftBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle_Regular>
-							<Hediff_Wood_OpticalTentacle_Regular>Slug/WoodOpticalTentacle/LeftWoodOpticalTentacle</Hediff_Wood_OpticalTentacle_Regular>
+							<Hediff_Wood_OpticalTentacle>Slug/Artificial/OpticalTentacle/Wood/LeftWoodOpticalTentacle</Hediff_Wood_OpticalTentacle>
+							<Hediff_Prosthetic_OpticalTentacle>Slug/Artificial/OpticalTentacle/Prosthetic/LeftProstheticOpticalTentacle</Hediff_Prosthetic_OpticalTentacle>
+							<Hediff_Bionic_OpticalTentacle>Slug/Artificial/OpticalTentacle/Bionic/LeftBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle>
 						</hediffGraphics>
 					</li>
 				   <!-- Right Optical tentacle-->
@@ -214,12 +217,15 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						<path>Slug/Tentacle/RightOpticalTentacle</path>
 						<bodyPart>SlugRightOpticalTentacle</bodyPart>
 						<useSkinColor>true</useSkinColor>
+						
+						<inFrontOfBody>true</inFrontOfBody>
+						<!-- <layerInvert>true</layerInvert> -->
+						
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
 						<drawnInBed>false</drawnInBed>
 						
-						<inFrontOfBody>true</inFrontOfBody>
 						<offsets>
 							<!-- front -->
 							<south>
@@ -254,8 +260,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						</offsets>
 						
 						<hediffGraphics>
-							<Hediff_Bionic_OpticalTentacle_Regular>Slug/BionicOpticalTentacle/RightBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle_Regular>
-							<Hediff_Wood_OpticalTentacle_Regular>Slug/WoodOpticalTentacle/RightWoodOpticalTentacle</Hediff_Wood_OpticalTentacle_Regular>
+							<Hediff_Wood_OpticalTentacle>Slug/Artificial/OpticalTentacle/Wood/RightWoodOpticalTentacle</Hediff_Wood_OpticalTentacle>
+							<Hediff_Prosthetic_OpticalTentacle>Slug/Artificial/OpticalTentacle/Prosthetic/RightProstheticOpticalTentacle</Hediff_Prosthetic_OpticalTentacle>
+							<Hediff_Bionic_OpticalTentacle>Slug/Artificial/OpticalTentacle/Bionic/RightBionicOpticalTentacle</Hediff_Bionic_OpticalTentacle>
 						</hediffGraphics>
 					</li>
 					<!-- Left Sensory tentacle-->
@@ -263,12 +270,14 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						<path>Slug/Tentacle/LeftSensoryTentacle</path>
 						<bodyPart>SlugLeftSensoryTentacle</bodyPart>
 						<useSkinColor>true</useSkinColor>
+
+						<inFrontOfBody>true</inFrontOfBody>
+						<!-- <layerInvert>false</layerInvert> -->
+						
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
 						<drawnInBed>false</drawnInBed>
-						
-						<inFrontOfBody>true</inFrontOfBody>
 						
 						<offsets>
 							<!-- front -->
@@ -304,21 +313,25 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						</offsets>
 				
 						<hediffGraphics>
-							<Hediff_Bionic_SensoryTentacle_Regular>Slug/BionicSensoryTentacle/LeftBionicSensoryTentacle</Hediff_Bionic_SensoryTentacle_Regular>
-							<Hediff_Wood_SensoryTentacle_Regular>Slug/WoodSensoryTentacle/LeftWoodSensoryTentacle</Hediff_Wood_SensoryTentacle_Regular>
+							<Hediff_Wood_SensoryTentacle>Slug/Artificial/SensoryTentacle/Wood/LeftWoodSensoryTentacle</Hediff_Wood_SensoryTentacle>
+							<Hediff_Prosthetic_SensoryTentacle>Slug/Artificial/SensoryTentacle/Prosthetic/LeftProstheticSensoryTentacle</Hediff_Prosthetic_SensoryTentacle>
+							<Hediff_Bionic_SensoryTentacle>Slug/Artificial/SensoryTentacle/Bionic/LeftBionicSensoryTentacle</Hediff_Bionic_SensoryTentacle>
 						</hediffGraphics>
 					</li>
-				   <!-- Right Optical tentacle-->
+				   <!-- Right Sensory tentacle-->
 					<li>
 						<path>Slug/Tentacle/RightSensoryTentacle</path>
 						<bodyPart>SlugRightSensoryTentacle</bodyPart>
-						<drawnInBed>false</drawnInBed>
 						<useSkinColor>true</useSkinColor>
+
+						<inFrontOfBody>true</inFrontOfBody>
+						<!-- <layerInvert>false</layerInvert> -->
+						
+						<drawnInBed>false</drawnInBed>
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
 						
-						<inFrontOfBody>true</inFrontOfBody>
 						<offsets>
 							<!-- front -->
 							<south>
@@ -353,8 +366,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						</offsets>
 						
 						<hediffGraphics>
-							<Hediff_Bionic_SensoryTentacle_Regular>Slug/BionicSensoryTentacle/RightBionicSensoryTentacle</Hediff_Bionic_SensoryTentacle_Regular>
-							<Hediff_Wood_SensoryTentacle_Regular>Slug/WoodSensoryTentacle/RightWoodSensoryTentacle</Hediff_Wood_SensoryTentacle_Regular>
+							<Hediff_Wood_SensoryTentacle>Slug/Artificial/SensoryTentacle/Wood/RightWoodSensoryTentacle</Hediff_Wood_SensoryTentacle>
+							<Hediff_Prosthetic_SensoryTentacle>Slug/Artificial/SensoryTentacle/Prosthetic/RightProstheticSensoryTentacle</Hediff_Prosthetic_SensoryTentacle>
+							<Hediff_Bionic_SensoryTentacle>Slug/Artificial/SensoryTentacle/Bionic/RightBionicSensoryTentacle</Hediff_Bionic_SensoryTentacle>
 						</hediffGraphics>
 					</li>
 					<!-- Upper trunk -->
