@@ -6,7 +6,7 @@
     <label>Slug - Don't just sit there and drool.</label>
     <description>No salt k thx</description>
 	<scenario>
-	<summary>Drooling all day baby</summary>
+	<summary>The more bullets flying, the less accurate each individual slug has to be.</summary>
 	<playerFaction>
 		<def>PlayerFaction</def>
 		<factionDef>SlugPlayerColony</factionDef>

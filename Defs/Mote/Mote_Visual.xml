@@ -15,6 +15,8 @@
 			<fadeInTime>0.75</fadeInTime>
 			<solidTime>0.5</solidTime>
 			<fadeOutTime>0.65</fadeOutTime>
+			<rotateTowardsMoveDirection>true</rotateTowardsMoveDirection>
+			<growthRate>-0.3</growthRate>
 		</mote>
 	</ThingDef>
 

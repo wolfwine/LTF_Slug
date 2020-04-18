@@ -34,8 +34,6 @@
     <coversFloor>true</coversFloor>
     <neverMultiSelect>false</neverMultiSelect>
 	
-
-	
     <tickerType>Rare</tickerType>
 	
     <statBases>
@@ -71,6 +69,7 @@
 		<isInert>true</isInert>
 		<ai_chillDestination>false</ai_chillDestination>
 		<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		<deconstructible>false</deconstructible>
     </building>
 	
 	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -79,10 +78,13 @@
 	<!-- csharp overriden -->
 	<colorGenerator Class="ColorGenerator_Options">
 		<options>
-			<!-- pink -->
-			<li><weight>3</weight><only>RGBA(.8,.75,	1,	.6)</only></li>
-			<li><weight>2</weight><only>RGBA(1,	.8, 1,	.6)</only></li>
-			<li><weight>1</weight><only>RGBA(1,	.9, 1,	.6)</only></li>
+			<!-- purple to orange -->
+			<li><only>(255, 147, 0)</only></li>
+			<li><only>(225, 115, 39)</only></li>
+			<li><only>(199, 89, 75)</only></li>
+			<li><only>(173, 61, 111)</only></li>
+			<li><only>(147, 33, 145)</only></li>
+
 		</options>
     </colorGenerator>
 

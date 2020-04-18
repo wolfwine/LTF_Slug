@@ -8,15 +8,13 @@
 		<rulesStrings>
 			<li>name->[FirstName] '[slugAdj]' [SlugName]</li>
 			<li>name->[FirstName] '[badAdj]' [SlugName]</li>
-			<li>name->[FirstName] '[negative]' [SlugName]</li>
 			<li>name->[FirstName] '[SlugName2]' [SlugName]</li>
 			<li>name->[FirstName] '[badass]' [SlugName]</li>
 			<li>name->[FirstName] '[SlugName]' [roman]</li>
 	
 			<li>name->[color] '[SlugName2]' [SlugName]</li>
 
-			<li>name->[negative] '[slugAdj]' [SlugName]</li>
-			<li>name->[slugAdj] '[negative]' [SlugName]</li>
+			<li>name->[slugAdj] '[SlugName2]' [SlugName]</li>
 			
 			<li>name->[FirstName] [SlugName]</li>
 		</rulesStrings>

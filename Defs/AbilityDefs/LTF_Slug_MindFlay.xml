@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Class="AbilityUser.ProjectileDef_Ability" Name="LTF_MindflayProjectile">
+	<ThingDef Class="AbilityUser.ProjectileDef_Ability" Name="LTF_MindFlayProjectile">
 		<defName>LTF_MindFlayProjectile</defName>
 		<category>Projectile</category>
 		<label>Ice spark</label>
-		<!-- <thingClass>Firestarter.FirestarterSpark</thingClass> -->
+		
 		<thingClass>AbilityUser.Projectile_Ability</thingClass>
 		
 		<graphicData>
-			<texPath>NullTex</texPath>
+			<!-- <texPath>NullTex</texPath> -->
+			<texPath>Things/Mote/SparkThrownBlue</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>Transparent</shaderType>
+			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 
 		<tickerType>Normal</tickerType>
@@ -23,7 +24,7 @@
 			<flyOverhead>true</flyOverhead>
 			<damageDef>Bite</damageDef>
 			<damageAmountBase>0</damageAmountBase>
-			<speed>9999</speed>
+			<speed>10</speed>
 		</projectile>
 	</ThingDef>
 
@@ -66,7 +67,8 @@ Each psychic sensitive living creature in this area will see its combat skills d
 			<defaultProjectile>LTF_MindFlayProjectile</defaultProjectile>
 			<warmupTime>.2</warmupTime>
 			
-			<soundCast>PsychicInsanityLanceCast</soundCast>
+			<!-- <soundCast>PsychicInsanityLanceCast</soundCast> -->
+			<soundCast>LTF_Slug_MindFlayCast</soundCast>
 			
 			<muzzleFlashScale>20</muzzleFlashScale>
 			<isPrimary>false</isPrimary>

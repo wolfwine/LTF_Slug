@@ -83,9 +83,14 @@ namespace LTF_Slug
             //lockBlock.SetColor(lockDowner.DrawColor);
             GenSpawn.Spawn(mindFlaySpot, destinationCell, map, Rot4.North, WipeMode.Vanish);
 
-            ThrowMicroFlakes(destinationCell.ToVector3(), map);
+            mindFlaySpot.SetFaction(Faction.OfPlayer);
 
-            foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(destinationCell, Rot4.North, IntVec2.North))
+            int randMotesNum = Rand.Range(3, 7);
+
+            for(int i=0;i<randMotesNum;i++)
+                ThrowMicroFlakes(destinationCell.ToVector3(), map);
+            
+            foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(mindFlaySpot))
                 if(puff.InBounds(map))
                     MoteMaker.ThrowAirPuffUp(puff.ToVector3(), map);
         }
@@ -98,15 +103,14 @@ namespace LTF_Slug
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MindFlay"), null);
             moteThrown.Scale = Rand.Range(0.5f, 1.2f);
-            moteThrown.rotationRate = Rand.Range(-12f, 36f);
+            moteThrown.rotationRate = Rand.Range(0f, 50f);
 
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition -= new Vector3(0.5f, 0f, 0.5f);
             moteThrown.exactPosition += new Vector3(Rand.Value, 0f, Rand.Value);
-            moteThrown.SetVelocity((float)Rand.Range(35, 45), 1.2f);
 
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
-            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
+            moteThrown.SetVelocity(Rand.Range(0f, 360f), Rand.Range(1f, 4f));
+
             GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 

@@ -158,7 +158,7 @@ namespace LTF_Slug
     {
         public static AbilityUser.AbilityDef LTF_Slug_MindFlayer;
     }
-
+    /*
     public class MindFlayerSpark : Projectile_AbilityBase
     {
         protected override void Impact(Thing hitThing)
@@ -168,5 +168,6 @@ namespace LTF_Slug
             MindFlayerUtility.CreateMindFlaySpot(hitThing);
         }
     }
+    */
 
 }
