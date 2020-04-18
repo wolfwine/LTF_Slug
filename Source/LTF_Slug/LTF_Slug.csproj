@@ -59,6 +59,7 @@
     <Compile Include="LTF_Slug_MindFlayEffect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools.cs" />
+    <Compile Include="ToolsCell.cs" />
     <Compile Include="ToolsPawn.cs" />
   </ItemGroup>
   <ItemGroup>

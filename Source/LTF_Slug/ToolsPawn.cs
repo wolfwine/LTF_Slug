@@ -14,6 +14,14 @@ namespace LTF_Slug
 {
     public class ToolsPawn
     {
+        private static string vestiShellName = "VestigialShellBP";
+
+        public static bool CheckPawn(Pawn pawn)
+        {
+            //return (pawn != null && pawn.Map != null && pawn.Position != null);
+            return (pawn != null && pawn.Map != null);
+        }
+
         public static BodyPartRecord GetBrain(Pawn pawn)
         {
             pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).TryRandomElement(out BodyPartRecord bodyPart);
@@ -26,11 +34,12 @@ namespace LTF_Slug
             return bodyPart;
         }
 
-        public static void Warn(string warning, bool debug = false)
+        public static BodyPartRecord GetVestiShell(Pawn pawn)
         {
-            if(debug)
-                Log.Warning(warning);
-        }
+            BodyPartDef vestiShell = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == vestiShellName).RandomElement();
 
+            pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
+            return bodyPart;
+        }
     }
 }

@@ -18,29 +18,27 @@ namespace LTF_Slug
 
         public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
         {
-            Tools.Warn("CanHitTargetFrom : Blink in TryCastShot with root" + root + " and target" + targ, myDebug);
-
+            //Tools.Warn("CanHitTargetFrom : Blink in TryCastShot with root" + root + " and target" + targ, myDebug);
             if (UseAbilityProps.AbilityTargetCategory == AbilityTargetCategory.TargetLocation)
             {
-                Tools.Warn("AbilityTargetCategory == TargetLocation; base.CanHitTargetFrom", myDebug);
+                //Tools.Warn("AbilityTargetCategory == TargetLocation; base.CanHitTargetFrom", myDebug);
                 return base.CanHitTargetFrom(root, targ);
             }
-            Tools.Warn("??? AbilityTargetCategory != TargetLocation; TryFindShootLineFromTo", myDebug);
-
+            //Tools.Warn("??? AbilityTargetCategory != TargetLocation; TryFindShootLineFromTo", myDebug);
             return TryFindShootLineFromTo(root, targ, out ShootLine shootLine);
         }
 
         protected override bool TryCastShot()
         {
-            Tools.Warn("Entering TryCastShot", myDebug);
+            //Tools.Warn("Entering TryCastShot", myDebug);
 
             if (currentTarget != null && CasterPawn != null && currentTarget.Cell != null && currentTarget.Cell.IsValid)
             {
-                Tools.Warn("Valid target in TryCastShot", myDebug);
-                CreateMindFlaySpot(currentTarget.Cell, CasterPawn.Map);
-                Tools.Warn("created MindFlaySpot in TryCastShot", myDebug);
+                //                Tools.Warn("Valid target in TryCastShot", myDebug);
+                //CreateMindFlaySpot(currentTarget.Cell, CasterPawn.Map);
+                base.TryCastShot();
+                //                Tools.Warn("created MindFlaySpot in TryCastShot", myDebug);
                 return true;
-                //this.CasterPawn.SetPositionDirect(this.currentTarget.Cell);
             }
             else
             {
@@ -51,29 +49,6 @@ namespace LTF_Slug
             //ability.TicksUntilCasting = (int)this.UseAbilityProps.SecondsToRecharge * GenTicks.TicksPerRealSecond;
 
             return false;
-        }
-        /*
-        public virtual void Effect()
-        {
-            string message = string.Empty;
-
-            CreateLockBlocks(CasterPawn);
-            MoteMaker.ThrowText(CasterPawn.DrawPos, CasterPawn.Map, message);
-        }
-        */
-
-        //IntVec3
-        public static IntVec3 InvertIntVec3(IntVec3 intVec3)
-        {
-            IntVec3 temp;
-            int x, y, z;
-            x = intVec3.x; y = intVec3.y; z = intVec3.z;
-
-            x *= -1;
-            z *= -1;
-
-            temp = new IntVec3(x, y, z);
-            return (temp);
         }
         
         public static void CreateMindFlaySpot(IntVec3 destinationCell, Map map)
@@ -103,7 +78,8 @@ namespace LTF_Slug
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MindFlay"), null);
             moteThrown.Scale = Rand.Range(0.5f, 1.2f);
-            moteThrown.rotationRate = Rand.Range(0f, 50f);
+
+            moteThrown.rotationRate = Rand.Range(0f, 359f);
 
             moteThrown.exactPosition = loc;
             moteThrown.exactPosition -= new Vector3(0.5f, 0f, 0.5f);
@@ -114,12 +90,28 @@ namespace LTF_Slug
             GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
 
+        public void Effect()
+        {
+            IntVec3 correctedCell = currentTarget.Cell;
+
+            if (ToolsCell.CellHasBuildingOrMaturePlant(currentTarget.Cell, CasterPawn.Map, myDebug))
+                correctedCell = ToolsCell.GetCloserCell(CasterPawn.Position, currentTarget.Cell, CasterPawn.Map, myDebug);
+
+            if (correctedCell == IntVec3.Zero)
+            {
+                Tools.Warn("Failed to find a better cell", myDebug);
+                return;
+            }
+                
+            CreateMindFlaySpot(correctedCell, CasterPawn.Map);
+        }
+
         // Necessary for autocomplete ability
         public override void PostCastShot(bool inResult, out bool outResult)
         {
             if (inResult)
             {
-                //Effect();
+                Effect();
                 outResult = true;
             }
             outResult = inResult;

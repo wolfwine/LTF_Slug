@@ -4,15 +4,18 @@
 	<ThingDef Class="AbilityUser.ProjectileDef_Ability" Name="LTF_MindFlayProjectile">
 		<defName>LTF_MindFlayProjectile</defName>
 		<category>Projectile</category>
-		<label>Ice spark</label>
+		<label>Mind flay tentacle</label>
 		
-		<thingClass>AbilityUser.Projectile_Ability</thingClass>
+		<!-- <thingClass>AbilityUser.Projectile_Ability</thingClass> -->
+		<thingClass>LTF_Slug.MindFlayer_Projectile</thingClass>
 		
 		<graphicData>
 			<!-- <texPath>NullTex</texPath> -->
 			<texPath>Things/Mote/SparkThrownBlue</texPath>
+			<!-- <texPath>Things/Projectile/ShellHighExplosive</texPath> -->
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>MoteGlow</shaderType>
+			<!-- <shaderType>TransparentPostLight</shaderType> -->
 		</graphicData>
 
 		<tickerType>Normal</tickerType>
@@ -21,10 +24,11 @@
 		<neverMultiSelect>True</neverMultiSelect>
 		
 		<projectile>
-			<flyOverhead>true</flyOverhead>
+			<!-- <flyOverhead>true</flyOverhead> -->
+			<flyOverhead>false</flyOverhead>
 			<damageDef>Bite</damageDef>
 			<damageAmountBase>0</damageAmountBase>
-			<speed>10</speed>
+			<speed>110</speed>
 		</projectile>
 	</ThingDef>
 
@@ -46,7 +50,6 @@ Each psychic sensitive living creature in this area will see its combat skills d
 			
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
-			
 			<!-- Maybe -->
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<!-- Maybe -->
@@ -57,45 +60,35 @@ Each psychic sensitive living creature in this area will see its combat skills d
 			<abilityDef>LTF_Slug_MindFlayer</abilityDef>
 			<isViolent>false</isViolent>
 			
-			
-			<SecondsToRecharge>60.0</SecondsToRecharge>
+			<SecondsToRecharge>45.0</SecondsToRecharge>
 			
 			<range>15</range>
 			<burstShotCount>1</burstShotCount>
 			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 	  
 			<defaultProjectile>LTF_MindFlayProjectile</defaultProjectile>
-			<warmupTime>.2</warmupTime>
+			<!-- <defaultProjectile>Spark</defaultProjectile> -->
+			
+			<warmupTime>.5</warmupTime>
 			
 			<!-- <soundCast>PsychicInsanityLanceCast</soundCast> -->
 			<soundCast>LTF_Slug_MindFlayCast</soundCast>
 			
 			<muzzleFlashScale>20</muzzleFlashScale>
 			<isPrimary>false</isPrimary>
-			
 			<targetable>false</targetable>
-			<!-- <AbilityTargetCategory>TargetSelf</AbilityTargetCategory> -->
+
 			<AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 				
 				<canTargetItems>false</canTargetItems>
-				<canTargetPawns>false</canTargetPawns>
+				<canTargetPawns>true</canTargetPawns>
 				<canTargetBuildings>false</canTargetBuildings>
 				<canTargetSelf>false</canTargetSelf>
 				<!-- <canTargetSelf>true</canTargetSelf> -->
 			</targetParams>
-			<!--
-			<AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
-			
-			<targetParams>
-				<canTargetLocations>false</canTargetLocations>
-				<canTargetPawns>false</canTargetPawns>
-				<canTargetBuildings>false</canTargetBuildings>
-				<canTargetItems>false</canTargetItems>
-				<canTargetSelf>true</canTargetSelf>
-			</targetParams>
-			-->
+
 		</MainVerb>
 		
 	</AbilityUser.AbilityDef>

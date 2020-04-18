@@ -138,19 +138,18 @@ namespace LTF_Slug
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (AbilityUser.Drafted)
+            //if (AbilityUser.Drafted)
+            
+            IEnumerator<Gizmo> enumerator = base.CompGetGizmosExtra().GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                IEnumerator<Gizmo> enumerator = base.CompGetGizmosExtra().GetEnumerator();
-                while (enumerator.MoveNext())
-                {
-                    Gizmo current = enumerator.Current;
-                    yield return current;
-                }
-                for (int i = 0; i < this.AbilityData.AllPowers.Count; i++)
-                    yield return this.AbilityData.AllPowers[i].GetGizmo();
+                Gizmo current = enumerator.Current;
+                yield return current;
             }
+            for (int i = 0; i < this.AbilityData.AllPowers.Count; i++)
+                yield return this.AbilityData.AllPowers[i].GetGizmo();
+            
         }
-
     }
 
     [DefOf]
@@ -158,16 +157,12 @@ namespace LTF_Slug
     {
         public static AbilityUser.AbilityDef LTF_Slug_MindFlayer;
     }
-    /*
-    public class MindFlayerSpark : Projectile_AbilityBase
+
+    public class MindFlayer_Projectile : AbilityUser.Projectile_AbilityBase
     {
         protected override void Impact(Thing hitThing)
         {
             base.Impact(hitThing);
-            //LockdownerUtility.CreateLockBlocks(hitThing, DestinationCell);
-            MindFlayerUtility.CreateMindFlaySpot(hitThing);
         }
     }
-    */
-
 }

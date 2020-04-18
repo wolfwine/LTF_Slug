@@ -44,9 +44,9 @@
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">
 				<hediffToApply>SlugHediff_MantleMoult_BS</hediffToApply>
+
 				<bodyDef>SlugBodyDef</bodyDef>
-				
-				<bodyPartName>SlugMantle</bodyPartName>
+				<bodyPartDef>SlugMantle</bodyPartDef>
 			</li>
 		</comps>
 	</HediffDef>

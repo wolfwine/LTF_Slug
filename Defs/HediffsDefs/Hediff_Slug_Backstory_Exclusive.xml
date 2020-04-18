@@ -58,7 +58,8 @@ The older the slugs is, the bigger quantities and more frequently they will exsu
 				
 				<hediffToApply>SlugHediff_StomachExsudation_HighDew_BS</hediffToApply>
 				
-				<bodyPartName>Stomach</bodyPartName>
+				<bodyDef>SlugBodyDef</bodyDef>
+				<bodyPartDef>Stomach</bodyPartDef>
 			</li>
 		</comps>
 	</HediffDef>
@@ -122,7 +123,7 @@ The older the slugs is, the fewer quantities and less frequently they will exsud
 				
 				<hediffToApply>SlugHediff_StomachExsudation_LowDew_BS</hediffToApply>
 				
-				<bodyPartName>Stomach</bodyPartName>
+				<bodyPartDef>Stomach</bodyPartDef>
 			</li>
 		</comps>
 	</HediffDef>
@@ -176,7 +177,8 @@ This slug will vent a megascarab now and then. Maybe it will be acknowledged wit
 				
 				<hediffToApply>SlugHediff_StomachVenting_Megascarab</hediffToApply>
 				
-				<bodyPartName>Stomach</bodyPartName>
+				<bodyDef>SlugBodyDef</bodyDef>
+				<bodyPartDef>Stomach</bodyPartDef>
 			</li>
 		</comps>
 	</HediffDef>

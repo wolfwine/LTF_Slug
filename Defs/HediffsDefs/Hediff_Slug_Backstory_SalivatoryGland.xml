@@ -44,8 +44,9 @@
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">
 				<hediffToApply>SlugHediff_SalivaryGland_Yayo_BS</hediffToApply>
+				
 				<bodyDef>SlugBodyDef</bodyDef>
-				<bodyPartName>SalivaryGlandBP</bodyPartName>
+				<bodyPartDef>SalivaryGlandBP</bodyPartDef>
 			</li>
 		</comps>
 	</HediffDef>

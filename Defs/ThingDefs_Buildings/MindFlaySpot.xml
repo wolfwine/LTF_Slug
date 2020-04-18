@@ -20,7 +20,7 @@
     <rotatable>false</rotatable>
     <holdsRoof>false</holdsRoof>
     <mineable>false</mineable>	
-	<randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+	<!-- <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn> -->
 	
     <graphicData>
 		<texPath>Things/AbilityBuilding/MindFlaySpot</texPath>
@@ -31,7 +31,7 @@
     <blockLight>false</blockLight>
 	<blockWind>false</blockWind>
 	
-    <coversFloor>true</coversFloor>
+    <coversFloor>false</coversFloor>
     <neverMultiSelect>false</neverMultiSelect>
 	
     <tickerType>Rare</tickerType>
