@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-	<ThingDef ParentName="MoteBase">
-		<defName>Mote_MindFlay</defName>
+	<ThingDef Name="Mote_MindFlayBase" ParentName="MoteBase" Abstact="true">
+		<defName>Mote_MindFlayBase</defName>
 		
 		<graphicData>
-			<texPath>Mote/Mote_MindFlay</texPath>
+			<texPath>NullTex</texPath>
 			<shaderType>MoteGlow</shaderType>
 		</graphicData>
 		
@@ -20,5 +19,31 @@
 		</mote>
 	</ThingDef>
 
+	<!-- blue -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFlay_Blue</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFlay_Blue</texPath>
+		</graphicData>
+	</ThingDef>
+
+	<!-- orange -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFlay_Orange</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFlay_Orange</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<!-- purple -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFlay_Purple</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFlay_Purple</texPath>
+		</graphicData>
+	</ThingDef>
 
 </Defs>

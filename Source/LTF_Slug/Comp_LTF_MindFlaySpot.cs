@@ -27,10 +27,14 @@ namespace LTF_Slug
         int FlayageNum = 0;
 
         bool drawOverlay = true;
-        
+        bool drawUnderlay = true;
+
+        MyGfx.ClosestColor closestColor = MyGfx.ClosestColor.blue;
+
         // Debug 
         public bool gfxDebug = false;
         public bool prcDebug = false;
+        public bool myDebug = true;
 
         // Props
         public CompProperties_LTF_MindFlaySpot Props
@@ -60,7 +64,43 @@ namespace LTF_Slug
         public override void PostDraw()
         {
             base.PostDraw();
+
+            Material overlayMat = null;
+            Material underlayMat = null;
+
+            if (drawUnderlay)
+            {
+                if(closestColor == MyGfx.ClosestColor.blue)
+                    underlayMat = MyGfx.BlueUnderlayM;
+                if (closestColor == MyGfx.ClosestColor.orange)
+                    underlayMat = MyGfx.OrangeUnderlayM;
+                if (closestColor == MyGfx.ClosestColor.purple)
+                    underlayMat = MyGfx.PurpleUnderlayM;
+
+                float opacity = GfxEffects.VanillaPulse(parent);
+                // (1 - value) bc we want to rotate counter clockwise
+                float angle = (1 - GfxEffects.LoopAroundOneSuperSlow(parent)) * 360;
+
+                GfxEffects.DrawTickRotating(parent, underlayMat, 0, 0, 2*Range, angle, opacity, GfxEffects.Layer.under, false);
+
+            }
+            if (drawOverlay)
+            {
+                if (closestColor == MyGfx.ClosestColor.blue)
+                    overlayMat = MyGfx.BlueOverlayM;
+                if (closestColor == MyGfx.ClosestColor.orange)
+                    overlayMat = MyGfx.OrangeOverlayM;
+                if (closestColor == MyGfx.ClosestColor.purple)
+                    overlayMat = MyGfx.PurpleOverlayM;
+
+                float opacity = GfxEffects.PulseFactorOne(parent);
+                // (1 - value) bc we want to rotate counter clockwise
+                float angle = (1 - GfxEffects.LoopAroundOneNormal(parent)) * 360;
+
+                GfxEffects.DrawTickRotating(parent, overlayMat, 0, 0, 2*Range, angle, opacity, GfxEffects.Layer.under, false);
+            }
         }
+
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             //Building
@@ -68,26 +108,37 @@ namespace LTF_Slug
             buildingPos = building.DrawPos;
             myMap = building.Map;
 
+            closestColor = GfxEffects.ClosestColor(building, myDebug);
+
             SetRange();
         }
         public override void CompTickRare()
         {
             base.CompTickRare();
-            List<Pawn> affectedPawnList = new List<Pawn> { };
 
+            //Applying torment
+            List<Pawn> affectedPawnList = new List<Pawn> { };
             affectedPawnList = ToolsCell.GetPawnsInRadius(buildingPos.ToIntVec3(), Range, myMap);
 
             foreach (Pawn curPawn in affectedPawnList)
             {
+                // Slugs are immune to this
+                if (curPawn.IsSlug())
+                    continue;
+
                 // Add psychicSensitivity * SocialImpact * SocialSkill fight here
                 if (ToolsPawn.ApplyHediffOnBodyPartTag(curPawn, BodyPartTagDefOf.ConsciousnessSource, MyXmlDef.MindFlayedHediff, prcDebug))
                 {
                     Thought_Memory MindFlayed = (Thought_Memory)ThoughtMaker.MakeThought(MyXmlDef.MindFlayedThought);
                     curPawn.needs.mood.thoughts.memories.TryGainMemory(MindFlayed, Initiator);
-                    MindFlayEffect.ThrowMicroFlakes(curPawn.Position.ToVector3(), myMap);
+                    GfxEffects.ThrowMindFlayMote(curPawn.Position.ToVector3(), myMap);
                     FlayageNum++;
                 }
             }
+
+            //Checking if Initiator is not mad or downed or sleepin or on fire
+            if (Initiator.InMentalState || Initiator.Downed || Initiator.IsSleepingOrOnFire())
+                building.Destroy();
         }
 
         public override void PostExposeData()
@@ -144,12 +195,22 @@ namespace LTF_Slug
             {
                 yield return new Command_Action
                 {
+                    defaultLabel = "under " + drawUnderlay + "->" + !drawUnderlay,
+                    action = delegate
+                    {
+                        drawUnderlay = !drawUnderlay;
+                    }
+                };
+
+                yield return new Command_Action
+                {
                     defaultLabel = "over " + drawOverlay + "->" + !drawOverlay,
                     action = delegate
                     {
                         drawOverlay = !drawOverlay;
                     }
                 };
+                
             }
 
         }
@@ -157,7 +218,7 @@ namespace LTF_Slug
         {
             base.PostDrawExtraSelectionOverlays();
             // Flickering line between spot and twin
-            GenDraw.DrawLineBetween(parent.TrueCenter(), Initiator.TrueCenter(), SimpleColor.Red);
+            GenDraw.DrawLineBetween(parent.TrueCenter(), Initiator.TrueCenter(), SimpleColor.Magenta);
 
 
             if (Range > 0f)

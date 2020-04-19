@@ -16,6 +16,8 @@ namespace LTF_Slug
             if (!validPawn)
                 return false;
 
+
+            bool bla = pawn.IsColonist;
             bool appliedHediff = base.TryApply(pawn, null);
             if (hediff.Part != ToolsPawn.GetStomach(pawn))
             {

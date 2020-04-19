@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="CompProperties_LTF_MindFlaySpot.cs" />
     <Compile Include="Comp_LTF_MindFlaySpot.cs" />
+    <Compile Include="GfxEffects.cs" />
     <Compile Include="HediffGiver_Slug.cs" />
     <Compile Include="LTF_Slug_MindFlayAbilityUser.cs" />
     <Compile Include="LTF_Slug_MindFlayEffect.cs" />

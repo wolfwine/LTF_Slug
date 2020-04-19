@@ -3,7 +3,7 @@
 	
   <ThingDef ParentName="BuildingBase">
     <defName>LTF_MindFlaySpot</defName>
-    <label>Mind flay spot</label>
+    <label>Mind flay convergence</label>
     <description>Slug Mind flay ability fruit</description>
 	
     <thingClass>Building</thingClass>
@@ -56,7 +56,7 @@
 		</li>
 
 		<li Class="LTF_Slug.CompProperties_LTF_MindFlaySpot">
-			<range>3</range>
+			<range>2.5</range>
 		</li>
 		
     </comps>
@@ -78,12 +78,23 @@
 	<!-- csharp overriden -->
 	<colorGenerator Class="ColorGenerator_Options">
 		<options>
-			<!-- purple to orange -->
+			<!-- orange to purple -->
 			<li><only>(255, 147, 0)</only></li>
 			<li><only>(225, 115, 39)</only></li>
 			<li><only>(199, 89, 75)</only></li>
 			<li><only>(173, 61, 111)</only></li>
 			<li><only>(147, 33, 145)</only></li>
+			
+			<!-- red to Indigo -->
+			<li><only>(201, 27, 38)</only></li>
+			<li><only>(156, 15, 95)</only></li>
+			<li><only>(96, 4, 122)</only></li>
+			
+			<!-- light blue to dark blue -->
+			<li><only>(116, 187, 251)</only></li>
+			<li><only>(31, 117, 254)</only></li>
+			<li><only>(0, 0, 139)</only></li>
+
 
 		</options>
     </colorGenerator>

@@ -56,20 +56,6 @@ namespace LTF_Slug
             if (MindFlayer == true) this.AddPawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
         }
 
-        private BodyPartRecord GetHeart(Pawn pawn)
-        {
-            BodyPartRecord bodyPart = null;
-            //pawn.RaceProps.body.GetPartsWithTag("BloodPumpingSource").TryRandomElement(out bodyPart);
-            pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.BloodPumpingSource).TryRandomElement(out bodyPart);
-            if (bodyPart == null)
-            {
-                Tools.Warn("null heart ?", myDebug);
-            }
-
-            return bodyPart;
-        }
-
-
         public bool IsMindFlayer
         {
             get
@@ -79,7 +65,8 @@ namespace LTF_Slug
                     return false;
 
                 // race
-                val = IsSlug(AbilityUser);
+                //val = ToolsPawn.IsSlug(AbilityUser);
+                val = AbilityUser.IsSlug();
                 if (!val)
                 {
                     Tools.Warn(AbilityUser.LabelShort + " is not Slug", myDebug);
@@ -87,46 +74,22 @@ namespace LTF_Slug
                 }
 
                 // heart
-                BodyPartRecord heart = GetHeart(AbilityUser);
-                if (heart == null)
+                BodyPartRecord vestiShell = AbilityUser.GetVestiShell();
+                if (vestiShell == null)
                 {
-                    Tools.Warn(AbilityUser.LabelShort + " has no heart", myDebug);
+                    Tools.Warn(AbilityUser.LabelShort + " has no vesti shell", myDebug);
                     return false;
                 }
-
-                // crysta heart
-                if (heart.def.defName != "Heart")
-                {
-                    Tools.Warn(AbilityUser.LabelShort + " has a non legit " + heart.def.defName, myDebug);
-                    return false;
-                }
-
 
                 // crystal clear health
+                /*
                 List<Hediff> myHediffs = AbilityUser.health.hediffSet.hediffs;
                 for (int i = 0; i < myHediffs.Count; i++)
                 {
                     BodyPartRecord myBP = myHediffs[i].Part;
-
-                    if (myBP != heart) {
-                        continue;
-                    }
-                    else
-                    {
-                        Tools.Warn(AbilityUser.LabelShort + " is special", myDebug);
-                        val = false;
-                        break;
-                    }
-                }
-
+                    */
                 return val;
             }
-        }
-
-
-        private bool IsSlug(Pawn pawn)
-        {
-            return (pawn?.def.defName == "Alien_Slug");
         }
 
         public override bool TryTransformPawn()
@@ -138,17 +101,28 @@ namespace LTF_Slug
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            //if (AbilityUser.Drafted)
-            
-            IEnumerator<Gizmo> enumerator = base.CompGetGizmosExtra().GetEnumerator();
-            while (enumerator.MoveNext())
+            IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
+            while (gizmoEnum.MoveNext())
             {
-                Gizmo current = enumerator.Current;
+                Gizmo current = gizmoEnum.Current;
                 yield return current;
             }
-            for (int i = 0; i < this.AbilityData.AllPowers.Count; i++)
-                yield return this.AbilityData.AllPowers[i].GetGizmo();
-            
+            //if (AbilityUser.Drafted)
+            if (!AbilityUser.IsSleepingOrOnFire())
+            for (int i = 0; i < AbilityData.AllPowers.Count; i++)
+            {
+                yield return AbilityData.AllPowers[i].GetGizmo();
+                if(Prefs.DevMode)
+                yield return new Command_Action
+                {
+                    defaultLabel = "reset " + AbilityData.AllPowers[i].CooldownTicksLeft + " cooldown",
+                    defaultDesc = "cooldown=" + AbilityData.AllPowers[i].CooldownTicksLeft,
+                    action = delegate
+                    {
+                        AbilityData.AllPowers[i].CooldownTicksLeft = -1;
+                    }
+                };
+            }
         }
     }
 

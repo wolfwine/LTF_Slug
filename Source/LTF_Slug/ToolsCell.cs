@@ -30,9 +30,9 @@ namespace LTF_Slug
                     if( myThing.def.defName.Contains("Plant_Tree"))
                     {
                         Plant myPlant = (Plant)myThing;
-                        if (myPlant.Growth > .75f)
+                        if (myPlant.Growth > .5f)
                         {
-                            Tools.Warn(myThing.Label + " is a mature tree", myDebug);
+                            Tools.Warn(myThing.Label + " is a mature enough tree", myDebug);
                             return true;
                         }
                     }

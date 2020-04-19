@@ -12,14 +12,37 @@ using Verse;
 
 namespace LTF_Slug
 {
-    public class ToolsPawn
+    public static class ToolsPawn
     {
-        private static string vestiShellName = "VestigialShellBP";
+        private static readonly string vestiShellName = "VestigialShellBP";
+        private static readonly string slugDefName = "Alien_Slug";
 
         public static bool CheckPawn(Pawn pawn)
         {
             //return (pawn != null && pawn.Map != null && pawn.Position != null);
             return (pawn != null && pawn.Map != null);
+        }
+
+        /*
+        public static bool IsSlug{
+            get
+            {
+                return (this.pawn.IsSlug());
+            }
+        }
+        */
+        public static bool IsSlug(this Pawn pawn)
+        {
+            return (pawn?.def.defName == slugDefName);
+        }
+
+        public static bool IsSleepingOrOnFire(this Pawn pawn)
+        {
+            if (pawn.jobs.curJob != null && !pawn.jobs.IsCurrentJobPlayerInterruptible())
+            {
+                return true;
+            }
+            return false;
         }
 
         public static BodyPartRecord GetBrain(Pawn pawn)
@@ -34,11 +57,24 @@ namespace LTF_Slug
             return bodyPart;
         }
 
-        public static BodyPartRecord GetVestiShell(Pawn pawn)
+        public static BodyPartRecord GetVestiShell(this Pawn pawn)
         {
             BodyPartDef vestiShell = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == vestiShellName).RandomElement();
 
             pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
+            return bodyPart;
+        }
+
+        private static BodyPartRecord GetHeart(Pawn pawn, bool myDebug=false)
+        {
+            BodyPartRecord bodyPart = null;
+            //pawn.RaceProps.body.GetPartsWithTag("BloodPumpingSource").TryRandomElement(out bodyPart);
+            pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.BloodPumpingSource).TryRandomElement(out bodyPart);
+            if (bodyPart == null)
+            {
+                Tools.Warn("null heart ?", myDebug);
+            }
+
             return bodyPart;
         }
 
