@@ -40,7 +40,6 @@ namespace LTF_Slug
             }
             return false;
         }
-
         public static List<IntVec3> GenCellsBetween(IntVec3 source, IntVec3 destination, bool myDebug = false)
         {
             List<IntVec3> cellList = new List<IntVec3> { };
@@ -57,7 +56,7 @@ namespace LTF_Slug
             }
 
             // the line start from destination and goes to source
-
+            // https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
             int dx = Math.Abs(source.x - destination.x);
             int sx = (destination.x < source.x) ? 1 : -1;
             int dy = -Math.Abs(source.z - destination.z);
@@ -87,26 +86,9 @@ namespace LTF_Slug
                     break;
             }
             Tools.Warn("generated " + cellList.Count + " cells", myDebug);
-
-            /*
-            int norm = (int)Math.Sqrt((float)(Math.Pow(diffVector.x, 2) + Math.Pow(diffVector.z, 2)));
-            int neededCells = (int)(norm)-1;
-
-            Tools.Warn("Steps: " + neededCells, myDebug);
-            for (int i = 1; i <= neededCells; i++)
-            {
-                //myArray[i] = new IntVec3((int)(diffVector.x / neededCells)*i + destination.x, 0, (int)(diffVector.z / neededCells)*i + destination.z);
-                //Tools.Warn("generated " + "(" + i + "/" + neededCells + "): " + myArray[i], myDebug);
-
-                cellList.Add(new IntVec3((int)(diffVector.x / neededCells) * i + destination.x, 0, (int)(diffVector.z / neededCells) * i + destination.z));
-                Tools.Warn("generated " + "(" + i + "/" + neededCells + "): " + cellList.Last(), myDebug);
-            }
-            */
-
-
+             
             return cellList;
         }
-
         public static IntVec3 GetCloserCell(IntVec3 source, IntVec3 destination, Map myMap, bool myDebug = false)
         {
             IntVec3 answer = IntVec3.Zero;
@@ -131,6 +113,38 @@ namespace LTF_Slug
             }
 
             return answer;
+        }
+
+        public static List<Pawn> GetPawnsInRadius(IntVec3 center, float radius, Map myMap, bool humanLike = true, bool fromPlayerFaction = false)
+        {
+            List<Pawn> pawnList = new List<Pawn> { };
+
+            IEnumerable<IntVec3> inRangeCells = GenRadial.RadialCellsAround(center, radius, true);
+
+            foreach (IntVec3 myCell in inRangeCells)
+            {
+                if (!myCell.InBounds(myMap))
+                    continue;
+
+                if (myCell.Impassable(myMap))
+                    continue;
+
+                foreach (Thing thing in myCell.GetThingList(myMap))
+                {
+                    if (thing is Pawn curPawn)
+                    {
+                        if ((humanLike && !curPawn.RaceProps.Humanlike) || (!humanLike && curPawn.RaceProps.Humanlike))
+                            continue;
+
+                        if ((fromPlayerFaction && !curPawn.Faction.IsPlayer) || (!fromPlayerFaction && curPawn.Faction.IsPlayer))
+                            continue;
+
+                        pawnList.Add(curPawn);
+                    }
+                }
+            }
+
+            return pawnList;
         }
     }
 }

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Hediffs are RimWorld's status effects. They can influence different pawn stats, represent diseases, and more -->
+	
+	<HediffDef Name="Hediff_LTF_MindFlayedBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<initialSeverity>.25</initialSeverity>
+
+		<tendable>false</tendable>
+		<makesAlert>true</makesAlert>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<defaultLabelColor>(.9, .8, 1)</defaultLabelColor>
+
+		<comps>
+			<li Class="HediffCompProperties_GrowthMode">
+				<severityPerDayGrowing>0.3</severityPerDayGrowing>
+				<severityPerDayRemission>-0.2</severityPerDayRemission>
+				<severityPerDayGrowingRandomFactor>0.5~1.5</severityPerDayGrowingRandomFactor>
+				<severityPerDayRemissionRandomFactor>0.8~1.5</severityPerDayRemissionRandomFactor>
+			</li>
+			<!-- Protection vs hediff getting broken with clone bay -->
+			<!-- Hediff should normaly be destroyed by compPostRemove from Hediff_LTF_Confusion -->
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1000~2000</disappearsAfterTicks>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<!-- Hediff_LTF_MindFlayed -->
+	<HediffDef Name="Hediff_LTF_MindFlayed" ParentName="Hediff_LTF_MindFlayedBase">
+		<defName>Hediff_LTF_MindFlayed</defName>
+		<description>This psychic attack is focused on making the victim an easy and harmless target.</description>
+		<label>Mind flayed</label>
+		<labelNoun>a staged confusion</labelNoun>
+
+		<stages>
+			<li>
+			    <label>minor</label>
+				<minSeverity>0.2</minSeverity>
+				<painFactor>1.15</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>-.15</MeleeHitChance>
+					<MeleeDodgeChance>-.15</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-.1</ShootingAccuracyPawn>
+					<IncomingDamageFactor>.1</IncomingDamageFactor>
+					<AimingDelayFactor>.15</AimingDelayFactor>
+					<MeleeDPS>-.1</MeleeDPS>
+					<PsychicSensitivity>.1</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+			    <label>serious</label>
+				<minSeverity>0.4</minSeverity>
+				
+				<painFactor>1.3</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>-.35</MeleeHitChance>
+					<MeleeDodgeChance>-.35</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-.3</ShootingAccuracyPawn>
+					<IncomingDamageFactor>.3</IncomingDamageFactor>
+					<AimingDelayFactor>.35</AimingDelayFactor>
+					<MeleeDPS>-.3</MeleeDPS>
+					<PsychicSensitivity>.3</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+			    <label>extreme</label>
+				<minSeverity>0.7</minSeverity>
+				
+				<painFactor>1.15</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<MeleeHitChance>-.55</MeleeHitChance>
+					<MeleeDodgeChance>-.55</MeleeDodgeChance>
+					<ShootingAccuracyPawn>-.5</ShootingAccuracyPawn>
+					<IncomingDamageFactor>.5</IncomingDamageFactor>
+					<AimingDelayFactor>.55</AimingDelayFactor>
+					<MeleeDPS>-.5</MeleeDPS>
+					<PsychicSensitivity>.5</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

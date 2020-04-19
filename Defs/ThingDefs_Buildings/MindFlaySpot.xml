@@ -52,13 +52,13 @@
 		</li>
 		<li Class="CompProperties_Lifespan">
 			<lifespanTicks>2000</lifespanTicks>
-			<!-- about 8 sec 460 tk= 8 * 60 / boring-->
+			<!-- about 33s -->
 		</li>
-		<!--
-		<li Class="LTF_Crystal_Lockdowner.CompProperties_MakeIceOverlay">
-			<maxTicks>500</maxTicks>
+
+		<li Class="LTF_Slug.CompProperties_LTF_MindFlaySpot">
+			<range>3</range>
 		</li>
-		-->
+		
     </comps>
 	
     <forceDebugSpawnable>true</forceDebugSpawnable>

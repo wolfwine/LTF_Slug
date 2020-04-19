@@ -82,7 +82,7 @@ namespace LTF_Slug
                 val = IsSlug(AbilityUser);
                 if (!val)
                 {
-                    Tools.Warn(AbilityUser.LabelShort + " is not Crystal", myDebug);
+                    Tools.Warn(AbilityUser.LabelShort + " is not Slug", myDebug);
                     return false;
                 }
 

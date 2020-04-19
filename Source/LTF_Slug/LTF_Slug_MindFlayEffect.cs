@@ -51,7 +51,7 @@ namespace LTF_Slug
             return false;
         }
         
-        public static void CreateMindFlaySpot(IntVec3 destinationCell, Map map)
+        public static Thing CreateMindFlaySpot(IntVec3 destinationCell, Map map)
         {
             Building mindFlaySpot = (Building)ThingMaker.MakeThing(ThingDef.Named("LTF_MindFlaySpot"), null);
 
@@ -68,6 +68,8 @@ namespace LTF_Slug
             foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(mindFlaySpot))
                 if(puff.InBounds(map))
                     MoteMaker.ThrowAirPuffUp(puff.ToVector3(), map);
+
+            return (mindFlaySpot);
         }
 
         public static void ThrowMicroFlakes(Vector3 loc, Map map)
@@ -103,7 +105,21 @@ namespace LTF_Slug
                 return;
             }
                 
-            CreateMindFlaySpot(correctedCell, CasterPawn.Map);
+            Thing myNewSpot = CreateMindFlaySpot(correctedCell, CasterPawn.Map);
+            if(myNewSpot == null)
+            {
+                Tools.Warn("myNewSpot is null after CreateMindFlaySpot", myDebug);
+                return;
+            }
+
+            Comp_LTF_MindFlaySpot MindFlaySpotComp = myNewSpot.TryGetComp<Comp_LTF_MindFlaySpot>();
+            if(MindFlaySpotComp == null) { 
+                Tools.Warn("MindFlaySpotComp is null after TryGetComp", myDebug);
+                return;
+            }
+
+            MindFlaySpotComp.SetPawn(CasterPawn);
+
         }
 
         // Necessary for autocomplete ability

@@ -41,5 +41,26 @@ namespace LTF_Slug
             pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
             return bodyPart;
         }
+
+        public static bool ApplyHediffOnBodyPartTag(Pawn pawn, BodyPartTagDef BPTag, HediffDef hediffDef, bool myDebug)
+        {
+            pawn.RaceProps.body.GetPartsWithTag(BPTag).TryRandomElement(out BodyPartRecord bodyPart);
+            if (bodyPart == null)
+            {
+                Tools.Warn("null body part", myDebug);
+                return false;
+            }
+
+            Hediff hediff = HediffMaker.MakeHediff(MyXmlDef.MindFlayedHediff, pawn, bodyPart);
+            if (hediff == null)
+            {
+                Tools.Warn("hediff maker null", myDebug);
+                return false;
+            }
+
+            pawn.health.AddHediff(hediff, bodyPart, null);
+
+            return true;
+        }
     }
 }
