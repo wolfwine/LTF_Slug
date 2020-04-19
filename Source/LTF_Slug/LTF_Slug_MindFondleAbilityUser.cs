@@ -1,27 +1,19 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 using AbilityUser;
-using AlienRace;
-using UnityEngine;
 
-using System;
-using System.Diagnostics;
-using System.Text;
-
-using Verse.Sound;
 
 namespace LTF_Slug
 {
     [StaticConstructorOnStartup]
     // reference: https://github.com/roxxploxx/RimWorldModGuide/wiki/SHORTUTORIAL%3A-JecsTools.CompAbilityUser
 
-    public class CompMindFlayer : GenericCompAbilityUser 
+    public class CompMindFondler : GenericCompAbilityUser 
     {
         public bool myDebug = true;
 
-        public bool? MindFlayer;
+        public bool? MindFondler;
 
         public bool EnableAbilities = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().EnableAbilities;
 
@@ -31,16 +23,16 @@ namespace LTF_Slug
             //Log.Warning("CompTick");
             if (AbilityUser?.Spawned == true)
             {
-                if (MindFlayer != null)
+                if (MindFondler != null)
                 {
-                    if (MindFlayer == true)
+                    if (MindFondler == true)
                     {
                         base.CompTick();
                     }
                 }
                 else
                 {
-                    MindFlayer = TryTransformPawn();
+                    MindFondler = TryTransformPawn();
                     Initialize();
                 }
             }
@@ -50,11 +42,11 @@ namespace LTF_Slug
         public override void PostInitialize()
         {
             base.PostInitialize();
-            if (MindFlayer == true)
-                AddPawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
+            if (MindFondler == true)
+                AddPawnAbility(MindFondlerDefOf.LTF_Slug_MindFondler);
         }
 
-        public bool IsMindFlayer
+        public bool IsMindFondler
         {
             get
             {
@@ -85,7 +77,7 @@ namespace LTF_Slug
         public override bool TryTransformPawn()
         {
             if (!EnableAbilities) return false;
-            return IsMindFlayer;
+            return IsMindFondler;
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -117,12 +109,12 @@ namespace LTF_Slug
     }
 
     [DefOf]
-    public static class MindFlayerDefOf
+    public static class MindFondlerDefOf
     {
-        public static AbilityUser.AbilityDef LTF_Slug_MindFlayer;
+        public static AbilityUser.AbilityDef LTF_Slug_MindFondler;
     }
     
-    public class MindFlayer_Projectile : AbilityUser.Projectile_AbilityBase
+    public class MindFondler_Projectile : AbilityUser.Projectile_AbilityBase
     {
         protected override void Impact(Thing hitThing)
         {

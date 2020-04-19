@@ -28,6 +28,11 @@ namespace LTF_Slug
             }
         }
 
+        public static void ThrowMindFondleMote(Vector3 loc, Map map)
+        {
+            ThrowMindFlayMote(loc, map);
+        }
+
         public static void ThrowMindFlayMote(Vector3 loc, Map map)
         {
             if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)

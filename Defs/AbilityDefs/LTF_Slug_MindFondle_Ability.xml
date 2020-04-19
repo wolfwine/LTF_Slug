@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Class="AbilityUser.ProjectileDef_Ability" Name="LTF_MindFlayProjectile">
-		<defName>LTF_MindFlayProjectile</defName>
+	<ThingDef Class="AbilityUser.ProjectileDef_Ability" Name="LTF_MindFondleProjectile">
+		<defName>LTF_MindFondleProjectile</defName>
 		<category>Projectile</category>
-		<label>Mind flay tentacle</label>
+		<label>Mind fondle tentacle</label>
 		
-		<!-- <thingClass>AbilityUser.Projectile_Ability</thingClass> -->
-		<thingClass>LTF_Slug.MindFlayer_Projectile</thingClass>
+		<thingClass>LTF_Slug.MindFondler_Projectile</thingClass>
 		
 		<graphicData>
-			<!-- <texPath>NullTex</texPath> -->
 			<texPath>Things/Mote/SparkThrownBlue</texPath>
-			<!-- <texPath>Things/Projectile/ShellHighExplosive</texPath> -->
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>MoteGlow</shaderType>
-			<!-- <shaderType>TransparentPostLight</shaderType> -->
 		</graphicData>
 
 		<tickerType>Normal</tickerType>
@@ -24,7 +20,6 @@
 		<neverMultiSelect>True</neverMultiSelect>
 		
 		<projectile>
-			<!-- <flyOverhead>true</flyOverhead> -->
 			<flyOverhead>false</flyOverhead>
 			<damageDef>Bite</damageDef>
 			<damageAmountBase>0</damageAmountBase>
@@ -35,18 +30,14 @@
 	
   <AbilityUser.AbilityDef>
 
-		<!-- <defName>Mindflayer</defName> -->
-		<defName>LTF_Slug_MindFlayer</defName>
-		<label>Mind flay</label>
-		<!-- <uiIconPath>things/building/art/Snowman</uiIconPath> -->
-		<uiIconPath>UI/MindFlay</uiIconPath>
-		<description>Creates a disturbance zone centered on the target.
-
-Each psychic sensitive living creature in this area will see its combat skills decreased.</description>
+		<defName>LTF_Slug_MindFondler</defName>
+		<label>Mind fondle</label>
+		<uiIconPath>UI/MindFondle</uiIconPath>
+		<description>Creates a fondle zone centered on the target.</description>
 		
 		<MainVerb Class="AbilityUser.VerbProperties_Ability">
-			<!-- <verbClass>AbilityUser.Verb_UseAbility</verbClass> -->
-			 <verbClass>LTF_Slug.MindFlayEffect</verbClass>
+
+			 <verbClass>LTF_Slug.MindFondleEffect</verbClass>
 			
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -57,7 +48,7 @@ Each psychic sensitive living creature in this area will see its combat skills d
 			
 			<hasStandardCommand>true</hasStandardCommand>
 			
-			<abilityDef>LTF_Slug_MindFlayer</abilityDef>
+			<abilityDef>LTF_Slug_MindFondler</abilityDef>
 			<isViolent>false</isViolent>
 			
 			<SecondsToRecharge>45.0</SecondsToRecharge>
@@ -66,12 +57,10 @@ Each psychic sensitive living creature in this area will see its combat skills d
 			<burstShotCount>1</burstShotCount>
 			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 	  
-			<defaultProjectile>LTF_MindFlayProjectile</defaultProjectile>
-			<!-- <defaultProjectile>Spark</defaultProjectile> -->
+			<defaultProjectile>LTF_MindFondleProjectile</defaultProjectile>
 			
 			<warmupTime>.5</warmupTime>
 			
-			<!-- <soundCast>PsychicInsanityLanceCast</soundCast> -->
 			<soundCast>LTF_Slug_MindFlayCast</soundCast>
 			
 			<muzzleFlashScale>20</muzzleFlashScale>
@@ -85,8 +74,7 @@ Each psychic sensitive living creature in this area will see its combat skills d
 				<canTargetItems>false</canTargetItems>
 				<canTargetPawns>true</canTargetPawns>
 				<canTargetBuildings>false</canTargetBuildings>
-				<canTargetSelf>false</canTargetSelf>
-				<!-- <canTargetSelf>true</canTargetSelf> -->
+				<canTargetSelf>true</canTargetSelf>
 			</targetParams>
 
 		</MainVerb>
