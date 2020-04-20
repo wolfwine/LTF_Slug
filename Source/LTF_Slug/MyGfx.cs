@@ -26,19 +26,27 @@ namespace LTF_Slug
 
         public static string basePath = "Things/AbilityBuilding/";
         public static string overlayPath = basePath + "GfxEffects/";
-        public static string underlayPath = basePath + "GfxEffects/";
 
         public enum ClosestColor
         {
+            [Description("blue")]
             blue = 0,
+            [Description("orange")]
             orange = 1,
+            [Description("purple")]
             purple = 2
         }
 
-        public static string[] motePool = {
+        public static string[] moteFlayPool = {
             "Mote_MindFlay_Blue",
             "Mote_MindFlay_Orange",
             "Mote_MindFlay_Purple"
+        };
+
+        public static string[] moteFondlePool = {
+            "Mote_MindFondle_Blue",
+            "Mote_MindFondle_Orange",
+            "Mote_MindFondle_Purple"
         };
 
         public static Color[] ChosenColors =
@@ -51,12 +59,22 @@ namespace LTF_Slug
             new Color(201, 27, 38)
         };
 
-        public static readonly Material BlueUnderlayM = MaterialPool.MatFrom(underlayPath + "BlueSpiral", ShaderDatabase.MoteGlow);
-        public static readonly Material OrangeUnderlayM = MaterialPool.MatFrom(underlayPath + "OrangeSpiral", ShaderDatabase.MoteGlow);
-        public static readonly Material PurpleUnderlayM = MaterialPool.MatFrom(underlayPath + "PurpleSpiral", ShaderDatabase.MoteGlow);
+        // CutoutPlant MetaOverlay MoteGlow
+        //Shader shtype = ShaderDatabase.CutoutSkin;
+        // Flay underlay
+        public static readonly Material FlayBlueUnderlay = MaterialPool.MatFrom(overlayPath + "FlayBlueUnderlay", ShaderDatabase.CutoutSkin);
+        public static readonly Material FlayOrangeUnderlay = MaterialPool.MatFrom(overlayPath + "FlayOrangeUnderlay", ShaderDatabase.CutoutSkin);
+        public static readonly Material FlayPurpleUnderlay = MaterialPool.MatFrom(overlayPath + "FlayPurpleUnderlay", ShaderDatabase.CutoutSkin);
+        // Flay overlay
+        public static readonly Material FlayOverlay = MaterialPool.MatFrom(overlayPath + "FlayOverlay", ShaderDatabase.MetaOverlay);
 
-        public static readonly Material BlueOverlayM = MaterialPool.MatFrom(overlayPath + "BlueSpiralPlus", ShaderDatabase.MetaOverlay);
-        public static readonly Material OrangeOverlayM = MaterialPool.MatFrom(overlayPath + "OrangeSpiralPlus", ShaderDatabase.MetaOverlay);
-        public static readonly Material PurpleOverlayM = MaterialPool.MatFrom(overlayPath + "PurpleSpiralPlus", ShaderDatabase.MetaOverlay);
+        // Fondle underlay
+        public static readonly Material FondleBlueUnderlay = MaterialPool.MatFrom(overlayPath + "FondleBlueUnderlay", ShaderDatabase.MetaOverlay);
+        public static readonly Material FondleOrangeUnderlay = MaterialPool.MatFrom(overlayPath + "FondleOrangeUnderlay", ShaderDatabase.MetaOverlay);
+        public static readonly Material FondlePurpleUnderlay = MaterialPool.MatFrom(overlayPath + "FondlePurpleUnderlay", ShaderDatabase.MetaOverlay);
+        // Fondle overlay
+        public static readonly Material FondleBlueOverlay = MaterialPool.MatFrom(overlayPath + "FondleBlueOverlay", ShaderDatabase.MoteGlow);
+        public static readonly Material FondleOrangeOverlay = MaterialPool.MatFrom(overlayPath + "FondleOrangeOverlay", ShaderDatabase.MoteGlow);
+        public static readonly Material FondlePurpleOverlay = MaterialPool.MatFrom(overlayPath + "FondlePurpleOverlay", ShaderDatabase.MoteGlow);
     }
 }

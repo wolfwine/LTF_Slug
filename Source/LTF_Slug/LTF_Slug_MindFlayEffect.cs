@@ -47,29 +47,6 @@ namespace LTF_Slug
 
             return false;
         }
-        
-        public static Thing CreateMindFlaySpot(IntVec3 destinationCell, Map map)
-        {
-            Building mindFlaySpot = (Building)ThingMaker.MakeThing(ThingDef.Named("LTF_MindFlaySpot"), null);
-
-            //lockBlock.SetColor(lockDowner.DrawColor);
-            GenSpawn.Spawn(mindFlaySpot, destinationCell, map, Rot4.North, WipeMode.Vanish);
-
-            mindFlaySpot.SetFaction(Faction.OfPlayer);
-
-            int randMotesNum = Rand.Range(3, 7);
-
-            for(int i=0;i<randMotesNum;i++)
-                GfxEffects.ThrowMindFlayMote(destinationCell.ToVector3(), map);
-            
-            foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(mindFlaySpot))
-                if(puff.InBounds(map))
-                    MoteMaker.ThrowAirPuffUp(puff.ToVector3(), map);
-
-            return (mindFlaySpot);
-        }
-
-
 
         public void Effect()
         {
@@ -84,21 +61,14 @@ namespace LTF_Slug
                 return;
             }
                 
-            Thing myNewSpot = CreateMindFlaySpot(correctedCell, CasterPawn.Map);
+            Thing myNewSpot = MindSpotUtils.CreateMindSpot(correctedCell, CasterPawn.Map, MyDefs.SpotKind.flay);
             if(myNewSpot == null)
             {
                 Tools.Warn("myNewSpot is null after CreateMindFlaySpot", myDebug);
                 return;
             }
 
-            Comp_LTF_MindFlaySpot MindFlaySpotComp = myNewSpot.TryGetComp<Comp_LTF_MindFlaySpot>();
-            if(MindFlaySpotComp == null) { 
-                Tools.Warn("MindFlaySpotComp is null after TryGetComp", myDebug);
-                return;
-            }
-
-            MindFlaySpotComp.SetPawn(CasterPawn);
-
+            MindSpotUtils.TryGetMindSpotComp(myNewSpot).SetPawn(CasterPawn);
         }
 
         // Necessary for autocomplete ability

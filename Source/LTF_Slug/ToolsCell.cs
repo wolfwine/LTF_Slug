@@ -115,7 +115,11 @@ namespace LTF_Slug
             return answer;
         }
 
-        public static List<Pawn> GetPawnsInRadius(IntVec3 center, float radius, Map myMap, bool humanLike = true, bool fromPlayerFaction = false)
+        public static List<Pawn> GetPawnsInRadius(
+            IntVec3 center, float radius, Map myMap,
+            bool affectsAnimals = false, bool affectsHumanlike = true, bool affectsMechanoids = false,
+            bool affectsColonists = false, bool affectsNeutralOrFriends = false, bool affectsEnemies = true,
+            bool myDebug = false)
         {
             List<Pawn> pawnList = new List<Pawn> { };
 
@@ -133,11 +137,22 @@ namespace LTF_Slug
                 {
                     if (thing is Pawn curPawn)
                     {
-                        if ((humanLike && !curPawn.RaceProps.Humanlike) || (!humanLike && curPawn.RaceProps.Humanlike))
+                        if ((affectsAnimals && !curPawn.RaceProps.Animal) || (!affectsAnimals && curPawn.RaceProps.Animal))
+                            continue;
+                        if ((affectsHumanlike && !curPawn.RaceProps.Humanlike) || (!affectsHumanlike && curPawn.RaceProps.Humanlike))
+                            continue;
+                        if ((affectsMechanoids && !curPawn.RaceProps.IsMechanoid) || (!affectsMechanoids && curPawn.RaceProps.IsMechanoid))
                             continue;
 
-                        if ((fromPlayerFaction && !curPawn.Faction.IsPlayer) || (!fromPlayerFaction && curPawn.Faction.IsPlayer))
-                            continue;
+                        if (curPawn.Faction != null)
+                        {
+                            if ((affectsColonists && !curPawn.Faction.IsPlayer) || (!affectsColonists && curPawn.Faction.IsPlayer))
+                                continue;
+                            if ((affectsNeutralOrFriends && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)) || (!affectsNeutralOrFriends && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)))
+                                continue;
+                            if ((affectsEnemies && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)) || (!affectsEnemies && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)))
+                                continue;
+                        }
 
                         pawnList.Add(curPawn);
                     }

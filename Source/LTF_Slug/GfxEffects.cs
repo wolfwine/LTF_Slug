@@ -20,20 +20,22 @@ namespace LTF_Slug
             under = -1,
         };
 
-        public static ThingDef RandomMote
+        public static ThingDef RandomMote(MyDefs.SpotKind spotKind=MyDefs.SpotKind.flay, bool myDebug=false)
         {
-            get
+            switch ((int)spotKind)
             {
-                return (ThingDef.Named(MyGfx.motePool[(int)Rand.Range(0, MyGfx.motePool.Length)]));
+                case (int)MyDefs.SpotKind.flay:
+                    return (ThingDef.Named(MyGfx.moteFlayPool[(int)Rand.Range(0, MyGfx.moteFlayPool.Length)]));
+                case (int)MyDefs.SpotKind.fondle:
+                    return (ThingDef.Named(MyGfx.moteFondlePool[(int)Rand.Range(0, MyGfx.moteFondlePool.Length)]));
+
+                default:
+                    Tools.Warn("RandomMote : Unexpected spotkind", myDebug);
+                    return (ThingDef.Named(MyGfx.moteFlayPool[(int)Rand.Range(0, MyGfx.moteFlayPool.Length)]));
             }
         }
 
-        public static void ThrowMindFondleMote(Vector3 loc, Map map)
-        {
-            ThrowMindFlayMote(loc, map);
-        }
-
-        public static void ThrowMindFlayMote(Vector3 loc, Map map)
+        public static void ThrowMindMote(Vector3 loc, Map map, MyDefs.SpotKind spotKind, bool myDebug=false)
         {
             if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
             {
@@ -41,7 +43,7 @@ namespace LTF_Slug
             }
 
             //MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MindFlay"), null);
-            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(RandomMote);
+            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(RandomMote(spotKind, myDebug));
             moteThrown.Scale = Rand.Range(0.5f, 1.2f);
 
             moteThrown.rotationRate = Rand.Range(0, 180);
@@ -191,6 +193,8 @@ namespace LTF_Slug
                 minVal = purpleDiff;
                 answer = MyGfx.ClosestColor.purple;
             }
+
+            Tools.Warn("closest Color=" + answer, myDebug);
 
             return answer;
         }

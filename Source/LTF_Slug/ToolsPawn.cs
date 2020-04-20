@@ -87,7 +87,7 @@ namespace LTF_Slug
                 return false;
             }
 
-            Hediff hediff = HediffMaker.MakeHediff(MyXmlDef.MindFlayedHediff, pawn, bodyPart);
+            Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn, bodyPart);
             if (hediff == null)
             {
                 Tools.Warn("hediff maker null", myDebug);

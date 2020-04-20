@@ -47,29 +47,6 @@ namespace LTF_Slug
 
             return false;
         }
-        
-        public static Thing CreateMindFondleSpot(IntVec3 destinationCell, Map map)
-        {
-            Building mindFlaySpot = (Building)ThingMaker.MakeThing(ThingDef.Named("LTF_MindFondleSpot"), null);
-
-            //lockBlock.SetColor(lockDowner.DrawColor);
-            GenSpawn.Spawn(mindFlaySpot, destinationCell, map, Rot4.North, WipeMode.Vanish);
-
-            mindFlaySpot.SetFaction(Faction.OfPlayer);
-
-            int randMotesNum = Rand.Range(3, 7);
-
-            for(int i=0;i<randMotesNum;i++)
-                GfxEffects.ThrowMindFondleMote(destinationCell.ToVector3(), map);
-            
-            foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(mindFlaySpot))
-                if(puff.InBounds(map))
-                    MoteMaker.ThrowAirPuffUp(puff.ToVector3(), map);
-
-            return (mindFlaySpot);
-        }
-
-
 
         public void Effect()
         {
@@ -83,23 +60,15 @@ namespace LTF_Slug
                 Tools.Warn("Failed to find a better cell", myDebug);
                 return;
             }
-              /*  
-            Thing myNewSpot = CreateMindFondleSpot(correctedCell, CasterPawn.Map);
-            if(myNewSpot == null)
+
+            Thing myNewSpot = MindSpotUtils.CreateMindSpot(correctedCell, CasterPawn.Map, MyDefs.SpotKind.fondle);
+            if (myNewSpot == null)
             {
-                Tools.Warn("myNewSpot is null after CreateMindFondleSpot", myDebug);
-                return;
-            }
-            */
-            /*
-            Comp_LTF_MindFondleSpot MindFondleSpotComp = myNewSpot.TryGetComp<Comp_LTF_MindFondleSpot>();
-            if(MindFondleSpotComp == null) { 
-                Tools.Warn("MindFondleSpotComp is null after TryGetComp", myDebug);
+                Tools.Warn("myNewSpot is null after CreateMindFlaySpot", myDebug);
                 return;
             }
 
-            MindFondleSpotComp.SetPawn(CasterPawn);
-            */
+            MindSpotUtils.TryGetMindSpotComp(myNewSpot).SetPawn(CasterPawn);
         }
 
         // Necessary for autocomplete ability

@@ -46,4 +46,31 @@
 		</graphicData>
 	</ThingDef>
 
+	<!-- blue -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFondle_Blue</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFondle_Blue</texPath>
+		</graphicData>
+	</ThingDef>
+
+	<!-- orange -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFondle_Orange</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFondle_Orange</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<!-- purple -->
+	<ThingDef ParentName="Mote_MindFlayBase">
+		<defName>Mote_MindFondle_Purple</defName>
+		
+		<graphicData>
+			<texPath>Mote/Mote_MindFondle_Purple</texPath>
+		</graphicData>
+	</ThingDef>
+
 </Defs>
