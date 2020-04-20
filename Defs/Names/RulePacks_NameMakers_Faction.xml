@@ -3,28 +3,22 @@
   <!-- Tribe -->
 
   <RulePackDef>
-    <defName>NamerBaseSlugVillage</defName>
+    <defName>NamerSlugFaction</defName>
     <rulePack>
       <rulesStrings>
         <li>name->[color] [badAdj] [SlugNames2]</li>
-		<li>name->The [slugAdj] and [badAdj] [SlugNames2]</li>
 		
-        <li>name->[badAdj] [negative] [terrainfeature]</li>
-		<li>name->The [SlugNames2] of the [color] [terrainfeature]</li>
-		<li>name->The [badAdj] [SlugNames2] [terrainfeature]</li>
-		
-		<li>name->The [slugAdj] [terrainfeature]</li>
-		<li>name->The [SlugNames2] [terrainfeature]</li>
-		
+		<li>name->[slugAdj] [negative] [politicalunion]</li>
+		<li>name->[slugAdj] [terrainfeature] [politicalunion]</li>
+		<li>name->The [slugAdj] [SlugNames2] [politicalunion]</li>
+		<li>name->[badAdj] [SlugNames2] [politicalunion]</li>
+
 		<li>name->The [slugAdj] [politicalunion]</li>
 		<li>name->The [SlugNames2] [politicalunion]</li>
-		
-		<li>name->[SlugNames2] [mediumVessel] [vesselRelated]</li>
-		<li>name->[slugAdj] [mediumVessel] [vesselRelated]</li>
       </rulesStrings>
 	  
-	<rulesRaw>
-		<li Class="Rule_File">
+	  <rulesRaw>
+		 <li Class="Rule_File">
           <keyword>lightVessel</keyword>
           <path>Vessels/light</path>
         </li>

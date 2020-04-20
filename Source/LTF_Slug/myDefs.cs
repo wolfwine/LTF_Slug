@@ -46,5 +46,10 @@ namespace LTF_Slug
 
         public static string FlayCompInspectStringExtra = "Flayage inflicted count: ";
         public static string FondleCompInspectStringExtra = "Cuddles count: ";
+
+        public static readonly string vestigialShellName = "VestigialShellBP";
+        public static readonly string fondlingVestigialShellName = "LTF_FondlingVestigialShell";
+
+        public static readonly string slugDefName = "Alien_Slug";
     }
 }

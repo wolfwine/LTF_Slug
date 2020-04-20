@@ -42,10 +42,6 @@
 						<offset>-0.1</offset>
 					</li>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>-0.1</offset>
-					</li>
-					<li>
 						<capacity>Moving</capacity>
 						<offset>-0.1</offset>
 					</li>
@@ -71,10 +67,6 @@
 						<offset>-0.2</offset>
 					</li>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>-0.2</offset>
-					</li>
-					<li>
 						<capacity>Moving</capacity>
 						<offset>-0.2</offset>
 					</li>
@@ -97,10 +89,6 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.3</offset>
-					</li>
-					<li>
-						<capacity>Manipulation</capacity>
 						<offset>-0.3</offset>
 					</li>
 					<li>
@@ -142,10 +130,6 @@ Mind the backlash when the buffs dissapear.</description>
 						<offset>0.1</offset>
 					</li>
 					<li>
-						<capacity>Manipulation</capacity>
-						<offset>0.1</offset>
-					</li>
-					<li>
 						<capacity>Moving</capacity>
 						<offset>0.1</offset>
 					</li>
@@ -167,10 +151,6 @@ Mind the backlash when the buffs dissapear.</description>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.2</offset>
-					</li>
-					<li>
-						<capacity>Manipulation</capacity>
 						<offset>0.2</offset>
 					</li>
 					<li>
@@ -196,10 +176,6 @@ Mind the backlash when the buffs dissapear.</description>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>0.3</offset>
-					</li>
-					<li>
-						<capacity>Manipulation</capacity>
 						<offset>0.3</offset>
 					</li>
 					<li>

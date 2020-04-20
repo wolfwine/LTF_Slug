@@ -69,9 +69,9 @@ namespace LTF_Slug
         public static readonly Material FlayOverlay = MaterialPool.MatFrom(overlayPath + "FlayOverlay", ShaderDatabase.MetaOverlay);
 
         // Fondle underlay
-        public static readonly Material FondleBlueUnderlay = MaterialPool.MatFrom(overlayPath + "FondleBlueUnderlay", ShaderDatabase.MetaOverlay);
-        public static readonly Material FondleOrangeUnderlay = MaterialPool.MatFrom(overlayPath + "FondleOrangeUnderlay", ShaderDatabase.MetaOverlay);
-        public static readonly Material FondlePurpleUnderlay = MaterialPool.MatFrom(overlayPath + "FondlePurpleUnderlay", ShaderDatabase.MetaOverlay);
+        public static readonly Material FondleBlueUnderlay = MaterialPool.MatFrom(overlayPath + "FondleBlueUnderlay", ShaderDatabase.CutoutSkin);
+        public static readonly Material FondleOrangeUnderlay = MaterialPool.MatFrom(overlayPath + "FondleOrangeUnderlay", ShaderDatabase.CutoutSkin);
+        public static readonly Material FondlePurpleUnderlay = MaterialPool.MatFrom(overlayPath + "FondlePurpleUnderlay", ShaderDatabase.CutoutSkin);
         // Fondle overlay
         public static readonly Material FondleBlueOverlay = MaterialPool.MatFrom(overlayPath + "FondleBlueOverlay", ShaderDatabase.MoteGlow);
         public static readonly Material FondleOrangeOverlay = MaterialPool.MatFrom(overlayPath + "FondleOrangeOverlay", ShaderDatabase.MoteGlow);

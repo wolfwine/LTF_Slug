@@ -34,10 +34,7 @@ namespace LTF_Slug
 
             mindFlaySpot.SetFaction(Faction.OfPlayer);
 
-            int randMotesNum = Rand.Range(3, 7);
-
-            for (int i = 0; i < randMotesNum; i++)
-                GfxEffects.ThrowMindMote(destinationCell.ToVector3(), map, spotKind);
+            GfxEffects.ThrowCoupleMotes(destinationCell.ToVector3(), map, spotKind);
 
             foreach (IntVec3 puff in GenAdj.CellsAdjacent8Way(mindFlaySpot))
                 if (puff.InBounds(map))

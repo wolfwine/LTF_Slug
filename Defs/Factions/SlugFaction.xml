@@ -22,7 +22,7 @@
 		</raidCommonalityFromPointsCurve>
 		<canStageAttacks>true</canStageAttacks>
 
-		<factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
+		<factionNameMaker>NamerSlugFaction</factionNameMaker>
 		<settlementNameMaker>NamerBaseSlugVillage</settlementNameMaker>
 		
 		<techLevel>Industrial</techLevel>

@@ -33,7 +33,13 @@
 		<defName>LTF_Slug_MindFondler</defName>
 		<label>Mind fondle</label>
 		<uiIconPath>UI/MindFondle</uiIconPath>
-		<description>Creates a fondle zone centered on the target.</description>
+		<description>An ability that creates a fondling zone centered on the target.
+
+- The zone will increase the combat and defensive skills of the ally humanlikes in the zone.
+- The longer the allies stay in the zone, the stronger they get.
+- The zone will disappear after a few seconds. The fondling effects shall disappear very fast as well.
+- If the limit of buffed allies is reached, the fondling zone will vanish and the caster will suffer a tiredness blacklash.
+- Slugs are immune to this ability.</description>
 		
 		<MainVerb Class="AbilityUser.VerbProperties_Ability">
 

@@ -36,10 +36,12 @@ namespace LTF_Slug
 
         MyGfx.ClosestColor closestColor = MyGfx.ClosestColor.blue;
 
+        public bool EnableTiredness = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().TirednessOnOveruse;
+
         // Debug 
         public bool gfxDebug = false;
         public bool prcDebug = false;
-        public bool myDebug = true;
+        public bool myDebug = false;
 
         // Props
         public CompProperties_LTF_MindSpot Props
@@ -74,6 +76,9 @@ namespace LTF_Slug
                     ";NeutralOrFriends: " + Props.affectsNeutralOrFriends +
                     ";Enemies: " + Props.affectsEnemies +
                     "\n" +
+                    "; AffectedPawnsNum:"+ AffectedPawnsNum+
+                    ((EnableTiredness) ?(";Props.hediffAppliedLimit: "+ Props.hediffAppliedLimit) :(""))+
+                    ((EnableTiredness) ? (";ExceededLimit: " + IsLimitExceeded) : ("")) +
                     ";lifeSpan: " + Props.lifeSpan +
                     ";range: " + Props.range +
                     ";initiator: " + Initiator.Label;
@@ -190,6 +195,18 @@ namespace LTF_Slug
             underlayMat = GetUnderlayMaterial;
             overlayMat = GetOverlayMaterial;
         }
+
+        private bool IsLimitExceeded
+        {
+            get
+            {
+                if (!EnableTiredness)
+                    return false;
+
+                return (AffectedPawnsNum >= Props.hediffAppliedLimit);
+            }
+        }
+
         // Overrides
         public override void PostDraw()
         {
@@ -218,7 +235,6 @@ namespace LTF_Slug
                 GfxEffects.DrawTickRotating(parent, overlayMat, 0, 0, 2*Range, angle, opacity, GfxEffects.Layer.under, false);
             }
         }
-
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             //Building
@@ -244,14 +260,17 @@ namespace LTF_Slug
                 buildingPos.ToIntVec3(), Range, myMap,
                 Props.affectsAnimals, Props.affectsHumanlike, Props.affectsMechanoids,
                 Props.affectsColonists, Props.affectsNeutralOrFriends, Props.affectsEnemies,
-                myDebug
+                prcDebug
             );
 
             foreach (Pawn curPawn in affectedPawnList)
             {
                 // Slugs are immune to this
                 if (curPawn.IsSlug())
+                {
+                    Tools.Warn(curPawn.Label + " is slug, not affected", prcDebug);
                     continue;
+                }
                 
                 // Add psychicSensitivity * SocialImpact * SocialSkill fight here
                 if (ToolsPawn.ApplyHediffOnBodyPartTag(curPawn, BodyPartTagDefOf.ConsciousnessSource, hediffDefToApply, prcDebug))
@@ -266,9 +285,19 @@ namespace LTF_Slug
                 }
             }
 
+            if (IsLimitExceeded)
+            {
+                Initiator.ApplyTiredness();
+            }
+                
+
             //Checking if Initiator is not mad or downed or sleepin or on fire
-            if (Initiator.InMentalState || Initiator.Downed || Initiator.IsSleepingOrOnFire())
+            if (Initiator.InMentalState || Initiator.Downed || Initiator.IsSleepingOrOnFire() || AffectedPawnsNum > Props.hediffAppliedLimit)
+            {
+                GfxEffects.ThrowCoupleMotes(buildingPos, myMap, spotKind);
                 building.Destroy();
+            }
+                
         }
 
         public override void PostExposeData()

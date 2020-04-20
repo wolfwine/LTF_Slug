@@ -14,26 +14,14 @@ namespace LTF_Slug
 {
     public static class ToolsPawn
     {
-        private static readonly string vestiShellName = "VestigialShellBP";
-        private static readonly string slugDefName = "Alien_Slug";
-
         public static bool CheckPawn(Pawn pawn)
         {
-            //return (pawn != null && pawn.Map != null && pawn.Position != null);
             return (pawn != null && pawn.Map != null);
         }
 
-        /*
-        public static bool IsSlug{
-            get
-            {
-                return (this.pawn.IsSlug());
-            }
-        }
-        */
         public static bool IsSlug(this Pawn pawn)
         {
-            return (pawn?.def.defName == slugDefName);
+            return (pawn?.def.defName == MyDefs.slugDefName);
         }
 
         public static bool IsSleepingOrOnFire(this Pawn pawn)
@@ -45,30 +33,9 @@ namespace LTF_Slug
             return false;
         }
 
-        public static BodyPartRecord GetBrain(Pawn pawn)
-        {
-            pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).TryRandomElement(out BodyPartRecord bodyPart);
-            return bodyPart;
-        }
-
-        public static BodyPartRecord GetStomach(Pawn pawn)
-        {
-            pawn.RaceProps.body.GetPartsWithDef(BodyPartDefOf.Stomach).TryRandomElement(out BodyPartRecord bodyPart);
-            return bodyPart;
-        }
-
-        public static BodyPartRecord GetVestiShell(this Pawn pawn)
-        {
-            BodyPartDef vestiShell = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == vestiShellName).RandomElement();
-
-            pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
-            return bodyPart;
-        }
-
-        private static BodyPartRecord GetHeart(Pawn pawn, bool myDebug=false)
+        private static BodyPartRecord GetHeart(Pawn pawn, bool myDebug = false)
         {
             BodyPartRecord bodyPart = null;
-            //pawn.RaceProps.body.GetPartsWithTag("BloodPumpingSource").TryRandomElement(out bodyPart);
             pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.BloodPumpingSource).TryRandomElement(out bodyPart);
             if (bodyPart == null)
             {
@@ -76,6 +43,51 @@ namespace LTF_Slug
             }
 
             return bodyPart;
+        }
+        public static BodyPartRecord GetBrain(Pawn pawn)
+        {
+            pawn.RaceProps.body.GetPartsWithTag(BodyPartTagDefOf.ConsciousnessSource).TryRandomElement(out BodyPartRecord bodyPart);
+            return bodyPart;
+        }
+        public static BodyPartRecord GetStomach(Pawn pawn)
+        {
+            pawn.RaceProps.body.GetPartsWithDef(BodyPartDefOf.Stomach).TryRandomElement(out BodyPartRecord bodyPart);
+            return bodyPart;
+        }
+
+        public static BodyPartRecord GetBPRecord(this Pawn pawn, string BPPartDefName)
+        {
+            BodyPartDef vestiShell = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == BPPartDefName).RandomElement();
+            pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
+            return bodyPart;
+        }
+        public static BodyPartRecord GetVestigialShell(this Pawn pawn)
+        {
+            return GetBPRecord(pawn, MyDefs.vestigialShellName);
+        }
+        public static BodyPartRecord GetFondlingVestigialShell(this Pawn pawn)
+        {
+            return GetBPRecord(pawn, MyDefs.fondlingVestigialShellName);
+        }
+        public static bool HasNaturalVestigialShell(this Pawn pawn, bool myDebug=false)
+        {
+            BodyPartRecord vestiShell = pawn.GetVestigialShell();
+            if (vestiShell == null)
+            {
+                Tools.Warn(pawn.LabelShort + " has no vestigial shell", myDebug);
+                return false;
+            }
+            return true;
+        }
+        public static bool HasFondlingVestigialShell(this Pawn pawn, bool myDebug = false)
+        {
+            BodyPartRecord vestiShell = pawn.GetFondlingVestigialShell();
+            if (vestiShell == null)
+            {
+                Tools.Warn(pawn.LabelShort + " has no fondling vestigial shell", myDebug);
+                return false;
+            }
+            return true;
         }
 
         public static bool ApplyHediffOnBodyPartTag(Pawn pawn, BodyPartTagDef BPTag, HediffDef hediffDef, bool myDebug)
@@ -97,6 +109,12 @@ namespace LTF_Slug
             pawn.health.AddHediff(hediff, bodyPart, null);
 
             return true;
+        }
+
+        // -10% rest
+        public static void ApplyTiredness(this Pawn pawn)
+        {
+            pawn.needs.rest.CurLevel = pawn.needs.rest.CurLevel * .9f;
         }
     }
 }

@@ -22,8 +22,8 @@
 		<pawnsPlural>Slugs</pawnsPlural>
 		
 		<settlementNameMaker>NamerBaseSlugVillage</settlementNameMaker>
-		<factionNameMaker>NamerFactionSlugVillage</factionNameMaker>
-		<playerInitialSettlementNameMaker>NamerFactionSlugVillage</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerSlugFaction</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerSlugFaction</playerInitialSettlementNameMaker>
 		
 		<backstoryCategories>
 			<li>SlugBackstory</li>

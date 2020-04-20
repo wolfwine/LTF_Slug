@@ -137,23 +137,82 @@ namespace LTF_Slug
                 {
                     if (thing is Pawn curPawn)
                     {
-                        if ((affectsAnimals && !curPawn.RaceProps.Animal) || (!affectsAnimals && curPawn.RaceProps.Animal))
+                        string DebugStr = "GetPawnsInRadius - " + curPawn.Label;
+
+                        // animals
+                        if (affectsAnimals && !curPawn.RaceProps.Animal) 
+                        {
+                            Tools.Warn(DebugStr + " is not animal", myDebug);
                             continue;
-                        if ((affectsHumanlike && !curPawn.RaceProps.Humanlike) || (!affectsHumanlike && curPawn.RaceProps.Humanlike))
+                        }
+                        else if (!affectsAnimals && curPawn.RaceProps.Animal)
+                        {
+                            Tools.Warn(DebugStr + " is animal", myDebug);
                             continue;
-                        if ((affectsMechanoids && !curPawn.RaceProps.IsMechanoid) || (!affectsMechanoids && curPawn.RaceProps.IsMechanoid))
+                        }
+
+                        // humanlike
+                        if (affectsHumanlike && !curPawn.RaceProps.Humanlike)
+                        {
+                            Tools.Warn(DebugStr + " is non humanlike", myDebug);
                             continue;
+                        }
+                        else if (!affectsHumanlike && curPawn.RaceProps.Humanlike)
+                        {
+                            Tools.Warn(DebugStr + " is humanlike", myDebug);
+                            continue;
+                        }
+
+                        // mechanoids
+                        if (affectsMechanoids && !curPawn.RaceProps.IsMechanoid) {
+                            Tools.Warn(DebugStr + " is non mechanoid", myDebug);
+                            continue;
+                        }
+                        else if (!affectsMechanoids && curPawn.RaceProps.IsMechanoid)
+                        {
+                            Tools.Warn(DebugStr + " is mechanoid", myDebug);
+                            continue;
+                        }
+                        
 
                         if (curPawn.Faction != null)
                         {
-                            if ((affectsColonists && !curPawn.Faction.IsPlayer) || (!affectsColonists && curPawn.Faction.IsPlayer))
+                            // colonists or colony animal
+                            if (affectsColonists && !curPawn.Faction.IsPlayer) {
+                                Tools.Warn(DebugStr + " is not colonist nor colony animal", myDebug);
                                 continue;
-                            if ((affectsNeutralOrFriends && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)) || (!affectsNeutralOrFriends && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)))
+                            }
+                            else if (!affectsColonists && curPawn.Faction.IsPlayer)
+                            {
+                                Tools.Warn(DebugStr + " is colonist or colony animal", myDebug);
                                 continue;
-                            if ((affectsEnemies && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)) || (!affectsEnemies && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)))
+                            }
+
+                            // ally or neutral
+                            if (!curPawn.Faction.IsPlayer)
+                            {
+                                if (affectsNeutralOrFriends && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)){
+                                    Tools.Warn(DebugStr + " is not ally or neutral", myDebug);
+                                    continue;
+                                }
+                                else if (!affectsNeutralOrFriends && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer))
+                                {
+                                    Tools.Warn(DebugStr + " is ally or neutral", myDebug);
+                                    continue;
+                                }
+                            }
+
+                            // enemy
+                            if (affectsEnemies && curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)){
+                                Tools.Warn(DebugStr + " is not enemy", myDebug);
                                 continue;
+                            } else if (!affectsEnemies && !curPawn.Faction.AllyOrNeutralTo(Faction.OfPlayer)) {
+                                Tools.Warn(DebugStr + " is enemy", myDebug);
+                                continue;
+                            }
                         }
 
+                        Tools.Warn(DebugStr + " is OK", myDebug);
                         pawnList.Add(curPawn);
                     }
                 }

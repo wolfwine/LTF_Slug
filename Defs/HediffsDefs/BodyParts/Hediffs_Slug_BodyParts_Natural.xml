@@ -302,7 +302,11 @@
 		<defName>VestigialShell</defName>
 		<label>vestigial shell</label>
 		<description>A biological slug vestigial shell. This organ serves as storage for calcium salts, in conjunction with the digestive glands.</description>
-		<descriptionHyperlinks><RecipeDef>InstallNaturalVestigialShell</RecipeDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallNaturalVestigialShell</RecipeDef>
+			<AbilityUser.AbilityDef>LTF_Slug_MindFlayer</AbilityUser.AbilityDef>
+		</descriptionHyperlinks>
+
 		<statBases>
 			<MarketValue>250</MarketValue>
 		<Mass>1</Mass>
@@ -313,7 +317,11 @@
 		<defName>InstallNaturalVestigialShell</defName>
 		<label>install vestigial shell</label>
 		<description>Install a biological vestigial shell.</description>
-		<descriptionHyperlinks><ThingDef>VestigialShell</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>VestigialShell</ThingDef>
+			<AbilityUser.AbilityDef>LTF_Slug_MindFlayer</AbilityUser.AbilityDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Installing vestigial shell.</jobString>
 		<ingredients>
 			<li>

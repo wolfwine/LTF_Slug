@@ -35,6 +35,13 @@ namespace LTF_Slug
             }
         }
 
+        public static void ThrowCoupleMotes(Vector3 loc, Map map, MyDefs.SpotKind spotKind){
+            int randMotesNum = Rand.Range(3, 7);
+
+            for (int i = 0; i < randMotesNum; i++)
+                GfxEffects.ThrowMindMote(loc, map, spotKind);
+        }
+
         public static void ThrowMindMote(Vector3 loc, Map map, MyDefs.SpotKind spotKind, bool myDebug=false)
         {
             if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
@@ -42,17 +49,12 @@ namespace LTF_Slug
                 return;
             }
 
-            //MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_MindFlay"), null);
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(RandomMote(spotKind, myDebug));
             moteThrown.Scale = Rand.Range(0.5f, 1.2f);
 
             moteThrown.rotationRate = Rand.Range(0, 180);
 
             moteThrown.exactPosition = loc;
-            /*
-            moteThrown.exactPosition -= new Vector3(0.5f, 0f, 0.5f);
-            moteThrown.exactPosition += new Vector3(Rand.Value, 0f, Rand.Value);
-            */
 
             moteThrown.SetVelocity(Rand.Range(0f, 360f), Rand.Range(1f, 4f));
 

@@ -28,7 +28,8 @@ namespace LTF_Slug
         // Provides ability without affecting save.
         public override void CompTick()
         {
-            //Log.Warning("CompTick");
+            //Tools.Warn(AbilityUser.Label + " CompMindFlayer.CompTick", myDebug);
+            
             if (AbilityUser?.Spawned == true)
             {
                 if (MindFlayer != null)
@@ -44,7 +45,6 @@ namespace LTF_Slug
                     Initialize();
                 }
             }
-
         }
 
         public override void PostInitialize()
@@ -58,27 +58,34 @@ namespace LTF_Slug
         {
             get
             {
-                bool val = false;
                 if (AbilityUser == null)
                     return false;
 
+                string userLabel = (myDebug)?AbilityUser.LabelShort : "";
+
                 // race
-                val = AbilityUser.IsSlug();
-                if (!val)
+                if (!AbilityUser.IsSlug())
                 {
-                    Tools.Warn(AbilityUser.LabelShort + " is not Slug", myDebug);
+                    Tools.Warn(userLabel + " is not Slug", myDebug);
                     return false;
+                }
+                else
+                {
+                    Tools.Warn(userLabel + " is indeed Slug", myDebug);
                 }
 
                 // Natural Bodypart
-                BodyPartRecord vestiShell = AbilityUser.GetVestiShell();
-                if (vestiShell == null)
+                if (!AbilityUser.HasNaturalVestigialShell(myDebug))
                 {
-                    Tools.Warn(AbilityUser.LabelShort + " has no vesti shell", myDebug);
+                    Tools.Warn(userLabel + " has no natural vestigial shell", myDebug);
                     return false;
                 }
+                else
+                {
+                    Tools.Warn(userLabel + " has indeed a natural vestigial shell", myDebug);
+                }
 
-                return val;
+                return true;
             }
         }
 

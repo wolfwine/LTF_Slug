@@ -23,6 +23,7 @@ namespace LTF_Slug
         public bool affectsEnemies = false;
 
         public int lifeSpan = 2000;
+        public int hediffAppliedLimit = 15;
 
         public CompProperties_LTF_MindSpot()
 		{

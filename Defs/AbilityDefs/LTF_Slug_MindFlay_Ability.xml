@@ -40,9 +40,17 @@
 		<label>Mind flay</label>
 		<!-- <uiIconPath>things/building/art/Snowman</uiIconPath> -->
 		<uiIconPath>UI/MindFlay</uiIconPath>
-		<description>Creates a disturbance zone centered on the target.
+		<description>An ability that creates a disturbance zone centered on the target.
 
-Each psychic sensitive living creature in this area will see its combat skills decreased.</description>
+- The zone will decrease the combat and defensive skills of the enemy humanlikes in the zone.
+- The longer the enemies stay in the zone, the weaker they get.
+- The zone will disappear after a few seconds. The flaying effects shall disappear very fast as well.
+- If the limit of debuffed enemies is reached, the flaying zone will vanish and the caster will suffer a tiredness blacklash.
+- Slugs are immune to this ability.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_InstallFondlingVestigialShell</RecipeDef>
+			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
+		</descriptionHyperlinks>
 		
 		<MainVerb Class="AbilityUser.VerbProperties_Ability">
 			<!-- <verbClass>AbilityUser.Verb_UseAbility</verbClass> -->
