@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-
+	<!-- OpticalTentacle parent class -->
 	<BodyPartDef Name="OpticalTentacle" Abstract="True">
 		<defName>OpticalTentacle</defName>
 		<label>optical tentacle</label>
@@ -13,6 +13,7 @@
 		<beautyRelated>true</beautyRelated>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 
+		<canSuggestAmputation>true</canSuggestAmputation>
 		<spawnThingOnRemoved>OpticalTentacle</spawnThingOnRemoved>
 		<tags>
 			<li>SightSource</li>
@@ -42,6 +43,7 @@
 		<socketed>true</socketed>
 	</BodyPartDef>
 	
+	<!-- SensoryTentacle parent class -->
 	<BodyPartDef Name="SensoryTentacle" Abstract="True">
 		<defName>SensoryTentacle</defName>
 		<label>sensory tentacle</label>
@@ -52,6 +54,8 @@
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
+		
+		<canSuggestAmputation>true</canSuggestAmputation>
 		<spawnThingOnRemoved>SensoryTentacle</spawnThingOnRemoved>
 		
 		<tags>
@@ -67,7 +71,8 @@
 		<defName>SlugRightSensoryTentacle</defName>
 		<label>right sensory tentacle</label>
 	</BodyPartDef>
-
+	
+	<!-- Radula -->
 	<BodyPartDef>
 		<defName>RadulaBP</defName>
 		<label>radula</label>
@@ -81,12 +86,15 @@
 		<bleedRate>0</bleedRate>
 
 		<socketed>true</socketed>
+		
+		<canSuggestAmputation>false</canSuggestAmputation>
 		<tags>
 			<!-- <li>TalkingSource</li> -->
 			<li>EatingSource</li>
 		</tags>
 	</BodyPartDef>
 
+	<!-- Pneumostome -->
 	<BodyPartDef>
 		<defName>PneumostomeBP</defName>
 		<label>Pneumostome</label>
@@ -97,12 +105,14 @@
 		<skinCovered>true</skinCovered>
 		<beautyRelated>true</beautyRelated>
 		
+		<canSuggestAmputation>false</canSuggestAmputation>
 		<tags>
 			<li>TalkingSource</li>
 			<li>BreathingPathway</li>
 		</tags>
 	</BodyPartDef>
-
+	
+	<!-- SalivaryGlandBP -->
 	<BodyPartDef>
 		<defName>SalivaryGlandBP</defName>
 		<label>salivary gland</label>
@@ -112,9 +122,12 @@
 			<li>BloodFiltrationLiver</li>
 			<li>MetabolismSource</li>
 		</tags>
+		
+		<canSuggestAmputation>false</canSuggestAmputation>
 		<spawnThingOnRemoved>SalivaryGland</spawnThingOnRemoved>
 	</BodyPartDef>
-
+	
+	<!-- VestigialShellBP -->
 	<BodyPartDef>
 		<defName>VestigialShellBP</defName>
 		<label>vestigial shell</label>
@@ -122,6 +135,10 @@
 		<skinCovered>false</skinCovered>
 		<solid>true</solid>
 		<bleedRate>0</bleedRate>
+		
+		<canSuggestAmputation>true</canSuggestAmputation>
+		<spawnThingOnRemoved>VestigialShell</spawnThingOnRemoved>
+		
 		<tags>
 			<li>MetabolismSource</li>
 			<li>MovingLimbCore</li>

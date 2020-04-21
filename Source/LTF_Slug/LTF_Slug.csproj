@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="CompProperties_LTF_MindSpot.cs" />
     <Compile Include="Comp_LTF_MindSpot.cs" />
+    <Compile Include="HediffCompProperties_ResetAbilities.cs" />
+    <Compile Include="HediffComp_ResetAbilities.cs" />
     <Compile Include="MindSpotUtils.cs" />
     <Compile Include="GfxEffects.cs" />
     <Compile Include="HediffGiver_Slug.cs" />

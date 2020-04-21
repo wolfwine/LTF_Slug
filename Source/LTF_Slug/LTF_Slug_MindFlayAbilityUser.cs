@@ -24,6 +24,7 @@ namespace LTF_Slug
         public bool? MindFlayer;
 
         public bool EnableAbilities = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().EnableAbilities;
+        public int period = 600;
 
         // Provides ability without affecting save.
         public override void CompTick()
@@ -41,10 +42,25 @@ namespace LTF_Slug
                 }
                 else
                 {
+                    Tools.Warn(AbilityUser.LabelShort + " Trying to transform into MindFlayer", myDebug);
                     MindFlayer = TryTransformPawn();
                     Initialize();
                 }
             }
+
+            /*
+            if (AbilityUser.IsColonist)
+            {
+                bool timeToCheck = ((Find.TickManager.TicksGame % period) == 0);
+                if (timeToCheck)
+                {
+                    Tools.Warn(AbilityUser.LabelShort + " is checking his abilitis to transform into MindFlayer", myDebug);
+                    if (!IsMindFlayer)
+                        MindFlayer = null;
+                }
+            }
+            */
+            
         }
 
         public override void PostInitialize()
@@ -66,7 +82,7 @@ namespace LTF_Slug
                 // race
                 if (!AbilityUser.IsSlug())
                 {
-                    Tools.Warn(userLabel + " is not Slug", myDebug);
+                    Tools.Warn(userLabel + " is not Slug, giving up IsMindFlayer" + "\n-----", myDebug);
                     return false;
                 }
                 else
@@ -77,7 +93,7 @@ namespace LTF_Slug
                 // Natural Bodypart
                 if (!AbilityUser.HasNaturalVestigialShell(myDebug))
                 {
-                    Tools.Warn(userLabel + " has no natural vestigial shell", myDebug);
+                    Tools.Warn(userLabel + " has no natural vestigial shell, giving up IsMindFlayer"+"\n-----", myDebug);
                     return false;
                 }
                 else
@@ -85,6 +101,8 @@ namespace LTF_Slug
                     Tools.Warn(userLabel + " has indeed a natural vestigial shell", myDebug);
                 }
 
+
+                Tools.Warn(userLabel + " IsMindFlayer"+"\n-----", myDebug);
                 return true;
             }
         }

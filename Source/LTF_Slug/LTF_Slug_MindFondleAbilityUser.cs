@@ -21,7 +21,6 @@ namespace LTF_Slug
         public override void CompTick()
         {
             //Tools.Warn(AbilityUser.Label + " CompMindFondler.CompTick", myDebug);
-
             if (AbilityUser?.Spawned == true)
             {
                 if (MindFondler != null)
@@ -33,6 +32,7 @@ namespace LTF_Slug
                 }
                 else
                 {
+                    Tools.Warn(AbilityUser.LabelShort + " Trying to transform into MindFondler", myDebug);
                     MindFondler = TryTransformPawn();
                     Initialize();
                 }
@@ -58,7 +58,7 @@ namespace LTF_Slug
                 // race
                 if (!AbilityUser.IsSlug())
                 {
-                    Tools.Warn(userLabel + " is not Slug", myDebug);
+                    Tools.Warn(userLabel + " is not Slug, giving up IsMindFondler" + "\n-----", myDebug);
                     return false;
                 }
                 else
@@ -69,7 +69,7 @@ namespace LTF_Slug
                 // Natural Bodypart
                 if (!AbilityUser.HasFondlingVestigialShell(myDebug))
                 {
-                    Tools.Warn(userLabel + " has no fondling vestigial shell", myDebug);
+                    Tools.Warn(userLabel + " has no fondling vestigial shell, giving up IsMindFondler" + "\n-----", myDebug);
                     return false;
                 }
                 else
@@ -77,6 +77,7 @@ namespace LTF_Slug
                     Tools.Warn(userLabel + " has indeed a fondling vestigial shell", myDebug);
                 }
 
+                Tools.Warn(userLabel + " IsMindFondler" + "\n-----", myDebug);
                 return true;
             }
         }

@@ -6,7 +6,7 @@
 		<stages>
 			<li>
 				<statOffsets>
-					<PsychicSensitivity>-.1</PsychicSensitivity>
+					<PsychicSensitivity>.1</PsychicSensitivity>
 				</statOffsets>
 			</li>
 		</stages>
@@ -18,7 +18,7 @@
 		</addedPartProps>
 	</HediffDef>
 	
-	<!-- Hediff_Bionic_OpticalTentacle -->
+	<!-- Hediff_Fondling Vestigial Shell -->
 	<HediffDef ParentName="Hediff_FondlingVestigialShell">
 		<defName>Hediff_FondlingVestigialShell</defName>
 
@@ -81,7 +81,8 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 			</thingDefs>
 		</fixedIngredientFilter>
 	
-		<addsHediff>Hediff_FondlingVestigialShell</addsHediff>
+		<!-- <addsHediff>Hediff_FondlingVestigialShell</addsHediff> -->
+		<addsHediff>Hediff_Wrapper_FondlingVestigialShell</addsHediff>
 	</RecipeDef>
 	
 	<RecipeDef ParentName="LTF_InstallFondlingVestigialShellBase">

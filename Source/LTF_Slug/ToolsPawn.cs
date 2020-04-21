@@ -26,10 +26,12 @@ namespace LTF_Slug
 
         public static bool IsSleepingOrOnFire(this Pawn pawn)
         {
-            if (pawn.jobs.curJob != null && !pawn.jobs.IsCurrentJobPlayerInterruptible())
-            {
+            if (pawn.CurJobDef == JobDefOf.LayDown || pawn.CurJobDef == JobDefOf.Wait_Downed)
                 return true;
-            }
+
+            if (pawn.HasAttachment(ThingDefOf.Fire) || pawn.CurJobDef == JobDefOf.ExtinguishSelf)
+                return true;
+
             return false;
         }
 
@@ -55,20 +57,32 @@ namespace LTF_Slug
             return bodyPart;
         }
 
-        public static BodyPartRecord GetBPRecord(this Pawn pawn, string BPPartDefName)
+        public static BodyPartRecord GetBPRecord(this Pawn pawn, string BPPartDefName, bool myDebug = false)
         {
-            BodyPartDef vestiShell = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == BPPartDefName).RandomElement();
-            pawn.RaceProps.body.GetPartsWithDef(vestiShell).TryRandomElement(out BodyPartRecord bodyPart);
+            IEnumerable<BodyPartDef> BPDefIE = DefDatabase<BodyPartDef>.AllDefs.Where((BodyPartDef b) => b.defName == BPPartDefName);
+            if (BPDefIE.EnumerableNullOrEmpty())
+            {
+                Tools.Warn(pawn.Label+" - GetBPRecord - did not find any " + BPPartDefName, myDebug);
+                return null;
+            }
+                
+            BodyPartDef BPDef = BPDefIE.RandomElement();
+            pawn.RaceProps.body.GetPartsWithDef(BPDef).TryRandomElement(out BodyPartRecord bodyPart);
+
+            Tools.Warn(pawn.Label + "GetBPRecord - DID find " + BPPartDefName, myDebug);
             return bodyPart;
         }
-        public static BodyPartRecord GetVestigialShell(this Pawn pawn)
+
+        public static BodyPartRecord GetVestigialShell(this Pawn pawn, bool myDebug = false)
         {
-            return GetBPRecord(pawn, MyDefs.vestigialShellName);
+            return GetBPRecord(pawn, MyDefs.vestigialShellName, myDebug);
         }
-        public static BodyPartRecord GetFondlingVestigialShell(this Pawn pawn)
+        /*
+        public static BodyPartRecord GetFondlingVestigialShell(this Pawn pawn, bool myDebug=false)
         {
-            return GetBPRecord(pawn, MyDefs.fondlingVestigialShellName);
+            return GetBPRecord(pawn, MyDefs.fondlingVestigialShellName, myDebug);
         }
+        */
         public static bool HasNaturalVestigialShell(this Pawn pawn, bool myDebug=false)
         {
             BodyPartRecord vestiShell = pawn.GetVestigialShell();
@@ -81,13 +95,15 @@ namespace LTF_Slug
         }
         public static bool HasFondlingVestigialShell(this Pawn pawn, bool myDebug = false)
         {
-            BodyPartRecord vestiShell = pawn.GetFondlingVestigialShell();
+            BodyPartRecord vestiShell = pawn.GetVestigialShell(myDebug);
             if (vestiShell == null)
             {
-                Tools.Warn(pawn.LabelShort + " has no fondling vestigial shell", myDebug);
+                Tools.Warn(pawn.LabelShort + " has a vestigial shell, and may have a fondling hediff", myDebug);
                 return false;
             }
-            return true;
+
+            //public bool HasHediff(HediffDef def, BodyPartRecord bodyPart, bool mustBeVisible = false);
+            return pawn.health.hediffSet.HasHediff(MyDefs.MindFondlingHediff, vestiShell); ;
         }
 
         public static bool ApplyHediffOnBodyPartTag(Pawn pawn, BodyPartTagDef BPTag, HediffDef hediffDef, bool myDebug)
