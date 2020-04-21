@@ -11,7 +11,7 @@ namespace LTF_Slug
 
     public class CompMindFondler : GenericCompAbilityUser 
     {
-        public bool myDebug = true;
+        public bool myDebug = false;
 
         public bool? MindFondler;
 

@@ -38,6 +38,7 @@ namespace LTF_Slug
         public static HediffDef MindFondleHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_LTF_MindFondle").RandomElement();
         // hediff required by caster to be able to have the ability
         public static HediffDef MindFondlingHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_FondlingVestigialShell").RandomElement();
+        public static HediffDef RainbowTrailHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_RainbowTrail").RandomElement();
 
         public static ThoughtDef MindFlayThought = DefDatabase<ThoughtDef>.AllDefs.Where((ThoughtDef b) => b.defName == "LTF_MindFlayed_Thought").RandomElement();
 

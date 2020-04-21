@@ -58,9 +58,10 @@
     <Compile Include="Comp_LTF_MindSpot.cs" />
     <Compile Include="HediffCompProperties_ResetAbilities.cs" />
     <Compile Include="HediffComp_ResetAbilities.cs" />
+    <Compile Include="HediffGiver_SlugTrail.cs" />
     <Compile Include="MindSpotUtils.cs" />
     <Compile Include="GfxEffects.cs" />
-    <Compile Include="HediffGiver_Slug.cs" />
+    <Compile Include="HediffGiver_NaturalSlugDewExudator.cs" />
     <Compile Include="LTF_Slug_MindFlayEffect.cs" />
     <Compile Include="LTF_Slug_MindFlayAbilityUser.cs" />
     <Compile Include="LTF_Slug_MindFondleAbilityUser.cs" />

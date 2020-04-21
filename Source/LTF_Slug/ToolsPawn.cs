@@ -106,6 +106,27 @@ namespace LTF_Slug
             return pawn.health.hediffSet.HasHediff(MyDefs.MindFondlingHediff, vestiShell); ;
         }
 
+        /*
+        public static Hediff GetHediffFromBodyPartWithHediffDef(Pawn pawn, BodyPartDef BP, HediffDef hediffDef, bool myDebug = false)
+        {
+            Hediff answer = null;
+
+            BodyPartRecord BPR = pawn.GetBPRecord( BP.defName, myDebug);
+            if (BPR == null)
+            {
+                Tools.Warn(pawn.LabelShort + " has no" + BP.defName, myDebug);
+                return null;
+            }
+
+            answer = pawn.health.hediffSet.GetFirstHediffOfDef(hediffDef);
+
+            //public bool HasHediff(HediffDef def, BodyPartRecord bodyPart, bool mustBeVisible = false);
+            //return pawn.health.hediffSet.HasHediff(MyDefs.MindFondlingHediff, BPR);
+
+            return answer;
+        }
+        */
+
         public static bool ApplyHediffOnBodyPartTag(Pawn pawn, BodyPartTagDef BPTag, HediffDef hediffDef, bool myDebug)
         {
             pawn.RaceProps.body.GetPartsWithTag(BPTag).TryRandomElement(out BodyPartRecord bodyPart);

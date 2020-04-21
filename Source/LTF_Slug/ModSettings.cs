@@ -11,12 +11,16 @@ namespace LTF_Slug
     {
         public bool EnableAbilities = true;
         public bool TirednessOnOveruse = true;
+        public bool NoPuddle = false;
+        public bool AlwaysRainbowPuddle = false;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref EnableAbilities, "EnableAbilities");
             Scribe_Values.Look(ref TirednessOnOveruse, "TirednessOnOveruse");
+            Scribe_Values.Look(ref NoPuddle, "NoPuddle");
+            Scribe_Values.Look(ref AlwaysRainbowPuddle, "AlwaysRainbowPuddle");
         }
 
     }
@@ -42,7 +46,9 @@ namespace LTF_Slug
 
             //listing.Label("Enable abilities: " + settings.EnableAbilities);
             listing.CheckboxLabeled("Enable abilities: ", ref settings.EnableAbilities);
-            listing.CheckboxLabeled("Slugs get tired when their abilities limit is exceeded", ref settings.TirednessOnOveruse);
+            listing.CheckboxLabeled("Ability Tiredness - Slugs get tired when their abilities limit is exceeded", ref settings.TirednessOnOveruse);
+            listing.CheckboxLabeled("No puddle - No puddle when slugs move around", ref settings.NoPuddle);
+            listing.CheckboxLabeled("Rainbow puddles - the puddles always have a rainbow gradient", ref settings.AlwaysRainbowPuddle);
 
             listing.End();
             base.DoSettingsWindowContents(inRect);

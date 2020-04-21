@@ -11,11 +11,17 @@
 				<partsToAffect>
 					<li>Stomach</li>
 				</partsToAffect>
-
-				<letterLabel>[PAWN_nameDef]'s natural exsudation</letterLabel>
-				<letter>[PAWN_nameDef]'s stomach makes [PAWN_objective] produce</letter>
+			</li>
+			<li Class="LTF_Slug.HediffGiver_SlugTrail">
+				<hediff>Hediff_RandomTrail</hediff>
+				
+				<partsToAffect>
+					<li>SlugGrooveSole</li>
+				</partsToAffect>
 			</li>
 		</hediffGivers>
+		
+		
 	</HediffGiverSetDef>
 
 </Defs>

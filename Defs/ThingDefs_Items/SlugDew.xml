@@ -119,26 +119,5 @@
 <!--    <storedConceptLearnOpportunity>BeeswaxMaking</storedConceptLearnOpportunity> -->
 </ThingDef>
 
-  <ThingDef ParentName="BaseFilth">
-    <defName>Filth_SlugDew</defName>
-    <label>dew leftovers</label>
-    <statBases>
-      <Beauty>-20</Beauty>
-      <Cleanliness>-5</Cleanliness>
-    </statBases>
-    <graphicData>
-      <texPath>Things/Filth/LiquidFuel</texPath>
-      <color>(138, 43, 226, 100)</color>
-    </graphicData>
-    <pathCost>5</pathCost>
-    <filth>
-      <rainWashes>true</rainWashes>
-      <cleaningWorkToReduceThickness>50</cleaningWorkToReduceThickness>
-      <canFilthAttach>true</canFilthAttach>
-      <allowsFire>false</allowsFire>
-    </filth>
-  </ThingDef>
-
- 
   
 </Defs>

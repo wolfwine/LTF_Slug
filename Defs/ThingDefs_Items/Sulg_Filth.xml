@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<ThingDef ParentName="BaseFilth">
+		<defName>Filth_SlugDew</defName>
+		<label>dew leftovers</label>
+		<statBases>
+			<Beauty>-5</Beauty>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/LiquidFuel</texPath>
+			<color>(138, 43, 226, 100)</color>
+		</graphicData>
+		<!-- <pathCost>5</pathCost> -->
+		<filth>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>5</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<allowsFire>false</allowsFire>
+		</filth>
+	</ThingDef>
+
+<!-- FilthKraptyl -->
+	<ThingDef ParentName="BaseFilth">
+		<defName>LTF_FilthKraptyl</defName>
+		<label>Kraptyl chips. Also flammable.</label>
+		<thingClass>LiquidFuel</thingClass>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<Beauty>-15</Beauty>
+			<Cleanliness>-10</Cleanliness>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>1.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/Ash</texPath>
+			<color>(138, 63, 226, 100)</color>
+		</graphicData>
+		<pathCost>3</pathCost>
+		<filth>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>60</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+		</filth>
+	</ThingDef>
+  
+</Defs>

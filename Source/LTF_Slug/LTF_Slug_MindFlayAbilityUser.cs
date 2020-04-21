@@ -19,7 +19,7 @@ namespace LTF_Slug
 
     public class CompMindFlayer : GenericCompAbilityUser 
     {
-        public bool myDebug = true;
+        public bool myDebug = false;
 
         public bool? MindFlayer;
 
@@ -47,20 +47,6 @@ namespace LTF_Slug
                     Initialize();
                 }
             }
-
-            /*
-            if (AbilityUser.IsColonist)
-            {
-                bool timeToCheck = ((Find.TickManager.TicksGame % period) == 0);
-                if (timeToCheck)
-                {
-                    Tools.Warn(AbilityUser.LabelShort + " is checking his abilitis to transform into MindFlayer", myDebug);
-                    if (!IsMindFlayer)
-                        MindFlayer = null;
-                }
-            }
-            */
-            
         }
 
         public override void PostInitialize()
