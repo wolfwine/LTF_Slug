@@ -59,8 +59,6 @@ namespace LTF_Slug
             new Color(201, 27, 38)
         };
 
-        // CutoutPlant MetaOverlay MoteGlow
-        //Shader shtype = ShaderDatabase.CutoutSkin;
         // Flay underlay
         public static readonly Material FlayBlueUnderlay = MaterialPool.MatFrom(overlayPath + "FlayBlueUnderlay", ShaderDatabase.CutoutSkin);
         public static readonly Material FlayOrangeUnderlay = MaterialPool.MatFrom(overlayPath + "FlayOrangeUnderlay", ShaderDatabase.CutoutSkin);

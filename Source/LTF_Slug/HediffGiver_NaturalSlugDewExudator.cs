@@ -10,15 +10,17 @@ namespace LTF_Slug
 
         public override bool OnHediffAdded(Pawn pawn, Hediff hediff)
         {
-            if (!pawn.IsSlug())
-                return false;
+            if (!pawn.IsSlug())return false;
 
             bool appliedHediff = TryApply(pawn, null);
 
             if (appliedHediff)
+            {
                 return true;
+            }
 
             return false;
         }
+
     }
 }

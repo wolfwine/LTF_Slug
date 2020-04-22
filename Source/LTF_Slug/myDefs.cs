@@ -45,6 +45,11 @@ namespace LTF_Slug
         public static string MindFlaySpotName = "LTF_MindFlaySpot";
         public static string MindFondleSpotName = "LTF_MindFondleSpot";
 
+        public static string Mote_PsycastAreaEffectName = "Mote_PsycastPsychicEffect";
+        //public static string Mote_PsycastAreaEffectName = "Mote_PsycastAreaEffect";
+        //public static string Mote_PsycastAreaEffectName = "Mote_PsycastPsychicLine";
+        public static ThingDef Mote_PsycastArea = ThingDef.Named(Mote_PsycastAreaEffectName);
+
         public static ThingDef MindFlaySpotThingDef = ThingDef.Named(MindFlaySpotName);
         public static ThingDef MindFondleSpotThingDef = ThingDef.Named(MindFondleSpotName);
 

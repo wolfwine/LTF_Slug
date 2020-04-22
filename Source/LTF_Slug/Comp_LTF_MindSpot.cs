@@ -280,6 +280,8 @@ namespace LTF_Slug
                         Thought_Memory MindFlayed = (Thought_Memory)ThoughtMaker.MakeThought(MyDefs.MindFlayThought);
                         curPawn.needs.mood.thoughts.memories.TryGainMemory(MindFlayed, Initiator);
                     }
+
+                    //GfxEffects.ThrowPsycastAreaMote(curPawn.Position.ToVector3(), myMap);
                     GfxEffects.ThrowMindMote(curPawn.Position.ToVector3(), myMap, spotKind);
                     AffectedPawnsNum++;
                 }

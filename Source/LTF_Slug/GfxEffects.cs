@@ -35,19 +35,31 @@ namespace LTF_Slug
             }
         }
 
-        public static void ThrowCoupleMotes(Vector3 loc, Map map, MyDefs.SpotKind spotKind){
+        public static void ThrowCoupleMotes(Vector3 loc, Map map, MyDefs.SpotKind spotKind) {
             int randMotesNum = Rand.Range(3, 7);
 
             for (int i = 0; i < randMotesNum; i++)
-                GfxEffects.ThrowMindMote(loc, map, spotKind);
+            {
+                if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
+                    return;
+                ThrowMindMote(loc, map, spotKind);
+            }
         }
+
+        public static void ThrowPsycastAreaMote(Vector3 loc, Map map, bool myDebug = false)
+        {
+            if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
+                return;
+
+            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(MyDefs.Mote_PsycastArea);
+            GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
+        }
+            
 
         public static void ThrowMindMote(Vector3 loc, Map map, MyDefs.SpotKind spotKind, bool myDebug=false)
         {
             if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
-            {
                 return;
-            }
 
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(RandomMote(spotKind, myDebug));
             moteThrown.Scale = Rand.Range(0.5f, 1.2f);

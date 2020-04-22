@@ -101,28 +101,31 @@ namespace LTF_Slug
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
-            while (gizmoEnum.MoveNext())
-            {
-                Gizmo current = gizmoEnum.Current;
-                yield return current;
-            }
-            //if (AbilityUser.Drafted)
             if (!AbilityUser.IsSleepingOrOnFire())
-            for (int i = 0; i < AbilityData.AllPowers.Count; i++)
             {
-                PawnAbility myAbility = AbilityData.AllPowers[i];
-                yield return myAbility.GetGizmo();
-                if (Prefs.DevMode)
-                yield return new Command_Action
+                IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
+                while (gizmoEnum.MoveNext())
                 {
-                    defaultLabel = "reset " + myAbility.CooldownTicksLeft + " cooldown",
-                    defaultDesc = "cooldown=" + myAbility.CooldownTicksLeft,
-                    action = delegate
-                    {
-                        myAbility.CooldownTicksLeft = -1;
-                    }
-                };
+                    Gizmo current = gizmoEnum.Current;
+                    yield return current;
+                }
+
+                for (int i = 0; i < AbilityData.AllPowers.Count; i++)
+                {
+                    PawnAbility myAbility = AbilityData.AllPowers[i];
+                    yield return myAbility.GetGizmo();
+
+                    if (Prefs.DevMode)
+                        yield return new Command_Action
+                        {
+                            defaultLabel = "reset " + myAbility.CooldownTicksLeft + " cooldown",
+                            defaultDesc = "cooldown=" + myAbility.CooldownTicksLeft,
+                            action = delegate
+                            {
+                                myAbility.CooldownTicksLeft = -1;
+                            }
+                        };
+                }
             }
         }
     }
