@@ -561,11 +561,24 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 				<li>EmptyHair</li>
 			</hairTags>
 		</hairSettings>
+		
+		<thoughtSettings>
+			<replacerList>
+                <li>
+                    <original>AteGasteropodSecretionDirect</original>
+                    <replacer>AteGasteropodSecretionDirectAsSlug</replacer> 
+                </li>
+				<li>
+                    <original>AteGasteropodSecretionAsIngredient</original>
+                    <replacer>AteGasteropodSecretionAsIngredientAsSlug</replacer> 
+                </li>
+            </replacerList>
+		</thoughtSettings>
 		<!--	
 		<relationSettings>
 		</relationSettings>
-		<thoughtSettings>
-		</thoughtSettings>
+		
+		
 		<raceRestriction>
 		</raceRestriction>
 		-->

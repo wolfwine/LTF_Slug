@@ -273,7 +273,7 @@ namespace LTF_Slug
                 }
                 
                 // Add psychicSensitivity * SocialImpact * SocialSkill fight here
-                if (ToolsPawn.ApplyHediffOnBodyPartTag(curPawn, BodyPartTagDefOf.ConsciousnessSource, hediffDefToApply, prcDebug))
+                if (ToolsHediff.ApplyHediffOnBodyPartTag(curPawn, BodyPartTagDefOf.ConsciousnessSource, hediffDefToApply, prcDebug))
                 {
                     if (IsFlaySpot)
                     {

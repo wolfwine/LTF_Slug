@@ -11,7 +11,8 @@
 		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/LiquidFuel</texPath>
-			<color>(138, 43, 226, 100)</color>
+			<!-- <color>(138, 43, 226, 100)</color> -->
+			<color>(255, 179, 217, 100)</color>
 		</graphicData>
 		<!-- <pathCost>5</pathCost> -->
 		<filth>
@@ -36,7 +37,8 @@
 		</statBases>
 		<graphicData>
 			<texPath>Things/Filth/Ash</texPath>
-			<color>(138, 63, 226, 100)</color>
+			<!-- <color>(138, 63, 226, 100)</color> -->
+			<color>(153, 0, 77, 100)</color>
 		</graphicData>
 		<pathCost>3</pathCost>
 		<filth>

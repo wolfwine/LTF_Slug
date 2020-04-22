@@ -81,8 +81,8 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 			</thingDefs>
 		</fixedIngredientFilter>
 	
-		<!-- <addsHediff>Hediff_FondlingVestigialShell</addsHediff> -->
-		<addsHediff>Hediff_Wrapper_FondlingVestigialShell</addsHediff>
+		<addsHediff>Hediff_FondlingVestigialShell</addsHediff>
+		<!-- <addsHediff>Hediff_Wrapper_FondlingVestigialShell</addsHediff> -->
 	</RecipeDef>
 	
 	<RecipeDef ParentName="LTF_InstallFondlingVestigialShellBase">

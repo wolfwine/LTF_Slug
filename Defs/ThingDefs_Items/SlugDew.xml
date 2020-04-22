@@ -2,61 +2,85 @@
 <Defs>
 
 <ThingDef ParentName="ResourceBase">
-    <defName>LTF_SlugDew</defName>
-    <label>Slug dew</label>
-    <description>Wtf slug dew erk. Is it snot ?</description>
-    <graphicData>
-      <texPath>Things/Item/SlugDew</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
-	  <!-- <color>(230, 204, 255)</color> -->
-	  <color>(.9, .8, 1, .6)</color>
-    </graphicData>
-	
-    <soundInteract>Interact_BeatFire</soundInteract>
-    <soundDrop>Corpse_Drop</soundDrop>
-	
+	<defName>LTF_SlugDew</defName>
+	<label>Slug dew</label>
+	<description>Wtf slug dew erk. Is it snot ?</description>
+
+	<graphicData>
+		<texPath>Things/Item/SlugDew</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
+		<!-- <color>(230, 204, 255)</color> -->
+		<!-- <color>(.9, .8, 1, .6)</color> -->
+		
+		<!-- <color>(255, 179, 217, 60)</color> -->
+		<color>(1, .7, .85, .7)</color>
+
+	</graphicData>
+
+	<soundInteract>Interact_BeatFire</soundInteract>
+	<soundDrop>Corpse_Drop</soundDrop>
+
 	<stackLimit>200</stackLimit>
-	
-    <statBases>
-		<MarketValue>.5</MarketValue>
+
+	<statBases>
+		<MarketValue>2</MarketValue>
 		<MaxHitPoints>70</MaxHitPoints>
 		<Mass>0.1</Mass>
 		<Flammability>0.1</Flammability>
 		<DeteriorationRate>2</DeteriorationRate>
 		<!--<ArmorHeatMultiplier>1.5</ArmorHeatMultiplier>-->
-		<SharpDamageMultiplier>0.2</SharpDamageMultiplier>
-		<BluntDamageMultiplier>0.7</BluntDamageMultiplier>
-		<Nutrition>0.02</Nutrition>
-    </statBases>
-	
+		<SharpDamageMultiplier>0.5</SharpDamageMultiplier>
+		<BluntDamageMultiplier>1.6</BluntDamageMultiplier>
+		<Nutrition>0.0025</Nutrition>
+		<!--
+		<StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+		<StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+		<StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
+		<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+		<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+		<SharpDamageMultiplier>0.85</SharpDamageMultiplier>
+		<BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+		-->
+		<FoodPoisonChanceFixedHuman>.05</FoodPoisonChanceFixedHuman>
+	</statBases>
+
 	<tickerType>Rare</tickerType>
 	<deepCommonality>0.01</deepCommonality>
 	<deepCountPerPortion>6</deepCountPerPortion>
 	<deepLumpSizeRange>2</deepLumpSizeRange>
-	
+
 	<scatterableOnMapGen>false</scatterableOnMapGen>
+
 	<smeltable>false</smeltable>
-    <stuffProps>
+	<burnableByRecipe>true</burnableByRecipe>
+	<smallVolume>true</smallVolume>
+
+	<stuffProps>
 		<stuffAdjective>secreted</stuffAdjective>
 		<categories>
 			<li>Woody</li>
 		</categories>
-		<!-- <commonality>0.01</commonality> -->
 		
-		<!-- <color>(230, 204, 255)</color> -->
-		<color>(.9, .8, 1, .7)</color>
+		<commonality>0.02</commonality>
+		<!-- <color>(255, 179, 217, 70)</color> -->
+		<color>(1, .7, .85, .7)</color>
+		<!-- <color>(.9, .8, 1, .7)</color> -->
+		
 		<constructEffect>ConstructWood</constructEffect>
 		<soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+		
 		<statOffsets>
 			<Beauty>-1</Beauty>
 		</statOffsets>
 		<statFactors>
-			<MaxHitPoints>0.2</MaxHitPoints>
-			<Beauty>-3</Beauty>
+			<MaxHitPoints>0.4</MaxHitPoints>
+			<Beauty>-2</Beauty>
 			<Flammability>0.3</Flammability>
+			
 			<WorkToMake>1.2</WorkToMake>
-			<WorkToBuild>1.2</WorkToBuild>
+			<WorkToBuild>.8</WorkToBuild>
 			<DoorOpenSpeed>1.5</DoorOpenSpeed>
+			
 			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
 			<ArmorRating_Sharp>.2</ArmorRating_Sharp>
 			<ArmorRating_Heat>1.5</ArmorRating_Heat>
@@ -66,18 +90,18 @@
 		<!-- <appearance>Planks</appearance> -->
 		<appearance>Dripping</appearance>
 		<!-- todo Dripping stuffprop.cs textures\things\building\linked\wall-->
-    </stuffProps>
-	
+	</stuffProps>
+
 	<ingestible>
 		<preferability>DesperateOnly</preferability>
 		<foodType>AnimalProduct, Fluid</foodType>
-		 <!--<foodType>Processed</foodType>-->
-		<!-- B19 <nutrition>0.02</nutrition> -->
 		
 		<ingestEffect>EatMeat</ingestEffect>
 		<ingestSound>Ingest_Beer</ingestSound>
 		
-		<tasteThought>Ate_LTF_SlugDew</tasteThought>
+		<tasteThought>AteGasteropodSecretionDirect</tasteThought>
+		<specialThoughtDirect>AteGasteropodSecretionDirect</specialThoughtDirect>
+		<specialThoughtAsIngredient>AteGasteropodSecretionAsIngredient</specialThoughtAsIngredient>
 		
 		<baseIngestTicks>240</baseIngestTicks>
 
@@ -92,8 +116,8 @@
 		<ingestReportString>Licking {0}.</ingestReportString>
 		<!--<useEatingSpeedStat>true</useEatingSpeedStat>-->
 	</ingestible>
-	
-    <comps>
+
+	<comps>
 		<li Class="CompProperties_FoodPoisonable">
 			<!-- B19 <humanlikeOnly>false</humanlikeOnly> -->
 		</li>
@@ -107,16 +131,30 @@
 			<progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
 		</li>
 	</comps>
+
+	<thingCategories>
+		<li>AnimalProductRaw</li>
+		<li>ResourcesRaw</li>
+	</thingCategories>
 	
-    <thingCategories>
-	  <li>AnimalProductRaw</li>
-      <li>ResourcesRaw</li>
-    </thingCategories>
-	
-    <techHediffsTags>
-      <li>Poor</li>
-    </techHediffsTags>
-<!--    <storedConceptLearnOpportunity>BeeswaxMaking</storedConceptLearnOpportunity> -->
+	<isTechHediff>true</isTechHediff>
+	<techHediffsTags>
+		<li>Poor</li>
+	</techHediffsTags>
+	<!--
+	<equippedAngleOffset>-20</equippedAngleOffset>
+	<tools>
+		<li>
+			<label>log</label>
+			<capacities>
+				<li>KickMaterialInEyes</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>2</cooldownTime>
+		</li>
+	</tools>
+	-->
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 </ThingDef>
 
   

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!---->	
+	<HediffDef Name="Hediff_GradientTrailBase" ParentName="Hediff_TrailBase">
+		<defName>Hediff_GradientTrailBase</defName>
+		
+		<description>Hediff_GradientTrailBase</description>
+		<label>Hediff_GradientTrailBase</label>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_RainbowTrail">
+				<period>12</period>
+				
+				<motePurpleDef>
+					<li>Mote_PuddlePA</li>
+					<li>Mote_PuddlePB</li>
+					<li>Mote_PuddlePC</li>
+				</motePurpleDef>
+				<moteBlueDef>
+					<li>Mote_PuddleBA</li>
+					<li>Mote_PuddleBB</li>
+					<li>Mote_PuddleBC</li>
+				</moteBlueDef>
+				<moteGreenDef>
+					<li>Mote_PuddleGA</li>
+					<li>Mote_PuddleGB</li>
+					<li>Mote_PuddleGC</li>
+				</moteGreenDef>
+				<moteYellowDef>					
+					<li>Mote_PuddleYA</li>
+					<li>Mote_PuddleYB</li>
+					<li>Mote_PuddleYC</li>
+				</moteYellowDef>
+				<moteOrangeDef>
+					<li>Mote_PuddleOA</li>
+					<li>Mote_PuddleOB</li>
+					<li>Mote_PuddleOC</li>
+				</moteOrangeDef>
+				<moteRedDef>
+					<li>Mote_PuddleRA</li>
+					<li>Mote_PuddleRB</li>
+					<li>Mote_PuddleRC</li>
+				</moteRedDef>
+
+				<staySameColorChance>.5</staySameColorChance>
+				<maxTimesSameColor>4</maxTimesSameColor>
+				<minTimesSameColor>2</minTimesSameColor>
+				
+				<scale>.6~.9</scale>
+				
+				<hideBySeverity>true</hideBySeverity>
+				<!-- <debug>true</debug> -->
+			</li>
+		</comps>
+	</HediffDef>
+
+<!-- rainbow -->	
+	<HediffDef ParentName="Hediff_GradientTrailBase">
+		<defName>Hediff_RainbowTrail</defName>
+		
+		<description>Hediff_RainbowTrail</description>
+		<label>Rainbow Trail</label>
+	</HediffDef>
+
+	<!-- 3 colors circular pawn colors -->	
+	<HediffDef ParentName="Hediff_GradientTrailBase">
+		<defName>Hediff_ThreeColorsCircularPawnColor</defName>
+		
+		<description>Hediff_ThreeColorsCircularPawnColor</description>
+		<label>3 Colors Circular PawnColor</label>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_RainbowTrail">
+				<threeColorsGradient>true</threeColorsGradient>
+				<colorChoice>pawnColor</colorChoice>
+				<cycleKind>circular</cycleKind>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<!-- 3 colors circular complementary -->	
+	<HediffDef ParentName="Hediff_GradientTrailBase">
+		<defName>Hediff_ThreeColorsCircularComplementary</defName>
+
+		<description>Hediff_ThreeColorsCircularComplementary</description>
+		<label>3 Colors Circular Complementary</label>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_RainbowTrail">
+				<threeColorsGradient>true</threeColorsGradient>
+				<colorChoice>complementary</colorChoice>
+				<cycleKind>circular</cycleKind>
+			</li>
+		</comps>
+	</HediffDef>
+	
+		<!-- 3 colors circular complementary -->	
+	<HediffDef ParentName="Hediff_GradientTrailBase">
+		<defName>Hediff_ThreeColorsCircularRandom</defName>
+		
+		<description>Hediff_ThreeColorsCircularRandom</description>
+		<label>3 Colors Circular Random</label>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_RainbowTrail">	
+				<threeColorsGradient>true</threeColorsGradient>
+				<colorChoice>random</colorChoice>
+				<cycleKind>circular</cycleKind>
+			</li>
+		</comps>
+	</HediffDef>
+	
+</Defs>

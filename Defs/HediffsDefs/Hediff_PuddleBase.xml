@@ -36,8 +36,15 @@
 					<li>Hediff_ThreeColorsCircularPawnColor</li>
 					<li>Hediff_ThreeColorsCircularPawnColor</li>
 					<li>Hediff_ThreeColorsCircularPawnColor</li>
-					<li>Hediff_ThreeColorsCircularRandom</li>
+					<li>Hediff_ThreeColorsBouncingPawnColor</li>
+					<li>Hediff_ThreeColorsBouncingPawnColor</li>
+					<li>Hediff_ThreeColorsBouncingPawnColor</li>
+					
 					<li>Hediff_ThreeColorsCircularComplementary</li>
+					<li>Hediff_ThreeColorsBouncingComplementary</li>
+					
+					<li>Hediff_ThreeColorsCircularRandom</li>
+					
 					<li>Hediff_RainbowTrail</li>
 				</hediffPool>
 				

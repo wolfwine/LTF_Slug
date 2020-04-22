@@ -4,7 +4,9 @@
   <ThingDef ParentName="DrugBase">
     <defName>LTF_SlugDewBeerawecka</defName>
     <label>Slug dew Beerawecka</label>
-    <description>An unrisen cake made with fruits macerated in ... erk slug dew</description>
+    <description>An unrisen cake made with fruits macerated in gasteropod secretions</description>
+	<descriptionHyperlinks><RecipeDef>MakeSlugDewBeerawecka</RecipeDef></descriptionHyperlinks>
+	
     <graphicData>
 		<drawSize>1</drawSize>
 		<texPath>Things/Item/SlugBeerawecka</texPath>
@@ -18,20 +20,20 @@
 	
     <socialPropernessMatters>true</socialPropernessMatters>
 	<stackLimit>75</stackLimit>
+	
     <statBases>
 		<MarketValue>4.3</MarketValue>
 		<Mass>.8</Mass>
 		<MaxHitPoints>10</MaxHitPoints>
 		<Nutrition>0.1</Nutrition>
     </statBases>
+	
 	<tickerType>Rare</tickerType>
  
 	<fillPercent>0.05</fillPercent>
 	<ingestible>
 		<preferability>DesperateOnly</preferability>
 		<foodType>AnimalProduct, Fluid</foodType>
-		 <!--<foodType>Processed</foodType>-->
-		<!-- B19 <nutrition>0.1</nutrition> -->
 		
 		<ingestEffect>EatVegetarian</ingestEffect>
 		<ingestSound>Meal_Eat</ingestSound>
@@ -76,7 +78,6 @@
 	
     <comps>
 		<li Class="CompProperties_FoodPoisonable">
-			<!-- B19 <humanlikeOnly>false</humanlikeOnly> -->
 		</li>
 		<li Class="CompProperties_Rottable">
 			<daysToRotStart>60</daysToRotStart>
@@ -94,7 +95,7 @@
 			<minToleranceToAddict>0.04</minToleranceToAddict>
 			<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
 			<needLevelOffset>1</needLevelOffset>
-			<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+			<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
 			<listOrder>100</listOrder>
 			<overdoseSeverityOffset>
 				<min>0.18</min>
@@ -107,7 +108,7 @@
 	<researchPrerequisites><li>LTF_Research_Slug</li></researchPrerequisites>
 	
     <thingCategories>
-      <li>Manufactured</li>
+		<li>Manufactured</li>
     </thingCategories>
 	
   </ThingDef>

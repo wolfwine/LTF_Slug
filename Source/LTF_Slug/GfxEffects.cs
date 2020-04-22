@@ -45,7 +45,7 @@ namespace LTF_Slug
                 ThrowMindMote(loc, map, spotKind);
             }
         }
-
+        /*
         public static void ThrowPsycastAreaMote(Vector3 loc, Map map, bool myDebug = false)
         {
             if (!loc.ShouldSpawnMotesAt(map) || map.moteCounter.SaturatedLowPriority)
@@ -54,6 +54,7 @@ namespace LTF_Slug
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(MyDefs.Mote_PsycastArea);
             GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map);
         }
+        */
             
 
         public static void ThrowMindMote(Vector3 loc, Map map, MyDefs.SpotKind spotKind, bool myDebug=false)

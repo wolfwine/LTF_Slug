@@ -4,6 +4,8 @@
     <defName>MakeSlugDewBeerawecka</defName>
     <label>make slug beerawecka</label>
     <description>Make a stupefying unrisen cake by combining raw fruits and slug dew.</description>
+	<descriptionHyperlinks><ThingDef>LTF_SlugDewBeerawecka</ThingDef></descriptionHyperlinks>
+	
     <jobString>Making slug beerawecka</jobString>
 	
     <workAmount>600</workAmount>
@@ -19,8 +21,6 @@
     <requiredGiverWorkType>Cooking</requiredGiverWorkType>
 	<skillRequirements>
 		<Cooking>3</Cooking>
-		<Animals>2</Animals>
-		<Medicine>1</Medicine>
 	</skillRequirements>
 	<researchPrerequisite>LTF_Research_Slug</researchPrerequisite>
 	
