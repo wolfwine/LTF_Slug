@@ -4,7 +4,20 @@
 <ThingDef ParentName="ResourceBase">
 	<defName>LTF_SlugDew</defName>
 	<label>Slug dew</label>
-	<description>Wtf slug dew erk. Is it snot ?</description>
+	<description>Gasteropod secretions.
+
+It's a repugnant ressource, but it has a versatile range of use:
+- Ingested raw or integrated to meals. It's very likely you will get some food poisonning by doing so though.
+- Molded int floors and, or fast doors.
+- Crafted into silk.
+- Integrated in eggs to torture nature.</description>
+
+<descriptionHyperlinks>
+	<RecipeDef>MakeSlugSilk</RecipeDef>
+	<RecipeDef>MakeSlugDewBeerawecka</RecipeDef>
+	<RecipeDef>LTF_CraftDewEgg</RecipeDef>
+	<RecipeDef>LTF_CraftChunkEgg</RecipeDef>
+</descriptionHyperlinks>
 
 	<graphicData>
 		<texPath>Things/Item/SlugDew</texPath>

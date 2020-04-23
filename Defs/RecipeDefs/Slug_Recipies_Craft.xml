@@ -4,6 +4,12 @@
     <defName>MakeSlugSilk</defName>
     <label>make slug silk</label>
     <description>Extract microfibers from slug dew.</description>
+	
+	<descriptionHyperlinks>
+		<ThingDef>LTF_SlugDew</ThingDef>
+		<ThingDef>LTF_SlugSilk</ThingDef>
+	</descriptionHyperlinks>
+	
     <jobString>Making slug silk</jobString>
 	
     <workAmount>500</workAmount>
@@ -56,6 +62,11 @@
 		<defName>LTF_ExtractKraptylFromSlag</defName>
 		<label>smelt kraptyl from slag</label>
 		<description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_Kraptyl</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Smelting metal from slag.</jobString>
 		<workAmount>1200</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -91,6 +102,11 @@
 		<defName>LTF_ExtractKraptylFromTinySlag</defName>
 		<label>smelt tiny kraptyl from slag</label>
 		<description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_Kraptyl</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Smelting metal from tiny slag.</jobString>
 		<workAmount>1200</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -127,6 +143,12 @@
 		<defName>LTF_CraftDewEgg</defName>
 		<label>Inoculate slug dew in an egg</label>
 		<description>Innoculate slug dew to corrupt the egg matrix purpose. Less food, more dew.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_SlugDew</ThingDef>
+			<ThingDef>LTF_DewEgg</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Corrupting the matrix</jobString>
 		<workAmount>600</workAmount>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -170,6 +192,13 @@
 		<defName>LTF_CraftChunkEgg</defName>
 		<label>Bruise egg with steel and dew</label>
 		<description>Corrupt mother nature to reach meaningless goals.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_SlugDew</ThingDef>
+			<ThingDef>LTF_TinyChunkSlagKraptyl</ThingDef>
+			<ThingDef>LTF_ChunkEgg</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Corrupting the matrice</jobString>
 		<workAmount>1300</workAmount>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -182,7 +211,7 @@
 				<count>1</count>
 			</li>
 			<li>
-				<filter><thingDefs><li>ChunkSlagSteel</li></thingDefs></filter>
+				<filter><thingDefs><li>LTF_TinyChunkSlagKraptyl</li></thingDefs></filter>
 				<count>1</count>
 			</li>
 			<li>
@@ -194,6 +223,7 @@
 				<count>1</count>
 			</li>
 		</ingredients>
+		
 		<products>
 			<LTF_ChunkEgg>1</LTF_ChunkEgg>
 		</products>
@@ -203,7 +233,7 @@
 			</categories>
 			<thingDefs>
 				<li>LTF_SlugDew</li>
-				<li>ChunkSlagSteel</li>
+				<li>LTF_TinyChunkSlagKraptyl</li>
 				<li>WoodLog</li>
 			</thingDefs>
 		</fixedIngredientFilter>
@@ -218,6 +248,12 @@
 		<defName>LTF_CraftKrapkenEgg</defName>
 		<label>corrupt egg</label>
 		<description>Corrupt mother nature to reach meaningless goals. What will hatch? The egg.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_TinyChunkSlagKraptyl</ThingDef>
+			<ThingDef>LTF_KrapkenEgg</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Corrupting the matrice</jobString>
 		<workAmount>1800</workAmount>
 		<workSpeedStat>CookSpeed</workSpeedStat>

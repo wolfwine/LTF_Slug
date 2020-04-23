@@ -5,6 +5,11 @@
     <defName>LTF_Kraptyl</defName>
     <label>Kraptyl</label>
     <description>An iron-carbon metal alloy deeply corroded by slug dew.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>LTF_ExtractKraptylFromSlag</RecipeDef>
+		<RecipeDef>LTF_ExtractKraptylFromTinySlag</RecipeDef>
+	</descriptionHyperlinks>
+	
     <graphicData>
 		<texPath>Things/Item/Resource/Metal</texPath>
 		<graphicClass>Graphic_Random</graphicClass>
@@ -113,6 +118,10 @@
 		<defName>LTF_ChunkSlagKraptyl</defName>
 		<label>Kraptyl slag chunk</label>
 		<description>A chunk of Kraptyl slag. Not very useful in its current form but it's possible to smelt Kraptyl from it.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_ExtractKraptylFromSlag</RecipeDef>
+		</descriptionHyperlinks>
+		
 		<graphicData>
 			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
@@ -140,6 +149,10 @@
 		<defName>LTF_TinyChunkSlagKraptyl</defName>
 		<label>tiny kraptyl slag chunk</label>
 		<description>A tiny chunk of Kraptyl slag. Not very useful in its current form but it's possible to smelt Kraptyl from it.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_ExtractKraptylFromTinySlag</RecipeDef>
+			<RecipeDef>LTF_CraftKrapkenEgg</RecipeDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/Chunk/ChunkSlag</texPath>
 			<graphicClass>Graphic_Random</graphicClass>

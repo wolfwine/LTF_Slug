@@ -10,9 +10,8 @@ namespace LTF_Slug
         private bool AlwaysRainbow = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().AlwaysRainbowPuddle;
         private bool EnablePuddles = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().EnablePuddles;
 
-        private readonly bool myDebug = true;
-
-        //private readonly bool myDebug = false;
+        //private readonly bool myDebug = true;
+        private readonly bool myDebug = false;
         private readonly string ErrStr = "HediffGiver_SlugTrail denied bc ";
 
         public override bool OnHediffAdded(Pawn pawn, Hediff hediff)

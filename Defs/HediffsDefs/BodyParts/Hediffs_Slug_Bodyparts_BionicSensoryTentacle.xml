@@ -73,6 +73,8 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	
+		<researchPrerequisite>LTF_Research_SlugBionics</researchPrerequisite>
+	
 		<addsHediff>Hediff_Bionic_SensoryTentacle</addsHediff>
 	</RecipeDef>
 	

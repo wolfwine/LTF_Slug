@@ -44,9 +44,13 @@ namespace LTF_Slug
             Listing_Standard listing = new Listing_Standard();
             listing.Begin(inRect);
 
-            //listing.Label("Enable abilities: " + settings.EnableAbilities);
+            listing.Label("Abilities");
+            listing.GapLine();
             listing.CheckboxLabeled("Enable abilities - Slug Psychic abilities to buff/debuff enemies/allies ", ref settings.EnableAbilities);
             listing.CheckboxLabeled("Ability Tiredness - Slugs get tired when their abilities limit is exceeded", ref settings.TirednessOnOveruse);
+            listing.Gap();
+            listing.Label("Puddles");
+            listing.GapLine();
             listing.CheckboxLabeled("Enable puddles - Slugs will leave puddles when moving around", ref settings.EnablePuddles);
             listing.CheckboxLabeled("Rainbow puddles - The puddles always have a rainbow gradient", ref settings.AlwaysRainbowPuddle);
 

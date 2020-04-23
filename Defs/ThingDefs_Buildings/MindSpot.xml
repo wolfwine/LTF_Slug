@@ -127,12 +127,13 @@
 			<texPath>Things/AbilityBuilding/MindFondleSpot</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
+		
 		<comps>
 			<li Class="LTF_Slug.CompProperties_LTF_MindSpot">
 				<range>2.2</range>
 				<affectsHumanlike>true</affectsHumanlike>
 				<affectsColonists>true</affectsColonists>
-				<hediffAppliedLimit>12</hediffAppliedLimit>
+				<hediffAppliedLimit>18</hediffAppliedLimit>
 			</li>
 		</comps>
 	</ThingDef>

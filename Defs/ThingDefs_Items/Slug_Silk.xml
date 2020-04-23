@@ -4,6 +4,7 @@
     <defName>LTF_SlugSilk</defName>
     <label>slug silk</label>
     <description>Microfibers extracted from slug dew.</description>
+	<descriptionHyperlinks><RecipeDef>MakeSlugSilk</RecipeDef></descriptionHyperlinks>
 
     <graphicData>
       <texPath>Things/Item/SlugSilk</texPath>

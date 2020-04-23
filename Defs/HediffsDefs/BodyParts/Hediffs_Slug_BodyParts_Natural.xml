@@ -9,9 +9,19 @@
 		<descriptionHyperlinks>
 			<RecipeDef>InstallLeftOpticalTentacle</RecipeDef>
 			<RecipeDef>InstallRightOpticalTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftWoodOpticalTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightWoodOpticalTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftProstheticOpticalTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightProstheticOpticalTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftBionicOpticalTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightBionicOpticalTentacle</RecipeDef>
 		</descriptionHyperlinks>
+		
 		<statBases>
-			<MarketValue>300</MarketValue>
+			<MarketValue>200</MarketValue>
 			<Mass>1</Mass>
 		</statBases>
 	</ThingDef>
@@ -62,37 +72,7 @@
 			<li>SlugRightOpticalTentacle</li>
 		</appliedOnFixedBodyParts>
 	</RecipeDef>
-<!--
-  <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
-    <defName>InstallOpticalTentacle</defName>
-    <label>install optical tentacle</label>
-    <description>Install a biological optical tentacle.</description>
-    <descriptionHyperlinks><ThingDef>OpticalTentacle</ThingDef></descriptionHyperlinks>
-    <jobString>Installing optical tentacle.</jobString>
-    <deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
-    <skillRequirements>
-      <Medicine>8</Medicine>
-    </skillRequirements>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>OpticalTentacle</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>OpticalTentacle</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <appliedOnFixedBodyParts>
-      <li>OpticalTentacle</li>
-    </appliedOnFixedBodyParts>
-  </RecipeDef>
--->
+
   <!-- sensory tentacle -->
 	<ThingDef ParentName="BodyPartNaturalBase">
 		<defName>SensoryTentacle</defName>
@@ -101,9 +81,18 @@
 		<descriptionHyperlinks>
 			<RecipeDef>InstallLeftSensoryTentacle</RecipeDef>
 			<RecipeDef>InstallRightSensoryTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftWoodSensoryTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightWoodSensoryTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftProstheticSensoryTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightProstheticSensoryTentacle</RecipeDef>
+			
+			<RecipeDef>LTF_InstallLeftBionicSensoryTentacle</RecipeDef>
+			<RecipeDef>LTF_InstallRightBionicSensoryTentacle</RecipeDef>
 		</descriptionHyperlinks>
 		<statBases>
-			<MarketValue>250</MarketValue>
+			<MarketValue>150</MarketValue>
 			<Mass>1</Mass>
 		</statBases>
 	</ThingDef>
@@ -225,6 +214,7 @@
 		<defName>Pneumostome</defName>
 		<label>pneumostome</label>
 		<description>A biological slug pneumostome. That breathing pore is a respiratory opening of the external body. It is a part of the respiratory system of gastropods. It is an opening in the right side of the mantle. Air enters through the pneumostome into the animal's single lung, the air-filled mantle cavity. Inside the mantle cavity the animal has a highly vascularized area of tissue that functions as a lung.</description>
+		
 		<descriptionHyperlinks><RecipeDef>InstallNaturalSalivaryGland</RecipeDef></descriptionHyperlinks>
 		<statBases>
 			<MarketValue>250</MarketValue>
@@ -265,6 +255,7 @@
 		<label>radula</label>
 		<description>A biological slug radula. An anatomical structure used by mollusks for feeding, sometimes compared to a tongue. It is a minutely toothed, chitinous ribbon, which is typically used for scraping or cutting food before the food enters the oesophagus.</description>
 		<descriptionHyperlinks><RecipeDef>InstallNaturalRadula</RecipeDef></descriptionHyperlinks>
+		
 		<statBases>
 			<MarketValue>250</MarketValue>
 		<Mass>1</Mass>

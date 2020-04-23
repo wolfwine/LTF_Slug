@@ -87,6 +87,8 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	
+		<researchPrerequisite>LTF_Research_SlugBionics</researchPrerequisite>
+	
 		<addsHediff>Hediff_Bionic_Tail</addsHediff>
 	</RecipeDef>
 	

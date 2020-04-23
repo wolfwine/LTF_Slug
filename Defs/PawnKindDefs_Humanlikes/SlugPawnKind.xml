@@ -30,6 +30,8 @@
   <!-- ============================ Slug Civilian Base ========================== -->
 
 <PawnKindDef Name="SlugCivBase" ParentName="SlugBase" Abstract="True">
+	<defName>SlugCivBase</defName>
+	
     <combatPower>25</combatPower>
 	<race>Alien_Slug</race>
     <itemQuality>Normal</itemQuality>

@@ -85,6 +85,8 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	
+		<researchPrerequisite>LTF_Research_SlugProsthetics</researchPrerequisite>
+	
 		<addsHediff>Hediff_Prosthetic_Tail</addsHediff>
 	</RecipeDef>
 	

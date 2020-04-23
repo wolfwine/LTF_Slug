@@ -60,6 +60,8 @@
 		
 		<tags>
 			<li>HearingSource</li>
+			<li>TalkingSource</li>
+			<li>ConsciousnessSource</li>
 		</tags>
 	</BodyPartDef>
 

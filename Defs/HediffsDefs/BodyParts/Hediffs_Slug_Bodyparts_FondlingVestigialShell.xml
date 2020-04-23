@@ -80,6 +80,8 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 				<li>LTF_FondlingVestigialShell</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+
+		<researchPrerequisite>LTF_Research_SlugBionics</researchPrerequisite>
 	
 		<addsHediff>Hediff_FondlingVestigialShell</addsHediff>
 		<!-- <addsHediff>Hediff_Wrapper_FondlingVestigialShell</addsHediff> -->

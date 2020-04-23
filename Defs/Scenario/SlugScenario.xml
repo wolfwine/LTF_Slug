@@ -107,8 +107,8 @@
 	</li>
 	<li Class="ScenPart_StartingThing_Defined">
 		<def>StartingThing_Defined</def>
-		<thingDef>Pemmican</thingDef>
-		<count>125</count>
+		<thingDef>MealSimple</thingDef>
+		<count>15</count>
 	</li>
 	<!-- Melee weapon-->
 	<li Class="ScenPart_StartingThing_Defined">
@@ -143,6 +143,7 @@
 		<count>1</count>
 		<bondToRandomPlayerPawnChance>.8</bondToRandomPlayerPawnChance>
 	</li>
+	
 	<!--
 	<li Class="ScenPart_StartingAnimal">
 		<def>StartingAnimal</def>

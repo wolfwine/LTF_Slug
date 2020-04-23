@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="OrganicProductBase" >
-<!-- <ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="ResourceVerbBase" > -->
-	<!--<graphicData>
-	<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
-	</graphicData>-->
+<!-- <ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="OrganicProductBase" > -->
+<ThingDef Abstract="True" Name="LTF_KeggBase" ParentName="EggFertBase" >
+
 	<ingestible>
 		<foodType>AnimalProduct</foodType>
 		<ingestEffect>EatMeat</ingestEffect>
@@ -25,7 +23,6 @@
 			<disableIfHatcher>true</disableIfHatcher>
 		</li>
 		<li Class="CompProperties_FoodPoisonable">
-			<!-- B19 <humanlikeOnly>false</humanlikeOnly> -->
 		</li>
 	</comps>
 	
@@ -37,15 +34,17 @@
     <defName>LTF_DewEgg</defName>
     <label>Dew egg</label>
     <description>This egg will fastly deteriorate and produce slug dew in the process. Waste healthy food for snot ? That's not very academical.</description>
+	<descriptionHyperlinks><RecipeDef>LTF_CraftDewEgg</RecipeDef></descriptionHyperlinks>
+	
     <graphicData>
-		<texPath>Things/Item/Resource/LTF_DewEgg</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
+		<texPath>Things/Item/Resource/DewEgg</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
 		<drawSize>1</drawSize>
 		<!-- <color>(230, 204, 255)</color> -->
 		<!-- <shaderType>Transparent</shaderType> -->
 	</graphicData>
 
-    <stackLimit>1</stackLimit>
+    <stackLimit>25</stackLimit>
 
 	<!-- equipable -->
 	<equipmentType>Primary</equipmentType>
@@ -82,7 +81,7 @@
     </statBases>
 	
 	<fillPercent>0.05</fillPercent>
-	<tickerType>Rare</tickerType>
+	<!-- <tickerType>Rare</tickerType> -->
 
 	<comps>
 		<!--
@@ -98,6 +97,17 @@
 			<spawnVerb>liquefaction</spawnVerb>
 		</li>
 		-->
+
+		<li Class="CompProperties_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>7</spawnCount>
+			<spawnIntervalRange>
+				<min>3300</min>
+				<max>3600</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>true</spawnForbidden>
+		</li>
 
 		<li Class="CompProperties_Lifespan">
 			<lifespanTicks>10000</lifespanTicks>
@@ -122,7 +132,7 @@
 	<label>dew egg projectile</label>
 
 	<graphicData>
-		<texPath>Things/Item/Resource/LTF_DewEgg</texPath>
+		<texPath>Things/Item/Resource/DewEgg/DewEgg01</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>.8</drawSize>
 	</graphicData>
@@ -156,16 +166,18 @@
     <defName>LTF_ChunkEgg</defName>
     <label>Chunk egg</label>
     <description>This egg will fastly deteriorate and produce kraptyl chunks in the process.</description>
+	<descriptionHyperlinks><RecipeDef>LTF_CraftChunkEgg</RecipeDef></descriptionHyperlinks>
+	
 	
     <graphicData>
-		<texPath>Things/Item/Resource/LTF_ChunkEgg</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
+		<texPath>Things/Item/Resource/ChunkEgg</texPath>
+		<graphicClass>Graphic_StackCount</graphicClass>
 		<drawSize>1</drawSize>
 		<!-- <color>(138,43,226)</color> -->
 	</graphicData>
 
 		<!-- bug https://ludeon.com/mantis/print_bug_page.php?bug_id=2094 si stack -->
-	<stackLimit>1</stackLimit>
+	<stackLimit>25</stackLimit>
 	
 	<!-- equipable -->
 	<equipmentType>Primary</equipmentType>
@@ -202,7 +214,7 @@
     </statBases>
 	
 	<fillPercent>0.1</fillPercent>
-	<tickerType>Rare</tickerType>
+	<!-- <tickerType>Rare</tickerType> -->
 
 	<comps>
 		<!--
@@ -218,7 +230,16 @@
 			<spawnVerb>corrosion</spawnVerb>
 		</li>
 		-->
-	
+		<li Class="CompProperties_Spawner">
+			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>4000</min>
+				<max>6000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<!-- <spawnForbidden>true</spawnForbidden> -->
+		</li>
 		<li Class="CompProperties_Lifespan">
 			<lifespanTicks>24000</lifespanTicks>
 		</li>
@@ -244,7 +265,7 @@
 	<label>chunk egg projectile</label>
 
 	<graphicData>
-		<texPath>Things/Item/Resource/LTF_ChunkEgg</texPath>
+		<texPath>Things/Item/Resource/ChunkEgg/ChunkEgg01</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>.8</drawSize>
 	</graphicData>
@@ -276,16 +297,21 @@
 <ThingDef ParentName="LTF_KeggBase">
     <defName>LTF_KrapkenEgg</defName>
     <label>Krapken egg</label>
-   <description>This egg will hatch something. But sometimes it wont. But ... even if you can, should you ?</description>
+	<description>This egg will hatch something. But even if you can, should you ?</description>
+	<descriptionHyperlinks>
+		<RecipeDef>LTF_CraftKrapkenEgg</RecipeDef>
+		<PawnKindDef>LTF_Krapken</PawnKindDef>
+	</descriptionHyperlinks>
    
    <graphicData>
-		<texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+		<!-- <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath> -->
+		<texPath>Things/Item/Resource/DewEgg</texPath>
 		<graphicClass>Graphic_StackCount</graphicClass>
 		<drawSize>1.5</drawSize>
 		<color>(109,31,47)</color>
 	</graphicData>
 
-	<stackLimit>1</stackLimit>
+	<stackLimit>25</stackLimit>
 	
     <statBases>
 		<MaxHitPoints>20</MaxHitPoints>
@@ -298,7 +324,7 @@
 
 	
 	<fillPercent>0.1</fillPercent>
-	<tickerType>Rare</tickerType>
+	<tickerType>Normal</tickerType>
 	
 	<!--
     <comps>
@@ -319,6 +345,12 @@
 		</li>
     </comps>
 	-->
+	<comps>
+		<li Class="CompProperties_Hatcher">
+			<hatcherDaystoHatch>.25</hatcherDaystoHatch>
+			<hatcherPawn>LTF_Krapken</hatcherPawn>
+		</li>
+	</comps>
 	
 	<thingCategories>
 		<li>AnimalProductRaw</li>

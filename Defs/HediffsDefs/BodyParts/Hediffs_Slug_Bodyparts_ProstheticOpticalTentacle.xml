@@ -70,6 +70,8 @@
 				<li>LTF_ProstheticOpticalTentacle</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		
+		<researchPrerequisite>LTF_Research_SlugProsthetics</researchPrerequisite>
 	
 		<addsHediff>Hediff_Prosthetic_OpticalTentacle</addsHediff>
 	</RecipeDef>
@@ -77,7 +79,7 @@
 	<RecipeDef ParentName="LTF_InstallProstheticOpticalTentacle">
 		<defName>LTF_InstallLeftProstheticOpticalTentacle</defName>
 		
-		<label>install left prosthetic optical tentacle</label>
+		<label>install prosthetic optical tentacle</label>
 		<description>Install a left prosthetic optical tentacle.</description>
 		<descriptionHyperlinks><ThingDef>LTF_ProstheticOpticalTentacle</ThingDef></descriptionHyperlinks>
 		<jobString>Installing left prosthetic optical tentacle.</jobString>
@@ -90,7 +92,7 @@
 	<RecipeDef ParentName="LTF_InstallProstheticOpticalTentacle">
 		<defName>LTF_InstallRightProstheticOpticalTentacle</defName>
 		
-		<label>install right prosthetic optical tentacle</label>
+		<label>install prosthetic optical tentacle</label>
 		<description>Install a right prosthetic optical tentacle.</description>
 		<descriptionHyperlinks><ThingDef>LTF_ProstheticOpticalTentacle</ThingDef></descriptionHyperlinks>
 		<jobString>Installing right prosthetic optical tentacle.</jobString>

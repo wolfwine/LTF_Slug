@@ -36,6 +36,7 @@
 		<defName>LTF_ProstheticSensoryTentacle</defName>
 		<label>prosthetic sensory tentacle</label>
 		<description>A sensory tentacle prothesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic the natural part convincingly. Still, it is inferior to a real sensory tentacle.</description>
+		
 		<descriptionHyperlinks>
 			<RecipeDef>LTF_InstallLeftProstheticSensoryTentacle</RecipeDef>
 			<RecipeDef>LTF_InstallRightProstheticSensoryTentacle</RecipeDef>

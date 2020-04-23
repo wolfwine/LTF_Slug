@@ -123,6 +123,7 @@
 	  
     </tools>
 	
+	<!--
 	<verbs>
 	  <li>
 			<verbClass>Verb_Shoot</verbClass>
@@ -136,6 +137,7 @@
 			<muzzleFlashScale>9</muzzleFlashScale>
       </li>
 	</verbs>
+	-->
 	
     <comps>
 	
@@ -159,17 +161,62 @@
 		</li>
    
 
-		<!--
-		<li Class="LTF_Slug.CompProperties_LTF_Spawner">
-			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
+		<li Class="CompProperties_Spawner">
+			<thingToSpawn>LTF_Kraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>
-				<min>2200</min>
-				<max>3600</max>
+				<min>15000</min>
+				<max>20000</max>
 			</spawnIntervalRange>
-			<spawnMaxAdjacent>5</spawnMaxAdjacent>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
 			<spawnForbidden>false</spawnForbidden>
-			<spawnVerb>desintegration</spawnVerb>
+		</li>
+		<!--
+		<li Class="CompProperties_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>
+				<min>5000</min>
+				<max>7000</max>
+			</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+		</li>
+-->
+		<!--
+		<li Class="MoharHediffs.HediffCompProperties_Spawner">
+			<thingToSpawn>LTF_SlugDew</thingToSpawn>
+			
+			<spawnCount>3</spawnCount>
+
+			<minDaysB4Next>.2</minDaysB4Next>
+			<maxDaysB4Next>.4</maxDaysB4Next>
+
+			<graceDays>.2</graceDays>
+			<randomGrace>.7</randomGrace>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			
+			<spawnVerb>exsudation</spawnVerb>
+		</li>
+		-->
+		<!--
+		<li Class="MoharHediffs.HediffCompProperties_Spawner">
+			<thingToSpawn>LTF_Kraptyl</thingToSpawn>
+			
+			<spawnCount>1</spawnCount>
+
+			<minDaysB4Next>.3</minDaysB4Next>
+			<maxDaysB4Next>.6</maxDaysB4Next>
+
+			<graceDays>.2</graceDays>
+			<randomGrace>.7</randomGrace>
+			
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>false</spawnForbidden>
+			
+			<spawnVerb>decay</spawnVerb>
 		</li>
 		-->
     
@@ -187,7 +234,7 @@
       
 		<foodType>VegetarianRoughAnimal</foodType>
 		<trainability>Advanced</trainability>
-		<!-- B19 <trainableIntelligence>Advanced</trainableIntelligence> -->
+		
 		<wildness>.7</wildness>
 		<manhunterOnDamageChance>1</manhunterOnDamageChance>
 		<manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
@@ -206,15 +253,6 @@
 		<lifeExpectancy>.05</lifeExpectancy>
 		
 		<leatherDef>Leather_Krapken</leatherDef>
-		
-		<!-- B19 <leatherCommonalityFactor>0.01</leatherCommonalityFactor> -->
-		<!--
-		<leatherStatFactors>
-			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
-			<ArmorRating_Heat>-0.5</ArmorRating_Heat>
-		</leatherStatFactors>
-		-->
   
 		<lifeStageAges>
 			<li>
