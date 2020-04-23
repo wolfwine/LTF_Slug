@@ -11,7 +11,7 @@
 		<drawSize>1</drawSize>
 		<texPath>Things/Item/SlugBeerawecka</texPath>
 		<graphicClass>Graphic_StackCount</graphicClass>
-		<color>(.9, .8, 1, .8)</color>
+		<!-- <color>(.9, .8, 1, .8)</color> -->
 		<!-- <color>(230, 204, 255)</color> -->
     </graphicData>
 	
@@ -39,16 +39,16 @@
 		<ingestSound>Meal_Eat</ingestSound>
 		
 		<!--<tasteThought>Ate_LTF_SlugDewBeerawecka</tasteThought>-->
-		<joy>0.01</joy>
+		<joy>0.15</joy>
 		<joyKind>Chemical</joyKind>
 		
 		<drugCategory>Hard</drugCategory>
 		<baseIngestTicks>240</baseIngestTicks>
 
 		<ingestHoldOffsetStanding>
-		<northDefault>
-			<offset>(0.21,0,0.05)</offset>
-		</northDefault>
+			<northDefault>
+				<offset>(0.21,0,0.05)</offset>
+			</northDefault>
 		</ingestHoldOffsetStanding>
 	  
 		<ingestHoldUsesTable>true</ingestHoldUsesTable>

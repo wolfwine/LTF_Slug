@@ -138,7 +138,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						<li>SlugPlayerColony</li>
 					</factions>
 					<goodwill>
-						<min>-15</min>
+						<min>-25</min>
 						<max>10</max>
 					</goodwill>
 				</li>
@@ -504,7 +504,13 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 								</bodyTypes>
 							</north>
 						</offsets>
-
+						
+						<hediffGraphics>
+							<Hediff_Wood_Tail>Slug/Artificial/Tail/Wood/WoodTail</Hediff_Wood_Tail>
+							<Hediff_Prosthetic_Tail>Slug/Artificial/Tail/Prosthetic/ProstheticTail</Hediff_Prosthetic_Tail>
+							<Hediff_Bionic_Tail>Slug/Artificial/Tail/Bionic/BionicTail</Hediff_Bionic_Tail>
+						</hediffGraphics>
+						
 					</li>
 				</bodyAddons>
 				<alienskincolorgen Class="ColorGenerator_Options">
@@ -641,11 +647,11 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 			</li>
 			<li>
 				<def>HumanlikeTeenager</def>
-				<minAge>8</minAge>
+				<minAge>10</minAge>
 			</li>
 			<li>
 				<def>HumanlikeAdult</def>
-				<minAge>12</minAge>
+				<minAge>16</minAge>
 
 				<soundWounded>Pawn_Bear_Injured</soundWounded>
 				<soundDeath>Pawn_Bear_Death</soundDeath>
@@ -678,9 +684,32 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 		</hediffGiverSets>
 	</race>
     <recipes>
+		<!-- OpticalTentacle -->
+		<li>LTF_InstallLeftWoodOpticalTentacle</li>
+		<li>LTF_InstallRightWoodOpticalTentacle</li>
+		<li>LTF_InstallLeftProstheticOpticalTentacle</li>
+		<li>LTF_InstallRightProstheticOpticalTentacle</li>
 		<li>LTF_InstallLeftBionicOpticalTentacle</li>
 		<li>LTF_InstallRightBionicOpticalTentacle</li>
-	
+		<!-- SensoryTentacle -->
+		<li>LTF_InstallLeftWoodSensoryTentacle</li>
+		<li>LTF_InstallRightWoodSensoryTentacle</li>
+		<li>LTF_InstallLeftProstheticSensoryTentacle</li>
+		<li>LTF_InstallRightProstheticSensoryTentacle</li>
+		<li>LTF_InstallLeftBionicSensoryTentacle</li>
+		<li>LTF_InstallRightBionicSensoryTentacle</li>
+		<!-- Tail -->
+		<li>LTF_InstallWoodTail</li>
+		<li>LTF_InstallProstheticTail</li>
+		<li>LTF_InstallBionicTail</li>
+		<!-- VestigialShell -->
+		<li>LTF_InstallFondlingVestigialShell</li>
+		<li>InstallNaturalVestigialShell</li>
+		
+		<li>InstallNaturalRadula</li>
+		<li>InstallNaturalPneumostome</li>
+		<li>InstallNaturalSalivaryGland</li>
+		
 		<li>InstallArchotechEye</li>
 		<li>InstallArchotechArm</li>
 		<li>InstallArchotechLeg</li>

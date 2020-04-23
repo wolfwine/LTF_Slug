@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Steel -->
+	<HediffDef Name="Hediff_Prosthetic_TailBase" ParentName="AddedBodyPartBase" Abstract="true">
+		<!--
+		<stages>
+			<li>
+				<statOffsets>
+					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
+					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		-->
+	
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>.9</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+	
+	<!-- Hediff_Prosthetic_Tail -->
+	<HediffDef ParentName="Hediff_Prosthetic_TailBase">
+		<defName>Hediff_Prosthetic_Tail</defName>
+
+		<label>prosthetic tail</label>
+		<labelNoun>a prosthetic tail</labelNoun>
+		<description>An installed prosthetic tail.</description>
+		<descriptionHyperlinks><ThingDef>LTF_ProstheticTail</ThingDef></descriptionHyperlinks>
+
+		<comps>
+		  <li Class="HediffCompProperties_VerbGiver">
+			<tools>
+			  <li>
+				<label>prosthetic tail</label>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>8.2</power> <!-- Same as natural fist -->
+				<cooldownTime>2</cooldownTime>
+			  </li>
+			</tools>
+		  </li>
+		</comps>
+
+		<spawnThingOnRemoved>LTF_ProstheticTail</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartProstheticBase">
+		<defName>LTF_ProstheticTail</defName>
+		<label>prosthetic tail</label>
+		<description>A tail prothesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic the natural part convincingly. Still, it is inferior to a real tail.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_InstallProstheticTail</RecipeDef>
+		</descriptionHyperlinks>
+		
+		<costList>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+	
+	<RecipeDef Name="LTF_InstallProstheticTailBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+		<defName>LTF_InstallProstheticTailBase</defName>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>LTF_ProstheticTail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>LTF_ProstheticTail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	
+		<addsHediff>Hediff_Prosthetic_Tail</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallProstheticTailBase">
+		<defName>LTF_InstallProstheticTail</defName>
+		
+		<label>install prosthetic tail</label>
+		<description>Install a prosthetic tail.</description>
+		<descriptionHyperlinks><ThingDef>LTF_ProstheticTail</ThingDef></descriptionHyperlinks>
+		<jobString>Installing prosthetic tail.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugTail</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+</Defs>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Steel -->
+	<HediffDef Name="Hediff_Bionic_TailBase" ParentName="AddedBodyPartBase" Abstract="true">
+		<!--
+		<stages>
+			<li>
+				<statOffsets>
+					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
+					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		-->
+	
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+	
+	<!-- Hediff_Bionic_Tail -->
+	<HediffDef ParentName="Hediff_Bionic_TailBase">
+		<defName>Hediff_Bionic_Tail</defName>
+
+		<label>bionic tail</label>
+		<labelNoun>a bionic tail</labelNoun>
+		<description>An installed bionic tail.</description>
+		<descriptionHyperlinks><ThingDef>LTF_BionicTail</ThingDef></descriptionHyperlinks>
+
+		<comps>
+		  <li Class="HediffCompProperties_VerbGiver">
+			<tools>
+			  <li>
+				<label>bionic tail</label>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			  </li>
+			</tools>
+		  </li>
+		</comps>
+
+		<spawnThingOnRemoved>LTF_BionicTail</spawnThingOnRemoved>
+	</HediffDef>
+	
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>LTF_BionicTail</defName>
+		<label>bionic tail</label>
+		<description>An advanced tail. A lattice-dust healing system allows it to recover from damage. It is better than a biological tail in almost every way.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>LTF_InstallBionicTail</RecipeDef>
+		</descriptionHyperlinks>
+		
+		<costList>
+			<Plasteel>50</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		
+		<thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+		
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+	
+	<RecipeDef Name="LTF_InstallBionicTailBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+		<defName>LTF_InstallBionicTailBase</defName>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>LTF_BionicTail</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>LTF_BionicTail</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	
+		<addsHediff>Hediff_Bionic_Tail</addsHediff>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="LTF_InstallBionicTailBase">
+		<defName>LTF_InstallBionicTail</defName>
+		
+		<label>install bionic tail</label>
+		<description>Install a bionic tail.</description>
+		<descriptionHyperlinks><ThingDef>LTF_BionicTail</ThingDef></descriptionHyperlinks>
+		<jobString>Installing bionic tail.</jobString>
+		
+		<appliedOnFixedBodyParts>
+			<li>SlugTail</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+	
+</Defs>
