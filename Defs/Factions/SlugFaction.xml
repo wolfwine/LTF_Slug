@@ -29,10 +29,14 @@
 		<techLevel>Industrial</techLevel>
 		<!--<backstoryCategory>SlugBackstory</backstoryCategory>		-->
 
-		<backstoryCategories>
-			<li>Raider</li>
-			<li>SlugBackstory</li>
-		</backstoryCategories>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Raider</li>
+					<li>SlugBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
 		
 		<hairTags>
 			<li>Slug</li>

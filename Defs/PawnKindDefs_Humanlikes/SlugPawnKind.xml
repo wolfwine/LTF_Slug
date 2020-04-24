@@ -7,7 +7,7 @@
     <defaultFactionType>SlugFaction</defaultFactionType>
     <race>Alien_Slug</race>
 
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
 			<categories>
 				<li>SlugBackstory</li>
@@ -15,12 +15,12 @@
 				<li>Outsider</li>
 			</categories>
 		</li>
-	</backstoryFilters>
+	</backstoryFiltersOverride>
 
-	<!-- B19 <backstoryCategory>SlugBackstory</backstoryCategory> -->
 	<chemicalAddictionChance>0.15</chemicalAddictionChance>
     <baseRecruitDifficulty>.95</baseRecruitDifficulty>
     <!--<apparelAllowHeadwearChance>0</apparelAllowHeadwearChance>-->
+	
     <apparelTags>
 		<li>Neolithic</li>
     </apparelTags>
@@ -480,13 +480,13 @@
     <combatPower>135</combatPower>
     <minGenerationAge>20</minGenerationAge>
 	
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
 			<categories>
 				<li>Offworld</li>
 			</categories>
 		</li>
-	</backstoryFilters>
+	</backstoryFiltersOverride>
 	
     <gearHealthRange>
       <min>0.5</min>
@@ -543,13 +543,13 @@
     <combatPower>220</combatPower>
     <minGenerationAge>26</minGenerationAge>
 	
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
 			<categories>
 				<li>Offworld</li>
 			</categories>
 		</li>
-	</backstoryFilters>
+	</backstoryFiltersOverride>
 	
     <gearHealthRange>
       <min>0.8</min>

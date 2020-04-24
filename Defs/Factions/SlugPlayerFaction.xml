@@ -25,10 +25,14 @@
 		<factionNameMaker>NamerSlugFaction</factionNameMaker>
 		<playerInitialSettlementNameMaker>NamerSlugFaction</playerInitialSettlementNameMaker>
 		
-		<backstoryCategories>
-			<li>SlugBackstory</li>
-			<li>Raider</li>
-		</backstoryCategories>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Raider</li>
+					<li>SlugBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
 		
 		<factionIconPath>Slug/npc</factionIconPath>
 		<settlementTexturePath>Slug/npcZoom</settlementTexturePath>

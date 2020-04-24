@@ -15,7 +15,7 @@
 		<label>colonist</label>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		
-		<backstoryFilters>
+		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>SlugBackstory</li>
@@ -23,7 +23,7 @@
 					<li>Outsider</li>
 				</categories>
 			</li>
-		</backstoryFilters>
+		</backstoryFiltersOverride>
 
 		<apparelTags>
 			<li>Neolithic</li>
