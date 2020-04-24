@@ -28,8 +28,7 @@
     </incompatibleWith>
 	
 	<description>Adds the slug race from Faster Than Light.
-1 race :
-	- Slug, 
+
 These xenophobic, leisurely Slugs have developed a standing position, their intellectual ability, and a basic sens of sociability. Their home world and all sectors under their control are engulfed in enormous nebulae. They developed on an ocean planet which lead to them evolving unique telepathic abilities in order to overcome the general lack of visibility. This leaves them at a distinct disadvantage outside nebulae however, so that even within their sectors they are almost never seen outside the concealing clouds.
 
 But against all odds, through thick and thin, they ended up on this very planet.
@@ -49,6 +48,7 @@ Dependencies:
 More Faster Than Light in RimWorld:
  - Beam me up Scotty(Teleporter)
  - Clone Bay
+ - Mind control
  - Crystal
  - Engi
  - Lanius

@@ -2,6 +2,7 @@
 <Defs>
 	<FactionDef>
 		<defName>SlugFaction</defName><!-- TribeSlug-->
+		
 		<label>Awkward gasteropods</label>
 		<description>Far from nebula homelands slugs</description>
 		<pawnsPlural>untrustworthy slugs</pawnsPlural>

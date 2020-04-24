@@ -170,7 +170,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
+							<li>UpperHead</li>
 						</hiddenUnderApparelFor>
+						
 						<drawnInBed>false</drawnInBed>
 						
 						<offsets>
@@ -223,7 +225,9 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
+							<li>UpperHead</li>
 						</hiddenUnderApparelFor>
+						
 						<drawnInBed>false</drawnInBed>
 						
 						<offsets>
@@ -277,6 +281,7 @@ While not as aggressive as the Rockmen or the Mantis, Slugs are both greedy and 
 						<hiddenUnderApparelFor>
 							<li>FullHead</li>
 						</hiddenUnderApparelFor>
+						
 						<drawnInBed>false</drawnInBed>
 						
 						<offsets>

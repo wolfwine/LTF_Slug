@@ -131,15 +131,38 @@
 			<li>SimpleGun</li>
 		</weaponTags>
 	</PawnKindDef>
-
+<!-- slave -->
 	<PawnKindDef ParentName="SlugCivBase">
 		<defName>SlugSlave</defName>
 		<label>slave</label>
+		
+		<techHediffsMoney>
+			<min>50</min>
+			<max>150</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+	
+		<techHediffsChance>.5</techHediffsChance>
 	</PawnKindDef>
+<!-- refugee	  -->
 	<PawnKindDef ParentName="SlugCivBase">
 		<defName>SlugRefugee</defName>
 		<label>refugee</label>
+		
+		<techHediffsMoney>
+			<min>200</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		
+		<techHediffsChance>0.1</techHediffsChance>
 	</PawnKindDef>
+	
 	<PawnKindDef ParentName="SlugCivBase">
 		<defName>SlugWanderer</defName>
 		<label>wanderer</label>
