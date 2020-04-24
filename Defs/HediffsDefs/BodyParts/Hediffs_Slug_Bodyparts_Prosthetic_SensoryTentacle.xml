@@ -1,43 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Steel -->
-	<HediffDef Name="Hediff_Prosthetic_SensoryTentacle" ParentName="AddedBodyPartBase" Abstract="true">
-		<!--
-		<stages>
-			<li>
-				<statOffsets>
-					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
-					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
-				</statOffsets>
-			</li>
-		</stages>
-		-->
-	
-		<addedPartProps>
-			<solid>true</solid>
-			<partEfficiency>.85</partEfficiency>
-			<betterThanNatural>true</betterThanNatural>
-		</addedPartProps>
-	</HediffDef>
-	
-	<!-- Hediff_Prosthetic_SensoryTentacle -->
-	<HediffDef ParentName="Hediff_Prosthetic_SensoryTentacle">
+	<HediffDef ParentName="HediffSlugProstheticBase">
 		<defName>Hediff_Prosthetic_SensoryTentacle</defName>
 
 		<label>prosthetic sensory tentacle</label>
 		<labelNoun>a prosthetic sensory tentacle</labelNoun>
-		<description>An installed prosthetic sensory tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticSensoryTentacle</ThingDef></descriptionHyperlinks>
+		<description>An installed prosthetic sensory tentacle.
+
+The buzzing sound tends to grate on the nerves, but it has an oligodynamic effect plus you can hang stuff on it.</description>
+		
+		<descriptionHyperlinks>
+			<ThingDef>LTF_ProstheticSensoryTentacle</ThingDef>
+			<RecipeDef>LTF_InstallLeftProstheticSensoryTentacle</RecipeDef>
+			<!-- <RecipeDef>LTF_InstallRightProstheticSensoryTentacle</RecipeDef> -->
+		</descriptionHyperlinks>
 
 		<spawnThingOnRemoved>LTF_ProstheticSensoryTentacle</spawnThingOnRemoved>
+		
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>.85</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<CarryingCapacity>.1</CarryingCapacity>
+					<ToxicSensitivity>-.06</ToxicSensitivity>
+					<PsychicSensitivity>.04</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
+		
 	</HediffDef>
 	
-	<ThingDef ParentName="BodyPartProstheticBase">
+	<ThingDef ParentName="BodyPartSlugProstheticBase">
 		<defName>LTF_ProstheticSensoryTentacle</defName>
 		<label>prosthetic sensory tentacle</label>
 		<description>A sensory tentacle prothesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic the natural part convincingly. Still, it is inferior to a real sensory tentacle.</description>
 		
 		<descriptionHyperlinks>
+			<HediffDef>Hediff_Prosthetic_SensoryTentacle</HediffDef>
 			<RecipeDef>LTF_InstallLeftProstheticSensoryTentacle</RecipeDef>
 			<RecipeDef>LTF_InstallRightProstheticSensoryTentacle</RecipeDef>
 		</descriptionHyperlinks>
@@ -52,8 +57,13 @@
 		</statBases>
 	</ThingDef>
 	
-	<RecipeDef Name="LTF_InstallProstheticSensoryTentacle" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+	<RecipeDef Name="LTF_InstallProstheticSensoryTentacle" ParentName="InstallSlugProstheticBase" Abstract="true">
 		<defName>LTF_InstallProstheticSensoryTentacle</defName>
+		
+		<descriptionHyperlinks>
+			<HediffDef>Hediff_Prosthetic_SensoryTentacle</HediffDef>
+			<ThingDef>LTF_ProstheticSensoryTentacle</ThingDef>
+		</descriptionHyperlinks>
 		
 		<ingredients>
 			<li>
@@ -78,9 +88,9 @@
 	<RecipeDef ParentName="LTF_InstallProstheticSensoryTentacle">
 		<defName>LTF_InstallLeftProstheticSensoryTentacle</defName>
 		
-		<label>install left prosthetic sensory tentacle</label>
+		<label>install prosthetic sensory tentacle</label>
 		<description>Install a left prosthetic sensory tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticSensoryTentacle</ThingDef></descriptionHyperlinks>
+		
 		<jobString>Installing left prosthetic sensory tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>
@@ -91,9 +101,9 @@
 	<RecipeDef ParentName="LTF_InstallProstheticSensoryTentacle">
 		<defName>LTF_InstallRightProstheticSensoryTentacle</defName>
 		
-		<label>install right prosthetic sensory tentacle</label>
+		<label>install prosthetic sensory tentacle</label>
 		<description>Install a right prosthetic sensory tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticSensoryTentacle</ThingDef></descriptionHyperlinks>
+
 		<jobString>Installing right prosthetic sensory tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>

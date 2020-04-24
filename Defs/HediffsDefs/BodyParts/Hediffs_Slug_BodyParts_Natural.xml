@@ -174,8 +174,12 @@
 	<ThingDef ParentName="BodyPartNaturalBase">
 		<defName>SalivaryGland</defName>
 		<label>salivary gland</label>
+		
 		<description>A biological slug salivary gland. Controls the secretion of saliva and its transport to the buccal mass.</description>
-		<descriptionHyperlinks><RecipeDef>InstallNaturalSalivaryGland</RecipeDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallNaturalSalivaryGland</RecipeDef>
+		</descriptionHyperlinks>
+		
 		<statBases>
 			<MarketValue>250</MarketValue>
 		<Mass>1</Mass>
@@ -185,8 +189,12 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
 		<defName>InstallNaturalSalivaryGland</defName>
 		<label>install salivary gland</label>
+		
 		<description>Install a biological salivary gland.</description>
-		<descriptionHyperlinks><ThingDef>SalivaryGland</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>SalivaryGland</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Installing salivary gland.</jobString>
 		<ingredients>
 			<li>
@@ -213,9 +221,12 @@
 	<ThingDef ParentName="BodyPartNaturalBase">
 		<defName>Pneumostome</defName>
 		<label>pneumostome</label>
-		<description>A biological slug pneumostome. That breathing pore is a respiratory opening of the external body. It is a part of the respiratory system of gastropods. It is an opening in the right side of the mantle. Air enters through the pneumostome into the animal's single lung, the air-filled mantle cavity. Inside the mantle cavity the animal has a highly vascularized area of tissue that functions as a lung.</description>
 		
-		<descriptionHyperlinks><RecipeDef>InstallNaturalSalivaryGland</RecipeDef></descriptionHyperlinks>
+		<description>A biological slug pneumostome. That breathing pore is a respiratory opening of the external body. It is a part of the respiratory system of gastropods. It is an opening in the right side of the mantle. Air enters through the pneumostome into the animal's single lung, the air-filled mantle cavity. Inside the mantle cavity the animal has a highly vascularized area of tissue that functions as a lung.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallNaturalSalivaryGland</RecipeDef>
+		</descriptionHyperlinks>
+		
 		<statBases>
 			<MarketValue>250</MarketValue>
 		<Mass>1</Mass>
@@ -225,8 +236,12 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
 		<defName>InstallNaturalPneumostome</defName>
 		<label>install pneumostome</label>
+		
 		<description>Install a biological pneumostome.</description>
-		<descriptionHyperlinks><ThingDef>Pneumostome</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>Pneumostome</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Installing pneumostome.</jobString>
 		<ingredients>
 			<li>
@@ -253,8 +268,11 @@
 	<ThingDef ParentName="BodyPartNaturalBase">
 		<defName>Radula</defName>
 		<label>radula</label>
+		
 		<description>A biological slug radula. An anatomical structure used by mollusks for feeding, sometimes compared to a tongue. It is a minutely toothed, chitinous ribbon, which is typically used for scraping or cutting food before the food enters the oesophagus.</description>
-		<descriptionHyperlinks><RecipeDef>InstallNaturalRadula</RecipeDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<RecipeDef>InstallNaturalRadula</RecipeDef>
+		</descriptionHyperlinks>
 		
 		<statBases>
 			<MarketValue>250</MarketValue>
@@ -265,8 +283,12 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
 		<defName>InstallNaturalRadula</defName>
 		<label>install radula</label>
+		
 		<description>Install a biological radula.</description>
-		<descriptionHyperlinks><ThingDef>Radula</ThingDef></descriptionHyperlinks>
+		<descriptionHyperlinks>
+			<ThingDef>Radula</ThingDef>
+		</descriptionHyperlinks>
+		
 		<jobString>Installing radula.</jobString>
 		<ingredients>
 			<li>
@@ -292,10 +314,12 @@
 	<ThingDef ParentName="BodyPartNaturalBase">
 		<defName>VestigialShell</defName>
 		<label>vestigial shell</label>
+		
 		<description>A biological slug vestigial shell. This organ serves as storage for calcium salts, in conjunction with the digestive glands.</description>
 		<descriptionHyperlinks>
 			<RecipeDef>InstallNaturalVestigialShell</RecipeDef>
 			<AbilityUser.AbilityDef>LTF_Slug_MindFlayer</AbilityUser.AbilityDef>
+			<HediffDef>Hediff_LTF_MindFlay</HediffDef>
 		</descriptionHyperlinks>
 
 		<statBases>
@@ -307,10 +331,12 @@
 	<RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
 		<defName>InstallNaturalVestigialShell</defName>
 		<label>install vestigial shell</label>
+		
 		<description>Install a biological vestigial shell.</description>
 		<descriptionHyperlinks>
 			<ThingDef>VestigialShell</ThingDef>
 			<AbilityUser.AbilityDef>LTF_Slug_MindFlayer</AbilityUser.AbilityDef>
+			<HediffDef>Hediff_LTF_MindFlay</HediffDef>
 		</descriptionHyperlinks>
 		
 		<jobString>Installing vestigial shell.</jobString>
@@ -329,10 +355,9 @@
 				<li>VestigialShell</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		
 		<appliedOnFixedBodyParts>
 			<li>VestigialShellBP</li>
 		</appliedOnFixedBodyParts>
-		
-		<!-- <addsHediff>Hediff_ResetAbilities</addsHediff> -->
 	</RecipeDef>
 </Defs>

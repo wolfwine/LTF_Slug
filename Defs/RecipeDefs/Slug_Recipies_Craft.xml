@@ -190,7 +190,7 @@
 	<!-- craft ChunkEgg -->	
 	<RecipeDef>
 		<defName>LTF_CraftChunkEgg</defName>
-		<label>Bruise egg with steel and dew</label>
+		<label>Bruise an egg with kraptyl and dew</label>
 		<description>Corrupt mother nature to reach meaningless goals.</description>
 		
 		<descriptionHyperlinks>

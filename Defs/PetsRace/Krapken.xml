@@ -291,6 +291,7 @@
   <PawnKindDef ParentName="AnimalKindBase">
     <defName>LTF_Krapken</defName>
     <label>krapken</label>
+
     <race>LTF_Krapken</race>
     <combatPower>42</combatPower>
     <!-- <wildSpawn_EcoSystemWeight>0.01</wildSpawn_EcoSystemWeight> -->

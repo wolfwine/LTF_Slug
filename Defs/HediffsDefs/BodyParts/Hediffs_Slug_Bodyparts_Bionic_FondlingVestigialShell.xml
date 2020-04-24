@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- Steel -->
-	<HediffDef Name="Hediff_FondlingVestigialShell" ParentName="AddedBodyPartBase" Abstract="true">
+<!-- bionic -->
+	<HediffDef Name="Hediff_FondlingVestigialShell" ParentName="HediffSlugBionicBase">
+		
+		<defName>Hediff_FondlingVestigialShell</defName>
+
+		<label>fondling vestigial shell</label>
+		<labelNoun>a fondling vestigial shell</labelNoun>
+		
+		<description>An installed fondling vestigial shell.</description>
+		<descriptionHyperlinks>
+			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
+			<AbilityUser.AbilityDef>LTF_Slug_MindFondler</AbilityUser.AbilityDef>
+			<HediffDef>Hediff_LTF_MindFondle</HediffDef>
+		</descriptionHyperlinks>
+
+		<spawnThingOnRemoved>LTF_FondlingVestigialShell</spawnThingOnRemoved>
 		
 		<stages>
 			<li>
@@ -16,26 +30,13 @@
 			<partEfficiency>1</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
+		
 	</HediffDef>
 	
-	<!-- Hediff_Fondling Vestigial Shell -->
-	<HediffDef ParentName="Hediff_FondlingVestigialShell">
-		<defName>Hediff_FondlingVestigialShell</defName>
-
-		<label>fondling vestigial shell</label>
-		<labelNoun>a fondling vestigial shell</labelNoun>
-		<description>An installed fondling vestigial shell.</description>
-		<descriptionHyperlinks>
-			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
-			<AbilityUser.AbilityDef>LTF_Slug_MindFondler</AbilityUser.AbilityDef>
-		</descriptionHyperlinks>
-
-		<spawnThingOnRemoved>LTF_FondlingVestigialShell</spawnThingOnRemoved>
-	</HediffDef>
-	
-	<ThingDef ParentName="BodyPartBionicBase">
+	<ThingDef ParentName="BodyPartSlugBionicBase">
 		<defName>LTF_FondlingVestigialShell</defName>
 		<label>fondling vestigial shell</label>
+		
 		<description>An alternate vestigial shell. It irradiates with good feelings.
 If installed on a colonist, it will give you the mind fondle ability.</description>
 
@@ -61,8 +62,16 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 		</statBases>
 	</ThingDef>
 	
-	<RecipeDef Name="LTF_InstallFondlingVestigialShellBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
-		<defName>LTF_InstallFondlingVestigialShellBase</defName>
+	<RecipeDef Name="LTF_InstallFondlingVestigialShell" ParentName="InstallSlugBionicBase">
+		<defName>LTF_InstallFondlingVestigialShell</defName>
+		<label>install fondling vestigial shell</label>
+		
+		<description>Install a fondling vestigial shell.</description>
+		<descriptionHyperlinks>
+			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
+			<AbilityUser.AbilityDef>LTF_Slug_MindFondler</AbilityUser.AbilityDef>
+			<HediffDef>Hediff_FondlingVestigialShell</HediffDef>
+		</descriptionHyperlinks>
 		
 		<ingredients>
 			<li>
@@ -80,28 +89,14 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 				<li>LTF_FondlingVestigialShell</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-
-		<researchPrerequisite>LTF_Research_SlugBionics</researchPrerequisite>
-	
-		<addsHediff>Hediff_FondlingVestigialShell</addsHediff>
-		<!-- <addsHediff>Hediff_Wrapper_FondlingVestigialShell</addsHediff> -->
-	</RecipeDef>
-	
-	<RecipeDef ParentName="LTF_InstallFondlingVestigialShellBase">
-		<defName>LTF_InstallFondlingVestigialShell</defName>
-		
-		<label>install fondling vestigial shell</label>
-		<description>Install a fondling vestigial shell.</description>
-		<descriptionHyperlinks>
-			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
-			<AbilityUser.AbilityDef>LTF_Slug_MindFondler</AbilityUser.AbilityDef>
-		</descriptionHyperlinks>
 		
 		<jobString>Installing fondling vestigial shell.</jobString>
 		
 		<appliedOnFixedBodyParts>
 			<li>VestigialShellBP</li>
 		</appliedOnFixedBodyParts>
+		
+		<addsHediff>Hediff_FondlingVestigialShell</addsHediff>
 	</RecipeDef>
 	
 </Defs>

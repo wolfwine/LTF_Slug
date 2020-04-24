@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- Steel -->
-	<HediffDef Name="Hediff_Prosthetic_OpticalTentacle" ParentName="AddedBodyPartBase" Abstract="true">
-		<!--
-		<stages>
-			<li>
-				<statOffsets>
-					<ButcheryFleshEfficiency>.2</ButcheryFleshEfficiency>
-					<ButcheryFleshSpeed>.35</ButcheryFleshSpeed>
-				</statOffsets>
-			</li>
-		</stages>
-		-->
-	
-		<addedPartProps>
-			<solid>true</solid>
-			<partEfficiency>1.25</partEfficiency>
-			<betterThanNatural>true</betterThanNatural>
-		</addedPartProps>
-	</HediffDef>
-	
+
 	<!-- Hediff_Prosthetic_OpticalTentacle -->
-	<HediffDef ParentName="Hediff_Prosthetic_OpticalTentacle">
+	<HediffDef ParentName="HediffSlugProstheticBase">
 		<defName>Hediff_Prosthetic_OpticalTentacle</defName>
+		
+		<description>An installed prosthetic optical tentacle.
+		
+The buzzing sound tends to grate on the nerves, but it becomes handy to aim at moving targets. It also has an inexplicable placebo effect when you take care of someone.</description>
+		<descriptionHyperlinks>
+			<ThingDef>LTF_ProstheticOpticalTentacle</ThingDef>
+			<RecipeDef>LTF_InstallLeftProstheticOpticalTentacle</RecipeDef>
+			<!-- <RecipeDef>LTF_InstallRightProstheticOpticalTentacle</RecipeDef> -->
+		</descriptionHyperlinks>
 
 		<label>prosthetic optical tentacle</label>
 		<labelNoun>a prosthetic optical tentacle</labelNoun>
-		<description>An installed prosthetic optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticOpticalTentacle</ThingDef></descriptionHyperlinks>
-
+		
 		<spawnThingOnRemoved>LTF_ProstheticOpticalTentacle</spawnThingOnRemoved>
+		
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>.9</partEfficiency>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+		
+		<stages>
+			<li>
+				<statOffsets>
+					<MedicalTendQuality>.05</MedicalTendQuality>
+					<ShootingAccuracyPawn>.05</ShootingAccuracyPawn>
+					<PsychicSensitivity>.07</PsychicSensitivity>
+				</statOffsets>
+			</li>
+		</stages>
 	</HediffDef>
 	
-	<ThingDef ParentName="BodyPartProstheticBase">
+	<ThingDef ParentName="BodyPartSlugProstheticBase">
 		<defName>LTF_ProstheticOpticalTentacle</defName>
-		<label>prosthetic optical tentacle</label>
+		
 		<description>An optical tentacle prothesis. While it lacks a neural interface, its complex arrangement of internal joints allows it to mimic the natural part convincingly. Still, it is inferior to a real optical tentacle.</description>
 		<descriptionHyperlinks>
 			<RecipeDef>LTF_InstallLeftProstheticOpticalTentacle</RecipeDef>
 			<RecipeDef>LTF_InstallRightProstheticOpticalTentacle</RecipeDef>
+			<HediffDef>Hediff_Prosthetic_OpticalTentacle</HediffDef>
 		</descriptionHyperlinks>
+		
+		<label>prosthetic optical tentacle</label>
 		
 		<costList>
 			<Plasteel>30</Plasteel>
@@ -51,8 +58,13 @@
 		</statBases>
 	</ThingDef>
 	
-	<RecipeDef Name="LTF_InstallProstheticOpticalTentacle" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="true">
+	<RecipeDef Name="LTF_InstallProstheticOpticalTentacle" ParentName="InstallSlugProstheticBase" Abstract="true">
 		<defName>LTF_InstallProstheticOpticalTentacle</defName>
+		
+		<descriptionHyperlinks>
+			<HediffDef>Hediff_Prosthetic_OpticalTentacle</HediffDef>
+			<ThingDef>LTF_ProstheticOpticalTentacle</ThingDef>
+		</descriptionHyperlinks>
 		
 		<ingredients>
 			<li>
@@ -70,8 +82,6 @@
 				<li>LTF_ProstheticOpticalTentacle</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		
-		<researchPrerequisite>LTF_Research_SlugProsthetics</researchPrerequisite>
 	
 		<addsHediff>Hediff_Prosthetic_OpticalTentacle</addsHediff>
 	</RecipeDef>
@@ -81,7 +91,7 @@
 		
 		<label>install prosthetic optical tentacle</label>
 		<description>Install a left prosthetic optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticOpticalTentacle</ThingDef></descriptionHyperlinks>
+
 		<jobString>Installing left prosthetic optical tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>
@@ -94,7 +104,7 @@
 		
 		<label>install prosthetic optical tentacle</label>
 		<description>Install a right prosthetic optical tentacle.</description>
-		<descriptionHyperlinks><ThingDef>LTF_ProstheticOpticalTentacle</ThingDef></descriptionHyperlinks>
+
 		<jobString>Installing right prosthetic optical tentacle.</jobString>
 		
 		<appliedOnFixedBodyParts>

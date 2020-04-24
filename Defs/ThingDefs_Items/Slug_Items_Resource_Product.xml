@@ -33,7 +33,9 @@
 <ThingDef ParentName="LTF_KeggBase">
     <defName>LTF_DewEgg</defName>
     <label>Dew egg</label>
-    <description>This egg will fastly deteriorate and produce slug dew in the process. Waste healthy food for snot ? That's not very academical.</description>
+    <description>This egg will fastly deteriorate and produce slug dew in the process. Waste healthy food for snot ? That's not very academical.
+
+When equipped, it can also be used as a single shot extinguishing grenade. Be sure to keep them fresh for when it matters.</description>
 	<descriptionHyperlinks><RecipeDef>LTF_CraftDewEgg</RecipeDef></descriptionHyperlinks>
 	
     <graphicData>
@@ -61,7 +63,7 @@
 			<range>12.9</range>
 			<forcedMissRadius>1.0</forcedMissRadius>
 			<warmupTime>1.5</warmupTime>
-			<noiseRadius>4</noiseRadius>
+			<noiseRadius>1</noiseRadius>
 			
 			<soundCast>ThrowMolotovCocktail</soundCast>
 			
@@ -102,7 +104,7 @@
 			<thingToSpawn>LTF_SlugDew</thingToSpawn>
 			<spawnCount>7</spawnCount>
 			<spawnIntervalRange>
-				<min>3300</min>
+				<min>2500</min>
 				<max>3600</max>
 			</spawnIntervalRange>
 			<spawnMaxAdjacent>40</spawnMaxAdjacent>
@@ -142,7 +144,7 @@
 		<flyOverhead>false</flyOverhead>
     	
 		<ai_IsIncendiary>false</ai_IsIncendiary>
-		<explosionRadius >1.4</explosionRadius >
+		<explosionRadius>1.9</explosionRadius>
 		<!-- <damageDef>Extinguish</damageDef> -->
 		<damageDef>Bomb</damageDef>
 		<explosionEffect>ExtinguisherExplosion</explosionEffect>
@@ -165,8 +167,12 @@
 
     <defName>LTF_ChunkEgg</defName>
     <label>Chunk egg</label>
-    <description>This egg will fastly deteriorate and produce kraptyl chunks in the process.</description>
-	<descriptionHyperlinks><RecipeDef>LTF_CraftChunkEgg</RecipeDef></descriptionHyperlinks>
+    <description>This egg will fastly deteriorate and produce kraptyl chunks in the process.
+
+When equipped, it can also be used as a single shot EMP grenade. Be sure to keep them fresh for when it matters.</description>
+	<descriptionHyperlinks>
+		<RecipeDef>LTF_CraftChunkEgg</RecipeDef>
+	</descriptionHyperlinks>
 	
 	
     <graphicData>
@@ -194,7 +200,7 @@
 			<range>12.9</range>
 			<forcedMissRadius>1.0</forcedMissRadius>
 			<warmupTime>1.5</warmupTime>
-			<noiseRadius>4</noiseRadius>
+			<noiseRadius>1</noiseRadius>
 			
 			<soundCast>ThrowMolotovCocktail</soundCast>
 			
@@ -234,8 +240,8 @@
 			<thingToSpawn>LTF_TinyChunkSlagKraptyl</thingToSpawn>
 			<spawnCount>1</spawnCount>
 			<spawnIntervalRange>
-				<min>4000</min>
-				<max>6000</max>
+				<min>3500</min>
+				<max>4500</max>
 			</spawnIntervalRange>
 			<spawnMaxAdjacent>40</spawnMaxAdjacent>
 			<!-- <spawnForbidden>true</spawnForbidden> -->
@@ -275,7 +281,7 @@
 		<flyOverhead>false</flyOverhead>
     	
 		<ai_IsIncendiary>false</ai_IsIncendiary>
-		<explosionRadius >1.9</explosionRadius >
+		<explosionRadius>2.5</explosionRadius>
 		<!-- <damageDef>Extinguish</damageDef> -->
 		<damageDef>EMP</damageDef>
 		
@@ -300,7 +306,7 @@
 	<description>This egg will hatch something. But even if you can, should you ?</description>
 	<descriptionHyperlinks>
 		<RecipeDef>LTF_CraftKrapkenEgg</RecipeDef>
-		<PawnKindDef>LTF_Krapken</PawnKindDef>
+		<ThingDef>LTF_Krapken</ThingDef>
 	</descriptionHyperlinks>
    
    <graphicData>

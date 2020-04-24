@@ -5,10 +5,10 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_Slug</defName>
 		<label>Slug neophyte</label>
-		<description>Beerawecka recipe and silk made of dew.
-		
-[ButcherTable]
-[TailoringBench]</description>
+		<description>Allows some basic slug tricks:
+- Beerawecka recipe at a butcher table
+- Make silk out of dew at a tailoring bench
+- Install wooden tail, optical and sensory tentacles</description>
 		<baseCost>700</baseCost>
 		<techLevel>Medieval</techLevel>
 		<tab>LTF_Slug</tab>
@@ -24,13 +24,11 @@
 	<ResearchProjectDef>
 		<defName>LTF_Research_SlugProducts</defName>
 		<label>Slug amateur</label>
-		<description>Torturing nature recipes:
+		<description>Unlocks torturing nature recipes at a butcher table:
 - Egg + dew = more dew
 - Egg + krap chunk = more chunk
 - Fertilized egg + krap chunk = ???
-You can also throw these eggs for extinguishing or emp effects.
-
-[ButcherTable]</description>
+You can also throw these eggs for extinguishing or emp effects.</description>
 
 		<baseCost>700</baseCost>
 		<techLevel>Industrial</techLevel>
@@ -49,10 +47,12 @@ You can also throw these eggs for extinguishing or emp effects.
 	<ResearchProjectDef>
 		<defName>LTF_Research_SlugProsthetics</defName>
 		<label>Slug scholar</label>
-		<description>Allows to craft and install prosthetics for slugs:
+		<description>Allows to install prosthetics to slugs:
 - Optical tentacle prosthetic
 - Sensory tentacle prosthetic
-- Tail prosthetic</description>
+- Tail prosthetic
+
+Unlocks their crafting at a smithy or a machining table.</description>
 <!--
 		<descriptionHyperlinks>
 			<ThingDef>LTF_ProstheticOpticalTentacle</ThingDef>
@@ -83,10 +83,12 @@ You can also throw these eggs for extinguishing or emp effects.
 		<label>Slug expert</label>
 		<description>Allows to create an alternative vestigial shell that will unlock an ability when installed.
 		
-Allows to craft and install bionics for slugs:
+Allows to install bionics for slugs:
 - Optical tentacle bionic
 - Sensory tentacle bionic
-- Tail bionic</description>
+- Tail bionic
+
+Unlocks their crafting at fabrication bench.</description>
 <!--
 		<descriptionHyperlinks>
 			<ThingDef>LTF_FondlingVestigialShell</ThingDef>
