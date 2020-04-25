@@ -19,6 +19,13 @@
 					<li>SlugGrooveSole</li>
 				</partsToAffect>
 			</li>
+			<li Class="LTF_Slug.HediffGiver_VestigialShellAbility">
+				<hediff>Hediff_FondlingVestigialShell</hediff>
+				
+				<partsToAffect>
+					<li>VestigialShellBP</li>
+				</partsToAffect>
+			</li>
 		</hediffGivers>
 		
 		

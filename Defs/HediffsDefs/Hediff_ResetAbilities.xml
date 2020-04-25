@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	<HediffDef>
+	<HediffDef Name="Hediff_ResetAbilities">
 		<defName>Hediff_ResetAbilities</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
-		<description>this should not be visible</description>
-		<label>Abilities reset</label>
-		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		<description>this should not be visible bc too fast</description>
+		<label>LTF_Slug.ResetAbilities</label>
 		
 		<comps>
 			<li Class="LTF_Slug.HediffCompProperties_ResetAbilities">
@@ -16,30 +15,28 @@
 		</comps>
 	</HediffDef>
 	
-	<HediffDef>
+	<HediffDef Name="Hediff_DelayedResetAbilities">
 		<defName>Hediff_DelayedResetAbilities</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>this should not be visible</description>
-		<label>Abilities reset</label>
-		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		<label>LTF_Slug.DelayedReset</label>
 		
 		<comps>
 			<li Class="LTF_Slug.HediffCompProperties_ResetAbilities">
-				<waitingTicks>1</waitingTicks>
+				<waitingTicks>5</waitingTicks>
 				<debug>true</debug>
 			</li>
 		</comps>
 	</HediffDef>
 	
 <!---->	
-	<HediffDef>
-		<defName>Hediff_ResetAbilities_MindFondle</defName>
+	<HediffDef Name="Hediff_MindFondle_OnInstall">
+		<defName>Hediff_MindFondle_OnInstall</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
-		<description>this should not be visible</description>
-		<label>MindFondle_ResetAbilities</label>
-		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		<description>this should not be visible bc too fast</description>
+		<label>LTF_Slug.InitFondleAbility</label>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
@@ -47,31 +44,7 @@
 				
 				<hediffToApply>
 					<li>Hediff_FondlingVestigialShell</li>	
-					<li>Hediff_ResetAbilities</li>	
-				</hediffToApply>
-				<bodyPartDef>
-					<li>VestigialShellBP</li>
-					<li>Brain</li>
-				</bodyPartDef>
-			</li>
-		</comps>
-	</HediffDef>
-<!---->	
-	<HediffDef>
-		<defName>Hediff_ResetAbilities_MindFlay</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		
-		<description>this should not be visible</description>
-		<label>MultipleHediffs</label>
-		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
-		
-		<comps>
-			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
-				<bodyDef>SlugBodyDef</bodyDef>
-				
-				<hediffToApply>
-					<li>Hediff_FondlingVestigialShell</li>	
-					<li>Hediff_ResetAbilities</li>	
+					<li>Hediff_ResetAbilities</li>
 				</hediffToApply>
 				<bodyPartDef>
 					<li>VestigialShellBP</li>

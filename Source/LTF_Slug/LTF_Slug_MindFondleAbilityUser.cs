@@ -11,7 +11,7 @@ namespace LTF_Slug
 
     public class CompMindFondler : GenericCompAbilityUser 
     {
-        public bool myDebug = true;
+        public bool myDebug = false;
 
         public bool? MindFondler;
 
@@ -89,7 +89,7 @@ namespace LTF_Slug
                     Tools.Warn(userLabel + " has indeed a fondling vestigial shell", myDebug);
                 }
 
-                Tools.Warn(userLabel + " IsMindFondler" + "\n-----", myDebug);
+                Tools.Warn(userLabel + " should become MindFondler", myDebug);
                 return true;
             }
         }

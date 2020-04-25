@@ -360,6 +360,7 @@
 			<li>VestigialShellBP</li>
 		</appliedOnFixedBodyParts>
 		
-		<addsHediff>Hediff_DelayedResetAbilities</addsHediff>
+		<!-- <removesHediff>Hediff_FondlingVestigialShell</removesHediff> -->
+		<!-- <addsHediff>Hediff_DelayedResetAbilities</addsHediff> -->
 	</RecipeDef>
 </Defs>

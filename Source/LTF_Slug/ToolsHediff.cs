@@ -24,7 +24,7 @@ namespace LTF_Slug
             }
 
             //public bool HasHediff(HediffDef def, BodyPartRecord bodyPart, bool mustBeVisible = false);
-            return pawn.health.hediffSet.HasHediff(MyDefs.MindFondlingHediff, vestiShell); ;
+            return pawn.health.hediffSet.HasHediff(MyDefs.MindFondlingHediff, vestiShell); 
         }
 
         // Check if pawn has slug natural hediffs aka part from HediffGiverSetDef or from BS

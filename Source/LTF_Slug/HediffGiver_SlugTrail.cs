@@ -16,8 +16,6 @@ namespace LTF_Slug
 
         public override bool OnHediffAdded(Pawn pawn, Hediff hediff)
         {
-          
-
             if (!pawn.IsSlug())
             {
                 if(pawn.Spawned)
@@ -39,7 +37,7 @@ namespace LTF_Slug
                 this.hediff = MyDefs.RainbowTrailHediff;
             }
             
-            if ((hediff.Part != pawn.GetgrooveSole()) && pawn.Spawned)
+            if (pawn.Spawned && hediff.Part != pawn.GetgrooveSole())
             {
                 if (pawn.Spawned)
                     Tools.Warn(pawn?.LabelShort + "'s" + ErrStr + "hediff.Part(" + hediff?.Part?.def?.defName + ") != pawn.GetgrooveSole()", myDebug);

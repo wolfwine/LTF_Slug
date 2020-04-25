@@ -59,6 +59,7 @@
     <Compile Include="HediffCompProperties_ResetAbilities.cs" />
     <Compile Include="HediffComp_ResetAbilities.cs" />
     <Compile Include="HediffGiver_SlugTrail.cs" />
+    <Compile Include="HediffGiver_VestigialShellAbility.cs" />
     <Compile Include="MindSpotUtils.cs" />
     <Compile Include="GfxEffects.cs" />
     <Compile Include="HediffGiver_NaturalSlugDewExudator.cs" />

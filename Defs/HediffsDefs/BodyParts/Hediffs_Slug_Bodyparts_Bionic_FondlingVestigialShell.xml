@@ -4,9 +4,7 @@
 	<HediffDef Name="Hediff_FondlingVestigialShell" ParentName="HediffSlugBionicBase">
 		
 		<defName>Hediff_FondlingVestigialShell</defName>
-
 		<label>fondling vestigial shell</label>
-		<labelNoun>a fondling vestigial shell</labelNoun>
 		
 		<description>An installed fondling vestigial shell.</description>
 		<descriptionHyperlinks>
@@ -14,6 +12,8 @@
 			<AbilityUser.AbilityDef>LTF_Slug_MindFondler</AbilityUser.AbilityDef>
 			<HediffDef>Hediff_LTF_MindFondle</HediffDef>
 		</descriptionHyperlinks>
+
+		<hediffClass>HediffWithComps</hediffClass>
 
 		<spawnThingOnRemoved>LTF_FondlingVestigialShell</spawnThingOnRemoved>
 		
@@ -30,6 +30,16 @@
 			<partEfficiency>1</partEfficiency>
 			<betterThanNatural>false</betterThanNatural>
 		</addedPartProps>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_PostRemoveTrigger_HediffAdd">
+				<triggeredHediff>
+					<li>Hediff_ResetAbilities</li>
+				</triggeredHediff>
+
+				<debug>true</debug>
+			</li>
+		</comps>
 		
 	</HediffDef>
 	
@@ -97,7 +107,7 @@ If installed on a colonist, it will give you the mind fondle ability.</descripti
 		</appliedOnFixedBodyParts>
 		
 		<!-- <addsHediff>Hediff_FondlingVestigialShell</addsHediff> -->
-		<addsHediff>Hediff_ResetAbilities_MindFondle</addsHediff>
+		<addsHediff>Hediff_MindFondle_OnInstall</addsHediff>
 	</RecipeDef>
 	
 </Defs>

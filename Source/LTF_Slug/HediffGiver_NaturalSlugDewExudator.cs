@@ -20,7 +20,7 @@ namespace LTF_Slug
             }
 
 
-            if ( (hediff.Part != pawn.GetStomach()) && pawn.Spawned)
+            if (pawn.Spawned && hediff.Part != pawn.GetStomach())
             {
                 if (pawn.Spawned) Tools.Warn(pawn.LabelShort + "'s"+ErrStr + "hediff.Part(" + hediff?.Part?.def?.defName + ") != pawn.GetStomach()", myDebug);
                 return false;

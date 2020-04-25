@@ -99,7 +99,7 @@ namespace LTF_Slug
                 }
 
 
-                Tools.Warn(userLabel + " IsMindFlayer"+"\n-----", myDebug);
+                Tools.Warn(userLabel + " should become MindFlayer", myDebug);
                 return true;
             }
         }

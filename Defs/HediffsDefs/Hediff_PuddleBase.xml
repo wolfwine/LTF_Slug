@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef Name="Hediff_TrailBase">
+	<HediffDef Name="Hediff_TrailBase" ParentName="Hediff_HiddenBase">
 		<defName>Hediff_TrailBase</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<description>base def puddles</description>
-		<label>trail base def</label>
-
-		<stages>
-			<li>
-				<minSeverity>.05</minSeverity>
-				<label>minor</label>
-				<becomeVisible>false</becomeVisible>
-			</li>
-			<li>
-				<minSeverity>0.15</minSeverity>
-				<label>minor</label>
-			</li>
-			<li>
-				<minSeverity>0.5</minSeverity>
-				<label>major</label>
-			</li>
-		</stages>
-		
+		<label>LTF_Slug.Hediff_TrailBase</label>
 	</HediffDef>
 
 	
 	<HediffDef ParentName="Hediff_TrailBase">
 		<defName>Hediff_RandomTrail</defName>
 		<description>random trail</description>
-		<label>random trail</label>
+		<label>LTF_Slug.Hediff_RandomTrail</label>
 	
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffRandom">
