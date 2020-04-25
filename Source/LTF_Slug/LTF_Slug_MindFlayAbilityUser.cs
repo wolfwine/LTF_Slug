@@ -24,7 +24,6 @@ namespace LTF_Slug
         public bool? MindFlayer;
 
         public bool EnableAbilities = LoadedModManager.GetMod<LTF_SlugMod>().GetSettings<LTF_SlugSettings>().EnableAbilities;
-        public int period = 600;
 
         // Provides ability without affecting save.
         public override void CompTick()
@@ -53,7 +52,19 @@ namespace LTF_Slug
         {
             base.PostInitialize();
             if (MindFlayer == true)
+            {
+                Tools.Warn(AbilityUser.LabelShort + " adding MindFlayer ability", myDebug);
                 AddPawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
+            }
+            else { 
+                CompMindFlayer checkIfMindFlayer = AbilityUser.TryGetComp<CompMindFlayer>();
+                if (checkIfMindFlayer != null)
+                {
+                    Tools.Warn(AbilityUser.LabelShort + " removing MindFlayer ability", myDebug);
+                    RemovePawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
+                }
+            }
+            
         }
 
         public bool IsMindFlayer

@@ -359,5 +359,7 @@
 		<appliedOnFixedBodyParts>
 			<li>VestigialShellBP</li>
 		</appliedOnFixedBodyParts>
+		
+		<addsHediff>Hediff_DelayedResetAbilities</addsHediff>
 	</RecipeDef>
 </Defs>

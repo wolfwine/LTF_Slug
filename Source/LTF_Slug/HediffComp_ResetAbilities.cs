@@ -20,7 +20,7 @@ namespace LTF_Slug
         const int tickLimiterModulo = 60;
         bool myDebug = false;
         bool blockAction = false;
-
+        int waitingTicks;
         bool didIt = false;
 
         public HeDiffCompProperties_ResetAbilities Props
@@ -34,7 +34,9 @@ namespace LTF_Slug
         public override void CompPostMake()
         {
             //base.CompPostMake();
+            Tools.Warn("Entering HeDiffComp_ResetAbilities.CompPostMake", myDebug);
             myDebug = Props.debug;
+            waitingTicks = Props.waitingTicks;
         }
         /*
         public bool HasAbilitiesToReset
@@ -48,6 +50,7 @@ namespace LTF_Slug
         public void ResetAbilities(Pawn pawn)
         {
             //foreach(AbilityUser.AbilityDef abilityDef in Props.abilitiesToReset){};
+            Tools.Warn("Entering ResetAbilities", myDebug);
             CompMindFlayer compMindFlayer = pawn.TryGetComp<CompMindFlayer>();
             if (compMindFlayer != null)
             {
@@ -69,7 +72,7 @@ namespace LTF_Slug
                 Tools.Warn("cannot find " + pawn.Label + " MindFondler ability", myDebug);
 
         }
-
+        
         public override void CompPostTick(ref float severityAdjustment)
         {
             Pawn pawn = parent.pawn;
@@ -79,11 +82,25 @@ namespace LTF_Slug
                 return;
             }
 
+            Tools.Warn(pawn.LabelShort+" entering HeDiffComp_ResetAbilities.CompPostTick - Ticks to wait: "+waitingTicks, myDebug);
+
+            if (waitingTicks > 0)
+            {
+                Tools.Warn("waiting ..."+ waitingTicks+" ticks left", myDebug);
+                waitingTicks--;
+                return;
+            }
+
+            Tools.Warn("Trying tp reset abililities", myDebug);
             ResetAbilities(pawn);
 
             // suicide
-            if(didIt)
+            if (didIt)
+            {
+                Tools.Warn("Did it, killing reset abilities hediff", myDebug);
                 parent.Severity = 0;
+            }
+                
         }
 
         public override string CompTipStringExtra

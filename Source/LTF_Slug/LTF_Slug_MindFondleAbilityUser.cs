@@ -11,7 +11,7 @@ namespace LTF_Slug
 
     public class CompMindFondler : GenericCompAbilityUser 
     {
-        public bool myDebug = false;
+        public bool myDebug = true;
 
         public bool? MindFondler;
 
@@ -43,7 +43,19 @@ namespace LTF_Slug
         {
             base.PostInitialize();
             if (MindFondler == true)
+            {
+                Tools.Warn(AbilityUser.LabelShort + " adding MindFondler ability", myDebug);
                 AddPawnAbility(MindFondlerDefOf.LTF_Slug_MindFondler);
+            }
+            else
+            {
+                CompMindFondler checkIfMindFondler = AbilityUser.TryGetComp<CompMindFondler>();
+                if (checkIfMindFondler != null)
+                {
+                    Tools.Warn(AbilityUser.LabelShort + " removing MindFondler ability", myDebug);
+                    RemovePawnAbility(MindFondlerDefOf.LTF_Slug_MindFondler);
+                }
+            }
         }
 
         public bool IsMindFondler
@@ -68,7 +80,7 @@ namespace LTF_Slug
 
                 // Natural Bodypart
                 if (!AbilityUser.HasFondlingVestigialShell(myDebug))
-                {
+                { 
                     Tools.Warn(userLabel + " has no fondling vestigial shell, giving up IsMindFondler" + "\n-----", myDebug);
                     return false;
                 }
@@ -125,7 +137,7 @@ namespace LTF_Slug
         public static AbilityUser.AbilityDef LTF_Slug_MindFondler;
     }
     
-    public class MindFondler_Projectile : AbilityUser.Projectile_AbilityBase
+    public class MindFondler_Projectile : Projectile_AbilityBase
     {
         protected override void Impact(Thing hitThing)
         {

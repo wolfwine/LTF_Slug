@@ -18,6 +18,7 @@ namespace LTF_Slug
         //public List<AbilityUser.AbilityDef> abilitiesToReset;
 
         public bool debug = false;
+        public int waitingTicks = 0;
 
         public HeDiffCompProperties_ResetAbilities()
 		{

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<HediffDef>
+		<defName>Hediff_ResetAbilities</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<description>this should not be visible</description>
+		<label>Abilities reset</label>
+		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		
+		<comps>
+			<li Class="LTF_Slug.HediffCompProperties_ResetAbilities">
+				<debug>true</debug>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>Hediff_DelayedResetAbilities</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<description>this should not be visible</description>
+		<label>Abilities reset</label>
+		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		
+		<comps>
+			<li Class="LTF_Slug.HediffCompProperties_ResetAbilities">
+				<waitingTicks>1</waitingTicks>
+				<debug>true</debug>
+			</li>
+		</comps>
+	</HediffDef>
+	
+<!---->	
+	<HediffDef>
+		<defName>Hediff_ResetAbilities_MindFondle</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<description>this should not be visible</description>
+		<label>MindFondle_ResetAbilities</label>
+		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>SlugBodyDef</bodyDef>
+				
+				<hediffToApply>
+					<li>Hediff_FondlingVestigialShell</li>	
+					<li>Hediff_ResetAbilities</li>	
+				</hediffToApply>
+				<bodyPartDef>
+					<li>VestigialShellBP</li>
+					<li>Brain</li>
+				</bodyPartDef>
+			</li>
+		</comps>
+	</HediffDef>
+<!---->	
+	<HediffDef>
+		<defName>Hediff_ResetAbilities_MindFlay</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		
+		<description>this should not be visible</description>
+		<label>MultipleHediffs</label>
+		<labelNoun>Hediff_Wraper_FondlingVestigialShell.labelNoun</labelNoun>
+		
+		<comps>
+			<li Class="MoharHediffs.HediffCompProperties_MultipleHediff">
+				<bodyDef>SlugBodyDef</bodyDef>
+				
+				<hediffToApply>
+					<li>Hediff_FondlingVestigialShell</li>	
+					<li>Hediff_ResetAbilities</li>	
+				</hediffToApply>
+				<bodyPartDef>
+					<li>VestigialShellBP</li>
+					<li>Brain</li>
+				</bodyPartDef>
+			</li>
+		</comps>
+	</HediffDef>
+
+</Defs>
