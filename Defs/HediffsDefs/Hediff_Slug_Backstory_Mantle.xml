@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- slug high exudation -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_MantleMoult_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A midly uncommon condition for slugs. It forces them to moult and reject dead skins.</description>
 		<label>moult</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_Spawner">
@@ -32,14 +31,12 @@
 		
 	</HediffDef>
 
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>Hediff_Wrapper_Moult_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A temporary condition that disappears ingame</description>
-		
 		<label>Slug mantle moult</label>
-		<labelNoun>this.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">

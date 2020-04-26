@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- slug natural exudation -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_StomachExsudation_SlugDew_Natural</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		

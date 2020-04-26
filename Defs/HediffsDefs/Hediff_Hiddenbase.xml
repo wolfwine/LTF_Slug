@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef Name="Hediff_HiddenBase" Abstract="True">
+	<HediffDef Name="Hediff_HiddenBase" ParentName="NonRandom_Hediff_Base" Abstract="True">
 		<defName>Hediff_HiddenBase</defName>
 		
 		<initialSeverity>.05</initialSeverity>

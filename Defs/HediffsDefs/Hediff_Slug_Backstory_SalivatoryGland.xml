@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- slug high exudation -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_SalivaryGland_Yayo_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A rare condition for slugs. It forces them to synthetize yayo from their salivatory glands.</description>
 		<label>Yayo synthetizor</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_Spawner">
@@ -32,14 +31,13 @@
 		
 	</HediffDef>
 
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>Hediff_Wrapper_Yayo_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A temporary condition that disappears ingame</description>
 		
 		<label>Slug salivary gland yayo embezzlement</label>
-		<labelNoun>this.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">

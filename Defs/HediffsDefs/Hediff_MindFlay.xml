@@ -4,15 +4,14 @@
 	<!-- Hediff_LTF_MindFlayed -->
 	<HediffDef Name="Hediff_LTF_MindFlay" ParentName="Hediff_LTF_MindMalusBase">
 		<defName>Hediff_LTF_MindFlay</defName>
+
 		<description>This psychic attack is focused on making the victim an easy and harmless target.</description>
-		
 		<descriptionHyperlinks>
 			<ThingDef>VestigialShell</ThingDef>
 			<AbilityUser.AbilityDef>LTF_Slug_MindFlayer</AbilityUser.AbilityDef>
 		</descriptionHyperlinks>
 		
 		<label>Mind flayed</label>
-		<labelNoun>a staged confusion</labelNoun>
 
 		<stages>
 			<li>

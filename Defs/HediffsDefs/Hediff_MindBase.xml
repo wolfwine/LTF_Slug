@@ -3,14 +3,13 @@
 
 	<!-- Hediffs are RimWorld's status effects. They can influence different pawn stats, represent diseases, and more -->
 	
-	<HediffDef Name="Hediff_LTF_MindBase" Abstract="True">
+	<HediffDef Name="Hediff_LTF_MindBase" ParentName="NonRandom_Hediff_Base" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<initialSeverity>.25</initialSeverity>
 
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
-		<scenarioCanAdd>false</scenarioCanAdd>
 
 		<comps>
 			<li Class="HediffCompProperties_Disappears">

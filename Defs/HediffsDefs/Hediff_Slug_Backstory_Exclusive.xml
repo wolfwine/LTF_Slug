@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- slug high exudation -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_StomachExsudation_HighDew_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
@@ -9,7 +9,6 @@
 		
 The older the slugs is, the bigger quantities and more frequently they will exsudate.</description>
 		<label>Slug high exsudation</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_Spawner">
@@ -41,14 +40,12 @@ The older the slugs is, the bigger quantities and more frequently they will exsu
 		</comps>
 	</HediffDef>
 	
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>Hediff_Wrapper_High_SlugDew_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A temporary condition that disappears ingame</description>
-		
 		<label>Mitigation to promote higher exsudation</label>
-		<labelNoun>this.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">
@@ -65,7 +62,7 @@ The older the slugs is, the bigger quantities and more frequently they will exsu
 	</HediffDef>
 
 	<!-- slug low exudation -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_StomachExsudation_LowDew_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
@@ -73,7 +70,6 @@ The older the slugs is, the bigger quantities and more frequently they will exsu
 		
 The older the slugs is, the fewer quantities and less frequently they will exsudate.</description>
 		<label>Slug low exsudation</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_Spawner">
@@ -106,14 +102,12 @@ The older the slugs is, the fewer quantities and less frequently they will exsud
 		</comps>
 	</HediffDef>
 	
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>Hediff_Wrapper_Low_SlugDew_BS</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A temporary condition that disappears ingame</description>
-		
 		<label>Mitigation to promote lower exsudation</label>
-		<labelNoun>this.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">
@@ -129,8 +123,9 @@ The older the slugs is, the fewer quantities and less frequently they will exsud
 	</HediffDef>
 
 	<!-- megascarab nest -->
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>SlugHediff_StomachVenting_Megascarab</defName>
+		
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>An rare condition for slugs.
@@ -138,7 +133,6 @@ The older the slugs is, the fewer quantities and less frequently they will exsud
 Due to poor hygiene conditions, natural exsudation got disrupted. Immune system flaws often leads to parasitism for slugs.
 This slug will vent a megascarab now and then. Maybe it will be acknowledged with gratitude.</description>
 		<label>Crawling megascarab nest</label>
-		<labelNoun>Tell me if you see this slugHeDiff.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_Spawner">
@@ -160,14 +154,13 @@ This slug will vent a megascarab now and then. Maybe it will be acknowledged wit
 		</comps>
 	</HediffDef>
 	
-	<HediffDef>
+	<HediffDef ParentName="NonRandom_Hediff_Base">
 		<defName>Hediff_Wrapper_Megascarab_BS</defName>
+
 		<hediffClass>HediffWithComps</hediffClass>
 		
 		<description>A temporary condition that disappears ingame</description>
-		
 		<label>mitigation to promote megascarab nest</label>
-		<labelNoun>this.labelNoun</labelNoun>
 		
 		<comps>
 			<li Class="MoharHediffs.HediffCompProperties_HediffExclusive">

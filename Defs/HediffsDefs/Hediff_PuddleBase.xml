@@ -5,6 +5,8 @@
 		<hediffClass>HediffWithComps</hediffClass>
 		<description>base def puddles</description>
 		<label>LTF_Slug.Hediff_TrailBase</label>
+		
+		<scenarioCanAdd>false</scenarioCanAdd>
 	</HediffDef>
 
 	
