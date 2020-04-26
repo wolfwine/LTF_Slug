@@ -11,26 +11,13 @@ namespace LTF_Slug
 
         //private readonly bool myDebug = true;
         private readonly bool myDebug = true;
+        /*
         private readonly string myName = "HediffGiver_VestigialShellAbility";
         private readonly string ErrStr = "HediffGiver_VestigialShellAbility denied bc ";
-        private bool DidChangeAbilities = false;
-
-        /*
-        public override void OnIntervalPassed(Pawn pawn, Hediff cause)
-        {
-            Tools.Warn(pawn.Label + " Entering OnIntervalPassed", myDebug);
-
-            if (!pawn.Spawned)
-                return;
-            bool FlayDesync =   (pawn.HasNaturalVestigialShell() != IsFlayer(pawn));
-            bool FondleDesync = (pawn.HasFondlingVestigialShell() != IsFondler(pawn));
-
-            Tools.Warn(pawn.Label + " Flay desync: HasNatural: "+ pawn.HasNaturalVestigialShell()+"; IsFlayer:"+IsFlayer(pawn), FlayDesync && myDebug);
-            Tools.Warn(pawn.Label + " Fondle desync; HasFondling: "+ pawn.HasFondlingVestigialShell()+"; IsFondler: "+IsFondler(pawn), FondleDesync && myDebug);
-            if ( FlayDesync || FondleDesync )
-                ResetAbilities(pawn);
-        }
         */
+        
+        private string pLabel;
+
         public bool IsFlayer(Pawn pawn)
         {
             CompMindFlayer compMindFlayer = pawn.TryGetComp<CompMindFlayer>();
@@ -48,64 +35,71 @@ namespace LTF_Slug
             return false;
         }
 
-        public void ResetAbilities(Pawn pawn)
-        {
-            DidChangeAbilities = false;
-
-            //foreach(AbilityUser.AbilityDef abilityDef in Props.abilitiesToReset){};
-            Tools.Warn(pawn.Label + " Entering HediffGiver_VestigialShellAbility ResetAbilities", myDebug);
-            CompMindFlayer compMindFlayer = pawn.TryGetComp<CompMindFlayer>();
-            if (compMindFlayer != null)
-            {
-                Tools.Warn("Reseting " + pawn.Label + ".compMindFlayer", myDebug);
-                //compMindFlayer.MindFlayer = null;
-                compMindFlayer.Initialize();
-                DidChangeAbilities = true;
-            }
-            else
-                Tools.Warn("cannot find" + pawn.Label + " MindFondler ability", myDebug);
-
-            CompMindFondler compMindFondler = pawn.TryGetComp<CompMindFondler>();
-            if (compMindFondler != null)
-            {
-                Tools.Warn("Reseting " + pawn.Label + " MindFondler", myDebug);
-                //compMindFondler.MindFondler = null;
-                compMindFondler.Initialize();
-                DidChangeAbilities = true;
-            }
-            else
-                Tools.Warn("cannot find " + pawn.Label + " MindFondler ability", myDebug);
-
-            Tools.Warn(pawn.Label + " Exiting HediffGiver_VestigialShellAbility ResetAbilities - DidIt: "+DidChangeAbilities, myDebug);
-
-        }
-
         public override bool OnHediffAdded(Pawn pawn, Hediff hediff)
         {
+            if (!pawn.Spawned)
+                return false;
+
+            pLabel = pawn?.LabelShort;
+
             if (!pawn.IsSlug())
             {
-                if(pawn.Spawned)
-                    Tools.Warn(pawn.LabelShort + "'s" + ErrStr + " is not slug", myDebug);
+                Tools.Warn(pLabel + " is not slug - false", myDebug);
                 return false;
             }
 
-            if (pawn.Spawned && hediff.Part != pawn.GetVestigialShell() )
+            BodyPartRecord pawnBPR = pawn.GetVestigialShell();
+            Tools.Warn(">> Entering " + pLabel + "'s vestigial HediffGiver;", myDebug);
+            Tools.Warn(" hediff.def.defName: " + hediff?.def?.defName + "; this.hediff.def.defname: " + this.hediff?.defName, myDebug);
+            Tools.Warn(" hediff.Part: " + hediff?.Part?.def?.defName + "; pawnBPR:" + pawnBPR.def.defName, myDebug);
+
+            /*
+            if (hediff.Part != pawnBPR)
             {
-                if (pawn.Spawned)
-                    Tools.Warn(pawn?.LabelShort + "'s" + ErrStr + "hediff.Part(" + hediff?.Part?.def?.defName + ") != pawn.GetVestigialShell()", myDebug);
+                Tools.Warn(pLabel + " h.part=" + hediff.Part.def.defName + " != " + pawnBPR.def.defName + " - false", myDebug);
+                return false;
+            }
+            */
+
+            if(hediff.def == HediffDefOf.Anesthetic && hediff.Part == null)
+            {
+                Tools.Warn(pLabel + " had Anesthetic applied on whole body", myDebug);
                 return false;
             }
 
+            /*
             bool appliedHediff = TryApply(pawn, null);
             if (appliedHediff)
             {
-                if (pawn.Spawned)
-                    Tools.Warn(pawn?.LabelShort + "'s HediffGiver_VestigialShellAbility applied " + this.hediff?.defName, myDebug);
+                Tools.Warn(pLabel + " had " + this.hediff?.defName + " applied ", myDebug);
 
-                Tools.Warn(pawn.Label + "'s HediffGiver_VestigialShellAbility OnHediffAdded calling ResetAbilities", myDebug);
-                ResetAbilities(pawn);
+
+
                 return true;
             }
+            */
+
+            if (hediff.def == MyDefs.MindFondlingHediff)
+            {
+                ToolsAbilities.FondlerReset(pawn, myDebug);
+                Tools.Warn(pLabel + " called ResetAbilities bc " + hediff.def.defName, myDebug);
+
+                return false;
+            }
+            else if (hediff.def == HediffDefOf.MissingBodyPart &&
+                hediff.Part.def.defName == MyDefs.vestigialShellName &&
+                !ToolsBodyPart.HasNaturalVestigialShell(pawn, myDebug))
+            {
+                ToolsAbilities.AbilitiesReset(pawn, myDebug);
+                Tools.Warn(pLabel + " called ResetAbilities bc " + hediff.def.defName, myDebug);
+
+                ToolsBodyPart.AddWaitingForVestigal(pawn, myDebug);
+                Tools.Warn(pLabel + " added WaitingForVestigal", myDebug);
+
+                return false;
+            }
+
+            Tools.Warn(hediff.def.defName + " not applied on " + pLabel, myDebug);
 
             return false;
         }

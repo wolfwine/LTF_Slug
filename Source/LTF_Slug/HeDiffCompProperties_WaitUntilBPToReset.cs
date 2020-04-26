@@ -12,17 +12,17 @@ using Verse;
 
 namespace LTF_Slug
 {
-	public class HeDiffCompProperties_ResetAbilities : HediffCompProperties
+	public class HeDiffCompProperties_WaitUntilBPToReset : HediffCompProperties
 	{
         //what
         //public List<AbilityUser.AbilityDef> abilitiesToReset;
 
         public bool debug = false;
-        public int waitingTicks = 0;
+        public int period = 180;
 
-        public HeDiffCompProperties_ResetAbilities()
+        public HeDiffCompProperties_WaitUntilBPToReset()
 		{
-			this.compClass = typeof(HeDiffComp_ResetAbilities);
+			this.compClass = typeof(HediffComp_WaitUntilBPToReset);
 		}
 	}
 }

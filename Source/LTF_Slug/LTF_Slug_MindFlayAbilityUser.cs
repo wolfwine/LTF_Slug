@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Verse;
 using AbilityUser;
-using AlienRace;
-using UnityEngine;
-
-using System;
-using System.Diagnostics;
-using System.Text;
-
-using Verse.Sound;
 
 namespace LTF_Slug
 {
@@ -19,7 +11,7 @@ namespace LTF_Slug
 
     public class CompMindFlayer : GenericCompAbilityUser 
     {
-        public bool myDebug = false;
+        public bool myDebug = true;
 
         public bool? MindFlayer;
 
@@ -56,15 +48,16 @@ namespace LTF_Slug
                 Tools.Warn(AbilityUser.LabelShort + " adding MindFlayer ability", myDebug);
                 AddPawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
             }
-            else { 
-                CompMindFlayer checkIfMindFlayer = AbilityUser.TryGetComp<CompMindFlayer>();
-                if (checkIfMindFlayer != null)
-                {
-                    Tools.Warn(AbilityUser.LabelShort + " removing MindFlayer ability", myDebug);
-                    RemovePawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
-                }
+        }
+
+        public void TryRemoveMindFlayer()
+        {
+            CompMindFlayer checkIfMindFlayer = AbilityUser.TryGetComp<CompMindFlayer>();
+            if (checkIfMindFlayer != null)
+            {
+                Tools.Warn(AbilityUser.LabelShort + " removing MindFlayer ability", myDebug);
+                RemovePawnAbility(MindFlayerDefOf.LTF_Slug_MindFlayer);
             }
-            
         }
 
         public bool IsMindFlayer
@@ -90,7 +83,10 @@ namespace LTF_Slug
                 // Natural Bodypart
                 if (!AbilityUser.HasNaturalVestigialShell(myDebug))
                 {
-                    Tools.Warn(userLabel + " has no natural vestigial shell, giving up IsMindFlayer"+"\n-----", myDebug);
+                    Tools.Warn(userLabel + " has no natural vestigial shell, trying to remove Flayer ability"+"\n-----", myDebug);
+
+                    TryRemoveMindFlayer();
+
                     return false;
                 }
                 else
@@ -120,24 +116,15 @@ namespace LTF_Slug
                     Gizmo current = gizmoEnum.Current;
                     yield return current;
                 }
-
-                for (int i = 0; i < AbilityData.AllPowers.Count; i++)
+                IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData).GetEnumerator();
+                while (gizmoAbilities.MoveNext())
                 {
-                    PawnAbility myAbility = AbilityData.AllPowers[i];
-                    yield return myAbility.GetGizmo();
-
-                    if (Prefs.DevMode)
-                        yield return new Command_Action
-                        {
-                            defaultLabel = "reset " + myAbility.CooldownTicksLeft + " cooldown",
-                            defaultDesc = "cooldown=" + myAbility.CooldownTicksLeft,
-                            action = delegate
-                            {
-                                myAbility.CooldownTicksLeft = -1;
-                            }
-                        };
+                    Gizmo current = gizmoAbilities.Current;
+                    yield return current;
                 }
             }
+
+            yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
         }
     }
 

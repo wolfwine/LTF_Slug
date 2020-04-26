@@ -33,21 +33,32 @@ namespace LTF_Slug
             na = -99
         };
 
+        // abilities
+        /*
+        public static readonly string FondleAbilityName = "LTF_Slug_MindFondler";
+        public static readonly string FlayAbilityName = "LTF_Slug_MindFlayer";
+        public static AbilityUser.AbilityDef FondleAbilityDef = DefDatabase<AbilityUser.AbilityDef>.AllDefs.Where((AbilityUser.AbilityDef b) => b.defName == FondleAbilityName).RandomElement();
+        public static AbilityUser.AbilityDef FlayAbilityDef = DefDatabase<AbilityUser.AbilityDef>.AllDefs.Where((AbilityUser.AbilityDef b) => b.defName == FlayAbilityName).RandomElement();
+        */
+
         // hediff applied on victim
         public static HediffDef MindFlayHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_LTF_MindFlay").RandomElement();
         public static HediffDef MindFondleHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_LTF_MindFondle").RandomElement();
         // hediff required by caster to be able to cast ability
         public static HediffDef MindFondlingHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_FondlingVestigialShell").RandomElement();
         public static HediffDef RainbowTrailHediff = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_RainbowTrail").RandomElement();
+        public static HediffDef WaitingForVestigial = DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_WaitingForVestigialToReset").RandomElement();
 
+        // thoughts
         public static ThoughtDef MindFlayThought = DefDatabase<ThoughtDef>.AllDefs.Where((ThoughtDef b) => b.defName == "LTF_MindFlayed_Thought").RandomElement();
-
+        
+        // building name and Def
         public static string MindFlaySpotName = "LTF_MindFlaySpot";
         public static string MindFondleSpotName = "LTF_MindFondleSpot";
-
         public static ThingDef MindFlaySpotThingDef = ThingDef.Named(MindFlaySpotName);
         public static ThingDef MindFondleSpotThingDef = ThingDef.Named(MindFondleSpotName);
 
+        //  CompTipStringExtra for building comps
         public static string FlayCompInspectStringExtra = "Flayage inflicted count: ";
         public static string FondleCompInspectStringExtra = "Cuddles count: ";
 
@@ -72,5 +83,6 @@ namespace LTF_Slug
             DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_ThreeColorsCircularComplementary").RandomElement(),
             DefDatabase<HediffDef>.AllDefs.Where((HediffDef b) => b.defName == "Hediff_RainbowTrail").RandomElement(),
         };
+
     }
 }

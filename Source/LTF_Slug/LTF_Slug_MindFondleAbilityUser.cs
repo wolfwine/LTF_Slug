@@ -1,8 +1,8 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using AbilityUser;
-
 
 namespace LTF_Slug
 {
@@ -111,23 +111,15 @@ namespace LTF_Slug
                     yield return current;
                 }
 
-                for (int i = 0; i < AbilityData.AllPowers.Count; i++)
+                IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData).GetEnumerator();
+                while (gizmoAbilities.MoveNext())
                 {
-                    PawnAbility myAbility = AbilityData.AllPowers[i];
-                    yield return myAbility.GetGizmo();
-
-                    if (Prefs.DevMode)
-                        yield return new Command_Action
-                        {
-                            defaultLabel = "reset " + myAbility.CooldownTicksLeft + " cooldown",
-                            defaultDesc = "cooldown=" + myAbility.CooldownTicksLeft,
-                            action = delegate
-                            {
-                                myAbility.CooldownTicksLeft = -1;
-                            }
-                        };
+                    Gizmo current = gizmoAbilities.Current;
+                    yield return current;
                 }
             }
+
+            yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
         }
     }
 
