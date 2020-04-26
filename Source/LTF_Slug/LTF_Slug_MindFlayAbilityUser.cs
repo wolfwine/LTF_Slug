@@ -11,7 +11,7 @@ namespace LTF_Slug
 
     public class CompMindFlayer : GenericCompAbilityUser 
     {
-        public bool myDebug = true;
+        public bool myDebug = false;
 
         public bool? MindFlayer;
 
@@ -108,23 +108,29 @@ namespace LTF_Slug
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (!AbilityUser.IsSleepingOrOnFire())
+            if (ToolsPawn.IsSlug(AbilityUser))
             {
-                IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
-                while (gizmoEnum.MoveNext())
-                {
-                    Gizmo current = gizmoEnum.Current;
-                    yield return current;
-                }
-                IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData).GetEnumerator();
-                while (gizmoAbilities.MoveNext())
-                {
-                    Gizmo current = gizmoAbilities.Current;
-                    yield return current;
-                }
-            }
 
-            yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
+
+                if (!AbilityUser.IsSleepingOrOnFire())
+                {
+                    IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
+                    while (gizmoEnum.MoveNext())
+                    {
+                        Gizmo current = gizmoEnum.Current;
+                        yield return current;
+                    }
+                    IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData);
+                    while (gizmoAbilities.MoveNext())
+                    {
+                        Gizmo current = gizmoAbilities.Current;
+                        yield return current;
+                    }
+                }
+                IEnumerable<Gizmo> reportGizmo = ToolsAbilities.GetAbilityReportGizmo(AbilityData);
+                if (!reportGizmo.EnumerableNullOrEmpty())
+                    yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
+            }
         }
     }
 

@@ -51,22 +51,7 @@ namespace LTF_Slug
             FondlerReset(pawn, debug);
         }
 
-        public static IEnumerable<Gizmo> GetAbilityReportGizmo(AbilityUser.AbilityData abilityData)
-        {
-            if (Prefs.DevMode)
-            {
-                string powerString = string.Empty;
-                for (int i = 0; i < abilityData.AllPowers.Count; i++)
-                    powerString += i + ":" + abilityData.AllPowers[i].Def.defName + "; ";
-
-                yield return new Command_Action
-                {
-                    defaultLabel = "power Num",
-                    defaultDesc = "n=" + abilityData.AllPowers.Count + ";\n" + powerString
-                };
-            }
-        }
-        public static IEnumerable<Gizmo> GetAbilityGizmos(AbilityUser.AbilityData abilityData)
+        public static IEnumerator<Gizmo> GetAbilityGizmos(AbilityUser.AbilityData abilityData)
         {
             for (int i = 0; i < abilityData.AllPowers.Count; i++)
             {
@@ -83,6 +68,22 @@ namespace LTF_Slug
                             myAbility.CooldownTicksLeft = -1;
                         }
                     };
+            }
+        }
+
+        public static IEnumerable<Gizmo> GetAbilityReportGizmo(AbilityUser.AbilityData abilityData)
+        {
+            if (Prefs.DevMode)
+            {
+                string powerString = string.Empty;
+                for (int i = 0; i < abilityData.AllPowers.Count; i++)
+                    powerString += i + ":" + abilityData.AllPowers[i].Def.defName + "; ";
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "power Num",
+                    defaultDesc = "n=" + abilityData.AllPowers.Count + ";\n" + powerString
+                };
             }
         }
     }

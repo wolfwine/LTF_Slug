@@ -102,24 +102,29 @@ namespace LTF_Slug
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (!AbilityUser.IsSleepingOrOnFire())
+            if (ToolsPawn.IsSlug(AbilityUser))
             {
-                IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
-                while (gizmoEnum.MoveNext())
-                {
-                    Gizmo current = gizmoEnum.Current;
-                    yield return current;
-                }
 
-                IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData).GetEnumerator();
-                while (gizmoAbilities.MoveNext())
+                if (!AbilityUser.IsSleepingOrOnFire())
                 {
-                    Gizmo current = gizmoAbilities.Current;
-                    yield return current;
+                    IEnumerator<Gizmo> gizmoEnum = base.CompGetGizmosExtra().GetEnumerator();
+                    while (gizmoEnum.MoveNext())
+                    {
+                        Gizmo current = gizmoEnum.Current;
+                        yield return current;
+                    }
+
+                    IEnumerator<Gizmo> gizmoAbilities = ToolsAbilities.GetAbilityGizmos(AbilityData);
+                    while (gizmoAbilities.MoveNext())
+                    {
+                        Gizmo current = gizmoAbilities.Current;
+                        yield return current;
+                    }
                 }
+                IEnumerable<Gizmo> reportGizmo = ToolsAbilities.GetAbilityReportGizmo(AbilityData);
+                if (!reportGizmo.EnumerableNullOrEmpty())
+                    yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
             }
-
-            yield return ToolsAbilities.GetAbilityReportGizmo(AbilityData).First();
         }
     }
 

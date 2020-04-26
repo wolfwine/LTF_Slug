@@ -10,7 +10,7 @@ namespace LTF_Slug
     {
 
         //private readonly bool myDebug = true;
-        private readonly bool myDebug = true;
+        private readonly bool myDebug = false;
         /*
         private readonly string myName = "HediffGiver_VestigialShellAbility";
         private readonly string ErrStr = "HediffGiver_VestigialShellAbility denied bc ";
