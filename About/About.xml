@@ -29,7 +29,7 @@
 	
 	<description>Adds the slug race from Faster Than Light.
 
-These xenophobic, leisurely Slugs have developed a standing position, their intellectual ability, and a basic sens of sociability. Their home world and all sectors under their control are engulfed in enormous nebulae. They developed on an ocean planet which lead to them evolving unique telepathic abilities in order to overcome the general lack of visibility. This leaves them at a distinct disadvantage outside nebulae however, so that even within their sectors they are almost never seen outside the concealing clouds.
+These xenophobic, leisurely Slugs have developed their intellectual ability, a very basic sense of sociability, and an ability to stand upright. Their home world and all sectors under their control are engulfed in enormous nebulae. They developed on an ocean planet which lead to them evolving unique telepathic abilities in order to overcome the general lack of visibility. This leaves them at a distinct disadvantage outside nebulae however, so that even within their sectors they are almost never seen outside the concealing clouds.
 
 But against all odds, through thick and thin, they ended up on this very planet.
 Will you lead them to salvation or condemn them to extinction?
@@ -37,9 +37,9 @@ Will you lead them to salvation or condemn them to extinction?
  - Psychic ability : Cast a debilitating area of effect power that will decrease the combat and defensive skills of the enemy humanlikes in the zone.
  - 50% psychic sensivity / 110% toxic sensivity.
  - 90% Social.
- - Drools : they will generate some slug dew ressource now and then.
- - Xenophobic trait : social debuff with non slug beings.
- - Immunity to slug powers and mind control.
+ - Drool : they will occasionally generate the slug dew resource.
+ - Xenophobic trait : social debuff with non-Slug beings.
+ - Immunity to Slug powers and mind control.
 
 Dependencies:
  - Humanoid Alien Races 2.0
