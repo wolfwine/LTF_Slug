@@ -37,8 +37,8 @@
 
 - The zone will increase the combat and defensive skills of the ally humanlikes in the zone.
 - The longer the allies stay in the zone, the stronger they get.
-- The zone will disappear after a few seconds. The fondling effects shall disappear very fast as well.
-- If the limit of buffed allies is reached, the fondling zone will vanish and the caster will suffer a tiredness blacklash.
+- The zone will disappear after a few seconds. The fondling effects also disappear quickly.
+- If the limit of buffed allies is reached, the fondling zone will vanish and the caster will suffer a tiredness backlash.
 - Slugs are immune to this ability.</description>
 		
 		<MainVerb Class="AbilityUser.VerbProperties_Ability">
