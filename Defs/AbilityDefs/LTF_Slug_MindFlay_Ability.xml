@@ -44,8 +44,8 @@
 
 - The zone will decrease the combat and defensive skills of the enemy humanlikes in the zone.
 - The longer the enemies stay in the zone, the weaker they get.
-- The zone will disappear after a few seconds. The flaying effects shall disappear very fast as well.
-- If the limit of debuffed enemies is reached, the flaying zone will vanish and the caster will suffer a tiredness blacklash.
+- The zone will disappear after a few seconds. The flaying effects also disappear quickly.
+- If the limit of debuffed enemies is reached, the flaying zone will vanish and the caster will suffer a tiredness backlash.
 - Slugs are immune to this ability.</description>
 		<descriptionHyperlinks>
 			<RecipeDef>LTF_InstallFondlingVestigialShell</RecipeDef>
